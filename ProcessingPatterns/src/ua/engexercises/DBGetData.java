@@ -10,7 +10,10 @@ public class DBGetData {
 		this.dataDB = dataDB;
 	}
 	
-	public ArrayList<String> getListData( String key ) {
+	public ArrayList<String> getListData( String key ) throws Exception {
+		if ( false == dataDB.containsKey(key) )
+			throw new Exception( "Cannot get DBData for key: " + key + "!!!" );
+		
 		return dataDB.get( key );
 	}	
 }
