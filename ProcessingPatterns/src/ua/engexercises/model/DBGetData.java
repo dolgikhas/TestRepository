@@ -1,4 +1,4 @@
-package ua.engexercises;
+package ua.engexercises.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
