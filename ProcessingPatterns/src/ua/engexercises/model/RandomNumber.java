@@ -6,12 +6,10 @@ public class RandomNumber {
 	static Random generator = new Random();
 	static int previous = 0;
 
-	public int getRandomNumber( int maxNumber ) {
+	public static int getRandomNumber( int maxNumber ) {
 		int number = Math.abs(generator.nextInt()) % maxNumber;
-		while ( previous == number ) {
-			System.out.println( "\t\tget random number equal to previous: " + number );
+		while ( previous == number )
 			number = Math.abs(generator.nextInt()) % maxNumber;
-		}
 		previous = number;
 		return number;
 	}

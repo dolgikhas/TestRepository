@@ -14,7 +14,7 @@ import ua.engexercises.model.ProcessingPattern;
 import ua.engexercises.model.RandomNumber;
 
 class TestRandomNumber extends RandomNumber {
-	public int getRandomNumber( int maxNumber ) {
+	public static int getRandomNumber( int maxNumber ) {
 		return 0;
 	}
 }
