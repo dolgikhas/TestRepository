@@ -1,0 +1,8 @@
+апр. 16, 2022 2:40:58 PM ua.engexercises.controller.ExercisesController initLoggerFileHandler
+INFO: Logger initialized
+апр. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
+INFO: Get option of application: 2
+апр. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
+INFO: === processing all themes ===
+апр. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
+INFO: Get theme: Present Simple - to be
