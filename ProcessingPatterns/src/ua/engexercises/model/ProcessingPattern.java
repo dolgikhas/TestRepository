@@ -7,7 +7,6 @@ public class ProcessingPattern {
 	public static final String HASH_SYMBOL = "#";
 	PatternTask patternTask;
 	CommonElements commonElements;
-	RandomNumber randomNumbers;
 	
 	private ProcessingPattern( Builder builder ) {
 		this.patternTask = new PatternTask.Builder()
@@ -16,14 +15,12 @@ public class ProcessingPattern {
 								.build();
 		
 		this.commonElements = builder.elements;
-		this.randomNumbers = builder.numbers;
 	}
 	
 	public static class Builder {
 		private String answer;
 		private String task;
 		private CommonElements elements;
-		private RandomNumber numbers;
 		
 		public Builder setAnswer(String answer) {
 			this.answer = answer;
@@ -40,10 +37,6 @@ public class ProcessingPattern {
 			return this;
 		}
 
-		public Builder setRandomNumbers(RandomNumber randomNumber) {
-			this.numbers = randomNumber;
-			return this;
-		}
 		
 		public ProcessingPattern build() {
 			return new ProcessingPattern( this );

@@ -8,22 +8,20 @@ import ua.engexercises.model.ProcessingExpressions;
 
 class ProcessingExpressionsTest {
 	ProcessingPatternsTestData testData = new ProcessingPatternsTestData();
+	String result = "(#" + testData.listWhoKey + "#) to see (#"
+					+ testData.listWhomKey + "#)";
 	
 	@Test
 	void testProcessingExpressionsReplaceVariable() throws Exception {
-		String result = "see #" + testData.listWhoKey +
-						"#/#" + testData.listWhomKey + "#";
 		result = ProcessingExpressions.replaceVariable( result, "" );
-		assertEquals( "see /#" + testData.listWhomKey + "#",
+		assertEquals( "() to see (#" + testData.listWhomKey + "#)",
 						result );		
 		result = ProcessingExpressions.replaceVariable( result, "" );
-		assertEquals( "see /", result );		
+		assertEquals( "() to see ()", result );		
 	}
 
 	@Test
 	void testProcessingExpressionsWithTaskSeePatternAndLishWhoKey() throws Exception {
-		String result = "see #" + testData.listWhoKey +
-						"#/#" + testData.listWhomKey + "#";
 		String variable = ProcessingExpressions.getNextVariable(result);
 		assertEquals( testData.listWhoKey, variable );
 		result = ProcessingExpressions.replaceVariable( result, "" );
@@ -33,8 +31,6 @@ class ProcessingExpressionsTest {
 
 	@Test
 	void testProcessingExpressionsGetNextVariableAndReplaceVariable() throws Exception {
-		String result = "see #" + testData.listWhoKey +
-					"#/#" + testData.listWhomKey + "#";
 		String variable = ProcessingExpressions.getNextVariable(result);
 		assertEquals( testData.listWhoKey, variable );
 		result = ProcessingExpressions.replaceVariable( result, "" );

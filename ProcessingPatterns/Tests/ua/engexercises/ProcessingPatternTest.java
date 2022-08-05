@@ -28,10 +28,9 @@ public class ProcessingPatternTest {
 				.setAnswer(testData.patternAnswerSeeSimple)
 				.setTask(testData.patternTaskSeeSimple)
 				.setElements(testData.commonElements)
-				.setRandomNumbers(testData.randomNumber)
 				.build()
 				.getTaskAndAnswer();
-		assertEquals( "see I/you", patternData.getTask() );
+		assertEquals( "(I) to see (you)", patternData.getTask() );
 		assertEquals( "I see you.", patternData.getAnswer() );
 	}
 }

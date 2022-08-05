@@ -12,7 +12,7 @@ public class ProcessingPatternsTestData {
 	public final String listWho1stValue = "I";
 	public final String listWhomKey = "LIST_WHOM";
 	public final String listWhom1stValue = "you";
-	public final String patternTaskSeeSimple = "see #" + listWhoKey + "#/#" + listWhomKey + "#";
+	public final String patternTaskSeeSimple = "(#" + listWhoKey + "#) to see (#" + listWhomKey + "#)";
 	public final String patternAnswerSeeSimple = "#" + listWhoKey + "# see #" + listWhomKey + "#.";
 
 	public DBGetData dataDB;
@@ -32,6 +32,6 @@ public class ProcessingPatternsTestData {
 		
 		dataDB = new DBGetData( mapListCommonElements );
 		randomNumber = new TestRandomNumber();
-		commonElements = new CommonElements( dataDB, randomNumber );
+		commonElements = new CommonElements( dataDB );
 	}
 }

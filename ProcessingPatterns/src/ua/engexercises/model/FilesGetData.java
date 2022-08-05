@@ -10,26 +10,16 @@ import java.util.HashMap;
 public class FilesGetData {
 	public HashMap<String, ArrayList<String>> dataDB;
 	
-	public static ArrayList<String> getListItems() throws FileNotFoundException, IOException {
+	public static ArrayList<String> getListItems( String fileName ) throws FileNotFoundException, IOException {
 		ArrayList<String> listItems = new ArrayList<>();
 		
 		try ( BufferedReader br	= new BufferedReader(
-				new FileReader( DBGetDataConstants.FILE_LIST_THEMES ) ) ) {
+				new FileReader( fileName ) ) ) {
 			String strLine;
 			while ( ( strLine = br.readLine() ) != null )
 				listItems.add( strLine );			
 		}
 		
 		return listItems;
-	}
-
-	public static String getRandomPattern(String theme) {
-		// get list themes
-		
-		
-		// get random theme from list
-		
-		
-		return null;
 	}
 }

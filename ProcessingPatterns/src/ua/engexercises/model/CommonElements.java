@@ -5,13 +5,10 @@ import java.util.HashMap;
 
 public class CommonElements {
 	DBGetData dataDB;
-	RandomNumber randomNumbers;
 	HashMap<String, ArrayList<String>> commonElements;
 
-
-	public CommonElements(DBGetData dataDB, RandomNumber randomNumbers) {
+	public CommonElements(DBGetData dataDB) {
 		this.dataDB = dataDB;
-		this.randomNumbers = randomNumbers;
 		commonElements = new HashMap<>();
 	}
 
@@ -22,8 +19,7 @@ public class CommonElements {
 		ArrayList<String> listElements = commonElements.get( key );
 		int amountElements = listElements.size();
 
-		return listElements.get(
-					randomNumbers.getRandomNumber( amountElements ) );
+		return listElements.get( RandomNumber.getRandomNumber( amountElements ) );
 	}
 	
 }

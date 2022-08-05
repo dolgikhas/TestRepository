@@ -1,8 +1,20 @@
-ря№. 16, 2022 2:40:58 PM ua.engexercises.controller.ExercisesController initLoggerFileHandler
+рту. 05, 2022 4:48:20 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-ря№. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
-INFO: Get option of application: 2
-ря№. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
-INFO: === processing all themes ===
-ря№. 16, 2022 2:40:59 PM ua.engexercises.controller.ExercisesController processingUser
-INFO: Get theme: Present Simple - to be
+рту. 05, 2022 4:48:20 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+INFO: Get list themes
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+INFO: Get theme number: 0
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+INFO: Get theme: Present Simple - to do
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+INFO: Get list variants for theme: Present Simple - to do
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+INFO: Get variant number from user: 2
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+INFO: Get variant: to come
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getRandomPatternByVariant
+INFO: Get list patterns for theme, variant: Present Simple - to do, to come
+рту. 05, 2022 4:48:21 PM ua.engexercises.controller.ExercisesController getRandomPatternByVariant
+INFO: Get pattern (0 for start): to come with somebody
+рту. 05, 2022 4:48:21 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: (#LIST_WHO_PLURAL_AND_I#) to come to (#LIST_WHOM_FULL#)	#LIST_WHO_PLURAL_AND_I# come to #LIST_WHOM_FULL#.

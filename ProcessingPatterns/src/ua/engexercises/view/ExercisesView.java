@@ -6,16 +6,12 @@ import ua.engexercises.model.DBGetData;
 
 public class ExercisesView {
 
-	public void printListThemes(ArrayList<String> listThemes) {
-		System.out.println( DBGetData.getMessageListThemes() );
+	public void printList( String message, ArrayList<String> items) {
+		System.out.println( message );
 		
-		for ( int index = 0; index < listThemes.size(); index++ )
-			System.out.println( index + ": " + listThemes.get(index) );
+		for ( int index = 0; index < items.size(); index++ )
+			System.out.println( index + ": " + items.get(index) );
 		
-	}
-
-	public void printApplicationOptions() {
-		System.out.println( DBGetData.getListAppOptions() );
 	}
 
 	public void printMessage(String message) {
