@@ -33,7 +33,6 @@ public class ExercisesController {
 
 	public void processingUser() throws FileNotFoundException, IOException {
 
-		// get theme by user chose
 		String theme, variant, pattern;
 		
 		try {
@@ -54,19 +53,20 @@ public class ExercisesController {
 				
 				userInput = scanner.nextLine();
 				
-				while ( !userInput.toLowerCase().equals(patternTask.getAnswer())
+				while ( !model.checkIsUserInputEqualToAnswer(userInput)
 					 && !userInput.toLowerCase().equals(DBGetData.getTextGetAnswer())
 					 && !userInput.toLowerCase().equals(DBGetData.getTextQuit()) )
 				{
 					view.printMessage( DBGetData.getMessageNotCorrectAnswer() );
-					view.printMessage( "¬ведено: \"" + userInput + "\"");
+					logger.info( "\t¬ведено: \"" + userInput + "\"");
 					view.printMessage( DBGetData.getMessageRepeatInputOrGetAnswerOrQuit() );
 					userInput = scanner.nextLine();
 				}
 				
-				if ( userInput.equals(patternTask.getAnswer()) ) {
+				if ( model.checkIsUserInputEqualToAnswer(userInput) ) {
 					correctAnswers++;
 					pattern = getRandomPatternByVariant( theme, variant );
+					model.setProcessingPatternObject( theme, variant, pattern );
 				} else {
 					if ( correctAnswers > 0 )
 						correctAnswers--;
@@ -78,8 +78,6 @@ public class ExercisesController {
 				if ( NUMBER_PROCESS_PATTERNS == correctAnswers )
 					view.printMessage( DBGetData.getMessageCompleteWorkWithPattern() );
 			}
-			
-			
 		} catch ( Exception exc ) {
 			System.out.println( exc );
 		}

@@ -18,17 +18,56 @@ public class ProcessingExpressions {
 							CommonElements commonElements) throws Exception {
 		String task = patternData.getTask();
 		String answer = patternData.getAnswer();
+		String subject = "";
 		
 		while ( -1 != task.indexOf( HASH_SYMBOL ) ) {
 			String variable = ProcessingExpressions.getNextVariable( task );
 			String randomElement = commonElements.getRandomValue( variable );
+			
+			if ( subject.isEmpty() )
+				subject = randomElement;
+			else if ( isSubjectPersonalPronoun(subject) ) {
+				while ( isSubjectPersonalPronounEqualToObject(subject, randomElement)) {
+					randomElement = commonElements.getRandomValue( variable );
+					System.out.println( "\tsubject is equal to object as personal pronoun" );
+				}
+			}
+			
 			task = ProcessingExpressions.replaceVariable( task, randomElement );
 			answer = ProcessingExpressions.replaceVariable( answer, randomElement );
 		}
 
 		return new PatternTask.Builder()
-				.setAnswer( answer )
-				.setTask( task )
-				.build();
+							  .setAnswer( answer )
+							  .setTask( task )
+							  .build();
+	}
+
+	private static boolean isSubjectPersonalPronounEqualToObject(String subject, String objectStr) {
+		if ( subject.equals("I") && objectStr.equals("me") )
+			return true;
+		if ( subject.equals("you") && objectStr.equals("you") )
+			return true;
+		if ( subject.equals("he") && objectStr.equals("him") )
+			return true;
+		if ( subject.equals("she") && objectStr.equals("her") )
+			return true;
+		if ( subject.equals("it") && objectStr.equals("it") )
+			return true;
+		if ( subject.equals("we") && objectStr.equals("us") )
+			return true;
+		if ( subject.equals("they") && objectStr.equals("them") )
+			return true;
+			
+			
+		return false;
+	}
+
+	private static boolean isSubjectPersonalPronoun(String subject) {
+		if ( subject.equals("I") || subject.equals("you") || subject.equals("he")
+			|| subject.equals("she") || subject.equals("it") || subject.equals("we")
+			|| subject.equals("they") )
+			return true;
+		return false;
 	}
 }
