@@ -1,0 +1,9 @@
+water
+milk
+coffee
+wine
+apple juice
+fruit juice
+strawberry juice
+beer
+tea
