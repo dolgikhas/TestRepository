@@ -46,6 +46,8 @@ public class ProcessingExpressions {
 	private static boolean isSubjectPersonalPronounEqualToObject(String subject, String objectStr) {
 		if ( subject.equals("I") && objectStr.equals("me") )
 			return true;
+		if ( subject.equals("I") && objectStr.equals("us") )
+			return true;
 		if ( subject.equals("you") && objectStr.equals("you") )
 			return true;
 		if ( subject.equals("he") && objectStr.equals("him") )
@@ -55,6 +57,8 @@ public class ProcessingExpressions {
 		if ( subject.equals("it") && objectStr.equals("it") )
 			return true;
 		if ( subject.equals("we") && objectStr.equals("us") )
+			return true;
+		if ( subject.equals("we") && objectStr.equals("me") )
 			return true;
 		if ( subject.equals("they") && objectStr.equals("them") )
 			return true;

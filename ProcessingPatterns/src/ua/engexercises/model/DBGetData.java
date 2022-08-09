@@ -99,4 +99,16 @@ public class DBGetData {
 		return DBGetDataConstants.USER_INPUT_QUIT;
 	}
 
+	public static String getMessageGetPatternNumber() {
+		return DBGetDataConstants.MESSAGE_GET_PATTERN_NUMBER;
+	}
+
+	public static String getMessageNotCorrectPatternNumber() {
+		return DBGetDataConstants.MESSAGE_NOT_CORRECT_PATTERN_NUMBER;
+	}
+
+	public static String getMessageListPatterns() {
+		return DBGetDataConstants.MESSAGE_LIST_PATTERNS;
+	}
+
 }

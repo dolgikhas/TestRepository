@@ -55,6 +55,7 @@ public class ExercisesModel {
 		
 		// 2. get random number
 		int randomNumber = RandomNumber.getRandomNumber(patternForms.size());
+		logger.info( "get random number for get form: " + randomNumber );
 		
 		// 3. get random pattern form from list
 		String[] patternStr = patternForms.get(randomNumber).split("\t");
@@ -75,19 +76,14 @@ public class ExercisesModel {
 
 	public boolean checkIsUserInputEqualToAnswer(String userInput) {
 		String answer = patternTask.getAnswer().toLowerCase();
-//		logger.info( "get answer from pattern task: " + answer );
 		userInput = userInput.toLowerCase();
-//		logger.info( "userInput: " + userInput );
 		
 		if ( answer.equals(userInput) )
 			return true;
-//		logger.info( "answer is not equal to userInput" );
 		
 		if ( answer.endsWith(".") &&
 				answer.substring(0, answer.length() - 1).equals(userInput) )
 			return true;
-//		logger.info( "answer without point is not equal to userInput" );
-//		logger.info( "answer without point: " + answer.substring(0, answer.length() - 1) );
 		
 		return false;
 	}

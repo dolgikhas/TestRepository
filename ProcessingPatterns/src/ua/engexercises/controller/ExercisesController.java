@@ -38,7 +38,8 @@ public class ExercisesController {
 		try {
 			theme = getThemeByUserInput();
 			variant = getVariantByUserInput( theme );
-			pattern = getRandomPatternByVariant( theme, variant );
+//			pattern = getRandomPatternByVariant( theme, variant );
+			pattern = getPatternByUserInput( theme, variant );
 			
 			model.setProcessingPatternObject( theme, variant, pattern );
 	
@@ -51,6 +52,7 @@ public class ExercisesController {
 				view.printMessage( DBGetData.getMessageInputAnswerOrQuit() );
 				view.printMessage( patternTask.getTask() + ": " );
 				
+				logger.info( "\tBEFORE FIRST userInput = scanner.nextLine();");
 				userInput = scanner.nextLine();
 				
 				while ( !model.checkIsUserInputEqualToAnswer(userInput)
@@ -65,7 +67,7 @@ public class ExercisesController {
 				
 				if ( model.checkIsUserInputEqualToAnswer(userInput) ) {
 					correctAnswers++;
-					pattern = getRandomPatternByVariant( theme, variant );
+//					pattern = getRandomPatternByVariant( theme, variant );
 					model.setProcessingPatternObject( theme, variant, pattern );
 				} else {
 					if ( correctAnswers > 0 )
@@ -83,6 +85,18 @@ public class ExercisesController {
 		}
 	}
 
+	private String getPatternByUserInput(String theme, String variant) throws FileNotFoundException, IOException {
+		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
+		logger.info( "Get list patterns for theme, variant: " + theme + ", " + variant );
+		view.printList( DBGetData.getMessageListPatterns(), listPatterns );
+		int patternNumber = getNumberFromUser( DBGetData.getMessageGetPatternNumber(),
+				listPatterns.size(), DBGetData.getMessageNotCorrectPatternNumber() );
+		logger.info( "Get pattern number from user: " + patternNumber );
+		String pattern = listPatterns.get(patternNumber);
+		logger.info( "Get pattern: " + pattern );
+		return pattern;
+	}
+
 	private String getRandomPatternByVariant(String theme, String variant) throws FileNotFoundException, IOException {
 		String pattern;
 		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
@@ -98,8 +112,8 @@ public class ExercisesController {
 		logger.info( "Get list variants for theme: " + theme );
 		view.printList( DBGetData.getMessageListVariants(), listVariants );
 		
-		int variantNumber = 2; //getNumberFromUser( DBGetData.getMessageGetVariantNumber(),
-						//listVariants.size() - 1, DBGetData.getMessageNotCorrectVariantNumber() );
+		int variantNumber = getNumberFromUser( DBGetData.getMessageGetVariantNumber(),
+						listVariants.size(), DBGetData.getMessageNotCorrectVariantNumber() );
 		logger.info( "Get variant number from user: " + variantNumber );
 
 		String variant = listVariants.get( variantNumber );  
@@ -122,50 +136,25 @@ public class ExercisesController {
 	}
 
 	private int getNumberFromUser( String message, int size, String messageNotCorrect ) {
-		int userChoise = getIntUserInput( message );
+      view.printMessage( message );
+		int userChoise = scanner.nextInt();
 		while ( userChoise < 0 || userChoise > size ) {
 			view.printMessage( messageNotCorrect );
-			userChoise = getIntUserInput( message );
+			userChoise = scanner.nextInt();
 		}
 		
 		return userChoise;
 	}
 
-	private void processingPattern(String randomPattern) {
-		// -1. create ProcessingPattern object
-		
-		// 1. get task and answer from pattern
-		
-		
-		// 2. output task
-		
-		// 3. get user input
-		
-		// 4. check: is answer equal to user input?
-		
-		// 5. if yes - increase number correct answers
-		
-		// 6. if no -
-		
-		// 	6.1. set number correct answers = 0
-		
-		//	6.2. check: is input == 'a'?
-		
-		//		6.2.1. if yes - output answer
-		
-		//		6.2.2. if no - output task and get answer
-		
-	}
-
-
-	public int getIntUserInput(String caption ) {
-        view.printMessage( caption );
-        while( !scanner.hasNextInt() ) {
-        	view.printMessage( DBGetData.getMessageNotCorrentInput() );
-        	view.printMessage( caption );
-        	scanner.next();
-        }
-        return scanner.nextInt();
-	}
-
+//
+//	public int getIntUserInput(String caption ) {
+//        view.printMessage( caption );
+//        while( !scanner.hasNextInt() ) {
+//        	view.printMessage( DBGetData.getMessageNotCorrentInput() );
+//        	view.printMessage( caption );
+//        	scanner.next();
+//        }
+//        return scanner.nextInt();
+//	}
+//
 }
