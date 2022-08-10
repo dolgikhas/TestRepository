@@ -29,7 +29,8 @@ public class ProcessingExpressions {
 			else if ( isSubjectPersonalPronoun(subject) ) {
 				while ( isSubjectPersonalPronounEqualToObject(subject, randomElement)) {
 					randomElement = commonElements.getRandomValue( variable );
-					System.out.println( "\tsubject is equal to object as personal pronoun" );
+					System.out.println( "\tsubject (" + subject + ") is equal to object (" +
+							randomElement + ") as personal pronoun" );
 				}
 			}
 			

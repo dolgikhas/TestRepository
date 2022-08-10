@@ -43,24 +43,21 @@ public class ExercisesController {
 			
 			model.setProcessingPatternObject( theme, variant, pattern );
 	
-			String userInput = "";
+			String userInput = scanner.nextLine();	// app output not correct input without input %)
 			int correctAnswers = 0;
 			while ( (correctAnswers < NUMBER_PROCESS_PATTERNS) &&
-					!userInput.toLowerCase().equals( DBGetData.getTextQuit() ) )
+					!isUserInputQuit(userInput) )
 			{
 				PatternTask patternTask = model.getPatternTask();
 				view.printMessage( DBGetData.getMessageInputAnswerOrQuit() );
 				view.printMessage( patternTask.getTask() + ": " );
 				
-				logger.info( "\tBEFORE FIRST userInput = scanner.nextLine();");
 				userInput = scanner.nextLine();
 				
-				while ( !model.checkIsUserInputEqualToAnswer(userInput)
-					 && !userInput.toLowerCase().equals(DBGetData.getTextGetAnswer())
-					 && !userInput.toLowerCase().equals(DBGetData.getTextQuit()) )
-				{
+				while ( !model.checkIsUserInputEqualToAnswer(userInput) &&
+						!isUserInputGetAnswer(userInput) &&
+						!isUserInputQuit(userInput) ) {
 					view.printMessage( DBGetData.getMessageNotCorrectAnswer() );
-					logger.info( "\t¬ведено: \"" + userInput + "\"");
 					view.printMessage( DBGetData.getMessageRepeatInputOrGetAnswerOrQuit() );
 					userInput = scanner.nextLine();
 				}
@@ -85,14 +82,29 @@ public class ExercisesController {
 		}
 	}
 
+	private boolean isUserInputGetAnswer(String userInput) {
+		return userInput.toLowerCase().equals(DBGetData.getTextGetAnswer());
+	}
+
+	private boolean isUserInputQuit(String userInput) {
+		return userInput.toLowerCase().equals( DBGetData.getTextQuit() );
+	}
+
 	private String getPatternByUserInput(String theme, String variant) throws FileNotFoundException, IOException {
 		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
 		logger.info( "Get list patterns for theme, variant: " + theme + ", " + variant );
+
 		view.printList( DBGetData.getMessageListPatterns(), listPatterns );
-		int patternNumber = getNumberFromUser( DBGetData.getMessageGetPatternNumber(),
-				listPatterns.size(), DBGetData.getMessageNotCorrectPatternNumber() );
-		logger.info( "Get pattern number from user: " + patternNumber );
-		String pattern = listPatterns.get(patternNumber);
+		String pattern;
+		if ( 1 == listPatterns.size() ) {
+			pattern = listPatterns.get(0);
+			logger.info( "Get first pattern. It is only on in list." );
+		} else {
+			int patternNumber = getNumberFromUser( DBGetData.getMessageGetPatternNumber(),
+					listPatterns.size(), DBGetData.getMessageNotCorrectPatternNumber() );
+			logger.info( "Get pattern number from user: " + patternNumber );
+			pattern = listPatterns.get(patternNumber);
+		}
 		logger.info( "Get pattern: " + pattern );
 		return pattern;
 	}
@@ -101,7 +113,7 @@ public class ExercisesController {
 		String pattern;
 		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
 		logger.info( "Get list patterns for theme, variant: " + theme + ", " + variant );
-		int randomNumber = 0; //RandomNumber.getRandomNumber(listPatterns.size());
+		int randomNumber = RandomNumber.getRandomNumber(listPatterns.size());
 		pattern = listPatterns.get(randomNumber);
 		logger.info( "Get pattern (0 for start): " + pattern );
 		return pattern;
@@ -140,7 +152,8 @@ public class ExercisesController {
 		int userChoise = scanner.nextInt();
 		while ( userChoise < 0 || userChoise > size ) {
 			view.printMessage( messageNotCorrect );
-			userChoise = scanner.nextInt();
+			userChoise = Integer.parseInt(scanner.nextLine());
+//			userChoise = scanner.nextInt();
 		}
 		
 		return userChoise;

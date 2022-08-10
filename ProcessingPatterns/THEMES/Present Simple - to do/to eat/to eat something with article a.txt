@@ -1,0 +1,12 @@
+(#LIST_WHO_PLURAL_AND_I#) to eat (#LIST_EAT_A#)	#LIST_WHO_PLURAL_AND_I# eat a #LIST_EAT_A#.
+(#LIST_WHO_SINGLE#) to eat (#LIST_EAT_A#)	#LIST_WHO_SINGLE# eats a #LIST_EAT_A#.
+(#LIST_PEOPLE_SINGLE#) to eat (#LIST_EAT_A#)	A #LIST_PEOPLE_SINGLE# eats a #LIST_EAT_A#.
+(#LIST_ANIMALS_SINGLE#) to eat (#LIST_EAT_A#)	A #LIST_ANIMALS_SINGLE# eats a #LIST_EAT_A#.
+(#LIST_WHO_PLURAL_AND_I#) not to eat (#LIST_EAT_A#)	#LIST_WHO_PLURAL_AND_I# don't eat a #LIST_EAT_A#.
+(#LIST_WHO_SINGLE#) not to eat (#LIST_EAT_A#)	#LIST_WHO_SINGLE# doesn't eat a #LIST_EAT_A#.
+(#LIST_PEOPLE_SINGLE#) not to eat (#LIST_EAT_A#)	A #LIST_PEOPLE_SINGLE# doesn't eat a #LIST_EAT_A#.
+(#LIST_ANIMALS_SINGLE#) not eats (#LIST_EAT_A#)	A #LIST_ANIMALS_SINGLE# doesn't eat a #LIST_EAT_A#.
+Question: (#LIST_WHO_PLURAL_AND_I#) to eat (#LIST_EAT_A#)?	Do #LIST_WHO_PLURAL_AND_I# eat a #LIST_EAT_A#?
+Question: (#LIST_WHO_SINGLE#) to eat (#LIST_EAT_A#)?	Does #LIST_WHO_SINGLE# eat a #LIST_EAT_A#.
+Question: (#LIST_PEOPLE_SINGLE#) to eat (#LIST_EAT_A#)?	Does a #LIST_PEOPLE_SINGLE# eat a #LIST_EAT_A#?
+Question: (#LIST_ANIMALS_SINGLE#) to eat (#LIST_EAT_A#)?	Does a #LIST_ANIMALS_SINGLE# eat a #LIST_EAT_A#?

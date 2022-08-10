@@ -5,5 +5,4 @@ mouse
 crab
 bird
 bear
-elephant
 turtle
