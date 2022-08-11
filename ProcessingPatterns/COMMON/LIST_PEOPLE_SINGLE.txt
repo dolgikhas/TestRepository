@@ -1,0 +1,5 @@
+girl
+boy
+child
+man
+woman

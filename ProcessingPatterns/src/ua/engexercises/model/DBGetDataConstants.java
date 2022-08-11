@@ -24,4 +24,5 @@ public interface DBGetDataConstants {
 	public String MESSAGE_GET_PATTERN_NUMBER = "Выберите шаблон: ";
 	public String MESSAGE_NOT_CORRECT_PATTERN_NUMBER = "Неверный номер шаблона!";
 	public String MESSAGE_LIST_PATTERNS = "Список шаблонов: ";
+	public String FILE_MAP_CONTRACTIONS = "MAP_CONTRACTIONS.txt";
 }

@@ -1,0 +1,8 @@
+he
+she
+it
+girl
+boy
+child
+man
+woman

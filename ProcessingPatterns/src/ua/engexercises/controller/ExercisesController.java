@@ -41,6 +41,7 @@ public class ExercisesController {
 //			pattern = getRandomPatternByVariant( theme, variant );
 			pattern = getPatternByUserInput( theme, variant );
 			
+			model.getCommonLists();
 			model.setProcessingPatternObject( theme, variant, pattern );
 	
 			String userInput = scanner.nextLine();	// app output not correct input without input %)
@@ -158,16 +159,4 @@ public class ExercisesController {
 		
 		return userChoise;
 	}
-
-//
-//	public int getIntUserInput(String caption ) {
-//        view.printMessage( caption );
-//        while( !scanner.hasNextInt() ) {
-//        	view.printMessage( DBGetData.getMessageNotCorrentInput() );
-//        	view.printMessage( caption );
-//        	scanner.next();
-//        }
-//        return scanner.nextInt();
-//	}
-//
 }

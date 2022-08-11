@@ -111,4 +111,9 @@ public class DBGetData {
 		return DBGetDataConstants.MESSAGE_LIST_PATTERNS;
 	}
 
+	public HashMap<String, String> getMapContractions() throws FileNotFoundException, IOException {
+		return FilesGetData.getMapItems( DBGetDataConstants.DIR_COMMON + "\\"
+				+ DBGetDataConstants.FILE_MAP_CONTRACTIONS );
+	}
+
 }

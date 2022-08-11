@@ -22,4 +22,18 @@ public class FilesGetData {
 		
 		return listItems;
 	}
+
+	public static HashMap<String, String> getMapItems(String filePath) throws FileNotFoundException, IOException {
+		ArrayList<String> listMapItems = getListItems(filePath);
+		HashMap<String, String> mapItems = new HashMap<String, String>();
+		for (String mapItemsStr : listMapItems) {
+			String[] arrMapItems = mapItemsStr.split("\t");
+			String mapItem0 = arrMapItems[ 0 ];
+			String mapItem1 = arrMapItems[ 1 ];
+			
+			mapItems.put(mapItem0, mapItem1);
+		}
+			
+		return mapItems;
+	}
 }

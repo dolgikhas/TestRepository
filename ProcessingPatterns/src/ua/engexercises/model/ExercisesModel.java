@@ -3,6 +3,7 @@ package ua.engexercises.model;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 public class ExercisesModel {
@@ -12,14 +13,17 @@ public class ExercisesModel {
 	public static Logger logger;
 	private ProcessingPattern patternData;
 	private PatternTask patternTask;
+	private HashMap<String, String> mapContractions;
+
 	
 	public ExercisesModel( Logger logger ) {
 		dbData = new DBGetData();
 		listThemes = null;
 		this.logger = logger;
-		commonElements = new CommonElements( dbData );
+		commonElements = null;
 		patternData = null;
 		patternTask = null;
+		mapContractions = null;
 	}
 
 	public ArrayList<String> getListThemes() throws FileNotFoundException, IOException {
@@ -85,7 +89,52 @@ public class ExercisesModel {
 				answer.substring(0, answer.length() - 1).equals(userInput) )
 			return true;
 		
+		if (isAnswerContainsContractions(userInput)) {
+			logger.info( "user input contain contraction" );
+			String userInputWithReplacedContractions = replaceContractions(userInput);
+			logger.info( "user input without contractions: " + userInputWithReplacedContractions );
+			
+			if ( answer.equals(userInputWithReplacedContractions) )
+				return true;
+			
+			if ( answer.endsWith(".") &&
+					answer.substring(0, answer.length() - 1)
+						  .equals(userInputWithReplacedContractions) )
+				return true;
+		}
+		
 		return false;
+	}
+
+	private String replaceContractions(String strLine ) {
+		String result = "";
+		String[] arrStrItems = strLine.split(" ");
+		for ( String strItem : arrStrItems ) {
+			if (mapContractions.containsKey(strItem)) {
+				result += mapContractions.get(strItem);
+			} else {
+				result += strItem;
+			}
+			result += " ";
+		}
+		result = result.strip();
+		
+		return result;
+	}
+
+	private boolean isAnswerContainsContractions(String strLine) {
+		String[] arrStrItems = strLine.split(" ");
+		for ( String strItem : arrStrItems ) {
+			if (mapContractions.containsKey(strItem))
+				return true;
+		}
+		
+		return false;
+	}
+
+	public void getCommonLists() throws FileNotFoundException, IOException {
+		mapContractions = dbData.getMapContractions();
+		commonElements = new CommonElements( dbData );
 	}
 
 
