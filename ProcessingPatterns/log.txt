@@ -1,10 +1,28 @@
-рту. 09, 2022 3:18:16 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
+рту. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-рту. 09, 2022 3:18:16 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+рту. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
 INFO: Get list themes
-рту. 09, 2022 3:18:16 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+рту. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
 INFO: Get theme number: 0
-рту. 09, 2022 3:18:16 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
+рту. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
 INFO: Get theme: Present Simple - to do
-рту. 09, 2022 3:18:16 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+рту. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
 INFO: Get list variants for theme: Present Simple - to do
+рту. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+INFO: Get variant number from user: 6
+рту. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
+INFO: Get variant: to eat
+рту. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
+INFO: Get list patterns for theme, variant: Present Simple - to do, to eat
+рту. 10, 2022 5:04:32 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
+INFO: Get pattern number from user: 2
+рту. 10, 2022 5:04:32 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
+INFO: Get pattern: to eat something with article an
+рту. 10, 2022 5:04:32 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 4
+рту. 10, 2022 5:04:32 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: (#LIST_WHO_PLURAL_AND_I#) not to eat (#LIST_EAT_AN#)	#LIST_WHO_PLURAL_AND_I# don't eat an #LIST_EAT_AN#.
+рту. 10, 2022 5:04:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 9
+рту. 10, 2022 5:04:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Question: (#LIST_WHO_SINGLE#) to eat (#LIST_EAT_AN#)?	Does #LIST_WHO_SINGLE# eat an #LIST_EAT_AN#.

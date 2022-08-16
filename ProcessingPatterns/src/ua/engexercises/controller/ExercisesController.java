@@ -49,7 +49,9 @@ public class ExercisesController {
 			while ( (correctAnswers < NUMBER_PROCESS_PATTERNS) &&
 					!isUserInputQuit(userInput) )
 			{
+				logger.info( "before get pattern task" );
 				PatternTask patternTask = model.getPatternTask();
+				logger.info( "after get pattern task" );
 				view.printMessage( DBGetData.getMessageInputAnswerOrQuit() );
 				view.printMessage( patternTask.getTask() + ": " );
 				
@@ -102,7 +104,7 @@ public class ExercisesController {
 			logger.info( "Get first pattern. It is only on in list." );
 		} else {
 			int patternNumber = getNumberFromUser( DBGetData.getMessageGetPatternNumber(),
-					listPatterns.size(), DBGetData.getMessageNotCorrectPatternNumber() );
+					listPatterns.size() - 1, DBGetData.getMessageNotCorrectPatternNumber() );
 			logger.info( "Get pattern number from user: " + patternNumber );
 			pattern = listPatterns.get(patternNumber);
 		}
@@ -126,7 +128,7 @@ public class ExercisesController {
 		view.printList( DBGetData.getMessageListVariants(), listVariants );
 		
 		int variantNumber = getNumberFromUser( DBGetData.getMessageGetVariantNumber(),
-						listVariants.size(), DBGetData.getMessageNotCorrectVariantNumber() );
+						listVariants.size() - 1, DBGetData.getMessageNotCorrectVariantNumber() );
 		logger.info( "Get variant number from user: " + variantNumber );
 
 		String variant = listVariants.get( variantNumber );  
@@ -139,7 +141,7 @@ public class ExercisesController {
 		logger.info( "Get list themes" );
 		view.printList( DBGetData.getMessageListThemes(), listThemes );
 		
-		int themeNumber = 0; //getNumberFromUser( DBGetData.getMessageGetThemeNumber(),
+		int themeNumber = 1; //getNumberFromUser( DBGetData.getMessageGetThemeNumber(),
 				//model.getThemesNumber() - 1, DBGetData.getMessageNotCorrectThemeNumber() );
 		logger.info( "Get theme number: " + themeNumber );
 
