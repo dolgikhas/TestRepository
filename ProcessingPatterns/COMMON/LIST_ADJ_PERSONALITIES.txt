@@ -1,0 +1,10 @@
+funny
+serious
+nice
+polite
+rude
+smart
+intelligent
+shy
+quiet
+outgoing

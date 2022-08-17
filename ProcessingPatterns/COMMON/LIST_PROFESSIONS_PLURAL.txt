@@ -1,0 +1,5 @@
+students
+teachers
+doctors
+painters
+postmans

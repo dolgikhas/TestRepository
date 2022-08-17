@@ -1,0 +1,5 @@
+student
+teacher
+doctor
+teacher
+painter

@@ -1,0 +1,16 @@
+good-looking
+ugly
+short
+medium height
+tall
+heavy
+medium
+slim
+thin
+strong
+weak
+young
+middle aged
+old
+dark
+light

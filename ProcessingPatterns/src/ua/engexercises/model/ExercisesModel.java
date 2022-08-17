@@ -89,6 +89,10 @@ public class ExercisesModel {
 				answer.substring(0, answer.length() - 1).equals(userInput) )
 			return true;
 		
+		if ( answer.endsWith("?") &&
+				answer.substring(0, answer.length() - 1).equals(userInput) )
+			return true;
+
 		if (isAnswerContainsContractions(userInput)) {
 			logger.info( "user input contain contraction" );
 			String userInputWithReplacedContractions = replaceContractions(userInput);
@@ -100,6 +104,10 @@ public class ExercisesModel {
 			if ( answer.endsWith(".") &&
 					answer.substring(0, answer.length() - 1)
 						  .equals(userInputWithReplacedContractions) )
+				return true;
+			
+			if ( answer.endsWith("?") &&
+					answer.substring(0, answer.length() - 1).equals(userInputWithReplacedContractions) )
 				return true;
 		}
 		
