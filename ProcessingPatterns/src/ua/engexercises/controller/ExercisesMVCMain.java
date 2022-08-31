@@ -1,6 +1,7 @@
 package ua.engexercises.controller;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -9,6 +10,7 @@ import java.util.logging.SimpleFormatter;
 
 import ua.engexercises.model.DBGetData;
 import ua.engexercises.model.ExercisesModel;
+import ua.engexercises.model.RandomNumber;
 import ua.engexercises.view.ExercisesView;
 
 public class ExercisesMVCMain {
@@ -38,12 +40,7 @@ public class ExercisesMVCMain {
 			controller.processingUser();
 		} catch ( IOException exc ) {
 			System.out.println( exc );			
-		}
-		
-		view.printMessage( "=== Конец работы программы ===" );
-
+		}		
 	}
-	
-
 
 }

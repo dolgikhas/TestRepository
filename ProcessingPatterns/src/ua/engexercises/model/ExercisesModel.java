@@ -56,6 +56,7 @@ public class ExercisesModel {
 	public void setProcessingPatternObject(String theme, String variant, String pattern) throws Exception {
 		// 1. get list pattern forms
 		ArrayList<String> patternForms = dbData.getListPatternForms( theme, variant, pattern );
+		logger.info( "get list pattern (" + pattern + ") forms" );
 		
 		// 2. get random number
 		int randomNumber = RandomNumber.getRandomNumber(patternForms.size());

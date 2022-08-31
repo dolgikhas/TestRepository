@@ -7,3 +7,5 @@ it's	it is
 we're	we are
 you're	you are
 they're	they are
+aren't	are not
+isn't	is not

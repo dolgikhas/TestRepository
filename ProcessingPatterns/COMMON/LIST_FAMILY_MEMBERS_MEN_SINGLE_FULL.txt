@@ -1,0 +1,7 @@
+father
+brother
+son
+uncle
+husband
+nephew
+cousin

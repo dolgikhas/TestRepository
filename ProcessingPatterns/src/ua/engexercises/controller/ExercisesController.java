@@ -141,8 +141,8 @@ public class ExercisesController {
 		logger.info( "Get list themes" );
 		view.printList( DBGetData.getMessageListThemes(), listThemes );
 		
-		int themeNumber = 1; //getNumberFromUser( DBGetData.getMessageGetThemeNumber(),
-				//model.getThemesNumber() - 1, DBGetData.getMessageNotCorrectThemeNumber() );
+		int themeNumber = getNumberFromUser( DBGetData.getMessageGetThemeNumber(),
+				model.getThemesNumber() - 1, DBGetData.getMessageNotCorrectThemeNumber() );
 		logger.info( "Get theme number: " + themeNumber );
 
 		String theme = listThemes.get(themeNumber); 
@@ -153,8 +153,8 @@ public class ExercisesController {
 	private int getNumberFromUser( String message, int size, String messageNotCorrect ) {
       view.printMessage( message );
 		int userChoise = scanner.nextInt();
-		while ( userChoise < 0 || userChoise > size ) {
-			view.printMessage( messageNotCorrect );
+		while (userChoise < 0 || userChoise > size) {
+			view.printMessage(messageNotCorrect);
 			userChoise = Integer.parseInt(scanner.nextLine());
 //			userChoise = scanner.nextInt();
 		}

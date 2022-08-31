@@ -1,0 +1,11 @@
+book
+ball
+pen
+pencil
+cat
+computer
+guitar
+desk
+notebook
+eraser
+egg

@@ -49,19 +49,35 @@ public class ProcessingExpressions {
 			return true;
 		if ( subject.equals("I") && objectStr.equals("us") )
 			return true;
+		if ( subject.equals("I") && objectStr.equals("my") )
+			return true;
+		if ( subject.equals("I") && objectStr.equals("our") )
+			return true;
 		if ( subject.equals("you") && objectStr.equals("you") )
 			return true;
+		if ( subject.equals("you") && objectStr.equals("your") )
+			return true;
 		if ( subject.equals("he") && objectStr.equals("him") )
+			return true;
+		if ( subject.equals("he") && objectStr.equals("his") )
 			return true;
 		if ( subject.equals("she") && objectStr.equals("her") )
 			return true;
 		if ( subject.equals("it") && objectStr.equals("it") )
 			return true;
+		if ( subject.equals("it") && objectStr.equals("its") )
+			return true;
 		if ( subject.equals("we") && objectStr.equals("us") )
 			return true;
 		if ( subject.equals("we") && objectStr.equals("me") )
 			return true;
+		if ( subject.equals("we") && objectStr.equals("my") )
+			return true;
+		if ( subject.equals("we") && objectStr.equals("our") )
+			return true;
 		if ( subject.equals("they") && objectStr.equals("them") )
+			return true;
+		if ( subject.equals("they") && objectStr.equals("their") )
 			return true;
 			
 			

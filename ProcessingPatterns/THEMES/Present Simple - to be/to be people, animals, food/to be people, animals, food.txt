@@ -1,0 +1,15 @@
+It (to be) - #LIST_WHO_SINGLE_PEOPLE#	It is a #LIST_WHO_SINGLE_PEOPLE#.
+It (to be) - #LIST_EAT_A#	It is a #LIST_EAT_A#.
+It (to be) - #LIST_EAT_AN#	It is an #LIST_EAT_AN#.
+It (to be) - #LIST_ANIMALS_SINGLE_A#	It is a #LIST_ANIMALS_SINGLE_A#.
+It (to be) - #LIST_ANIMALS_SINGLE_AN#	It is an #LIST_ANIMALS_SINGLE_AN#.
+It not (to be) - #LIST_WHO_SINGLE_PEOPLE#	It is not a #LIST_WHO_SINGLE_PEOPLE#.
+It not (to be) - #LIST_EAT_A#	It is not a #LIST_EAT_A#.
+It not (to be) - #LIST_EAT_AN#	It is not an #LIST_EAT_AN#.
+It not (to be) - #LIST_ANIMALS_SINGLE_A#	It is not a #LIST_ANIMALS_SINGLE_A#.
+It not (to be) - #LIST_ANIMALS_SINGLE_AN#	It is not an #LIST_ANIMALS_SINGLE_AN#.
+Question: it (to be) - #LIST_WHO_SINGLE_PEOPLE#	Is it a #LIST_WHO_SINGLE_PEOPLE#?
+Question: it (to be) - #LIST_EAT_A#	Is it a #LIST_EAT_A#?
+Question: it (to be) - #LIST_EAT_AN#	Is it an #LIST_EAT_AN#?
+Question: it (to be) - #LIST_ANIMALS_SINGLE_A#	Is it a #LIST_ANIMALS_SINGLE_A#?
+Question: it (to be) - #LIST_ANIMALS_SINGLE_AN#	Is it an #LIST_ANIMALS_SINGLE_AN#?

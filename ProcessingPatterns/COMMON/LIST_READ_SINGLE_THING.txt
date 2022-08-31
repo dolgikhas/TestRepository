@@ -1,0 +1,4 @@
+newspaper
+book
+menu
+magazine
