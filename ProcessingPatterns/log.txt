@@ -1,28 +1,4 @@
-אגד. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
+סוםע. 02, 2022 4:57:51 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-אגד. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
-INFO: Get list themes
-אגד. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
-INFO: Get theme number: 0
-אגד. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getThemeByUserInput
-INFO: Get theme: Present Simple - to do
-אגד. 10, 2022 5:04:29 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
-INFO: Get list variants for theme: Present Simple - to do
-אגד. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
-INFO: Get variant number from user: 6
-אגד. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getVariantByUserInput
-INFO: Get variant: to eat
-אגד. 10, 2022 5:04:31 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
-INFO: Get list patterns for theme, variant: Present Simple - to do, to eat
-אגד. 10, 2022 5:04:32 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
-INFO: Get pattern number from user: 2
-אגד. 10, 2022 5:04:32 PM ua.engexercises.controller.ExercisesController getPatternByUserInput
-INFO: Get pattern: to eat something with article an
-אגד. 10, 2022 5:04:32 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 4
-אגד. 10, 2022 5:04:32 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: (#LIST_WHO_PLURAL_AND_I#) not to eat (#LIST_EAT_AN#)	#LIST_WHO_PLURAL_AND_I# don't eat an #LIST_EAT_AN#.
-אגד. 10, 2022 5:04:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 9
-אגד. 10, 2022 5:04:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Question: (#LIST_WHO_SINGLE#) to eat (#LIST_EAT_AN#)?	Does #LIST_WHO_SINGLE# eat an #LIST_EAT_AN#.
+סוםע. 02, 2022 4:57:51 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+INFO: view.initView() complete

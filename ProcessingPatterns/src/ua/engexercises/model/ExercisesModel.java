@@ -49,7 +49,7 @@ public class ExercisesModel {
 		return dbData.getListVariants( theme );
 	}
 
-	public ArrayList<String> getListTemplates(String theme, String variant) throws FileNotFoundException, IOException {
+	public ArrayList<String> getListPatterns(String theme, String variant) throws FileNotFoundException, IOException {
 		return dbData.getListTemplates( theme, variant );
 	}
 

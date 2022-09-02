@@ -1,0 +1,7 @@
+work
+house
+family
+dog
+cat
+pillow
+phone

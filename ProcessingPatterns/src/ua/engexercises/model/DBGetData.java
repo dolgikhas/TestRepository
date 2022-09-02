@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.swing.Icon;
+
 public class DBGetData {
 
 	HashMap<String, ArrayList<String>> dataDB;
@@ -116,4 +118,27 @@ public class DBGetData {
 				+ DBGetDataConstants.FILE_MAP_CONTRACTIONS );
 	}
 
+	public static String getLabelTheme() {
+		return DBGetDataConstants.LABEL_GET_THEME;
+	}
+
+	public static String getLabelVariant() {
+		return DBGetDataConstants.LABEL_GET_VARIANT;
+	}
+
+	public static String getLabelPattern() {
+		return DBGetDataConstants.LABEL_GET_PATTERN;
+	}
+
+	public static String getLblSetCheckPatternMode() {
+		return DBGetDataConstants.LABEL_SET_CHECK_PATTERN_MODE;
+	}
+
+	public static String getLblStopCheckPatternMode() {
+		return DBGetDataConstants.LABEL_STOP_CHECK_PATTERN_MODE;
+	}
+
+	public static String getMessageDefaultTask() {
+		return DBGetDataConstants.MESSAGE_DEFAULT_TASK;
+	}
 }

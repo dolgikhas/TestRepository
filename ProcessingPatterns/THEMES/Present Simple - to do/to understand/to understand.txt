@@ -1,0 +1,6 @@
+#LIST_WHO_PLURAL_AND_I# (to understand)	#LIST_WHO_PLURAL_AND_I# understand.
+#LIST_WHO_SINGLE_WITHOUT_IT# (to understand)	#LIST_WHO_SINGLE_WITHOUT_IT# understands.
+#LIST_WHO_PLURAL_AND_I# not (to understand)	#LIST_WHO_PLURAL_AND_I# don't understand.
+#LIST_WHO_SINGLE_WITHOUT_IT# not (to understand)	#LIST_WHO_SINGLE_WITHOUT_IT# doesn't understand.
+Question: #LIST_WHO_PLURAL_AND_I# understand?	Do #LIST_WHO_PLURAL_AND_I# understand?
+Question: #LIST_WHO_SINGLE_WITHOUT_IT# understand?	Does #LIST_WHO_SINGLE_WITHOUT_IT# understand?

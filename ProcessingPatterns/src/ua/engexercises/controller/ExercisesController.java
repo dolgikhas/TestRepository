@@ -94,7 +94,7 @@ public class ExercisesController {
 	}
 
 	private String getPatternByUserInput(String theme, String variant) throws FileNotFoundException, IOException {
-		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
+		ArrayList<String> listPatterns = model.getListPatterns( theme, variant );
 		logger.info( "Get list patterns for theme, variant: " + theme + ", " + variant );
 
 		view.printList( DBGetData.getMessageListPatterns(), listPatterns );
@@ -114,7 +114,7 @@ public class ExercisesController {
 
 	private String getRandomPatternByVariant(String theme, String variant) throws FileNotFoundException, IOException {
 		String pattern;
-		ArrayList<String> listPatterns = model.getListTemplates( theme, variant );
+		ArrayList<String> listPatterns = model.getListPatterns( theme, variant );
 		logger.info( "Get list patterns for theme, variant: " + theme + ", " + variant );
 		int randomNumber = RandomNumber.getRandomNumber(listPatterns.size());
 		pattern = listPatterns.get(randomNumber);

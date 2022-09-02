@@ -11,7 +11,7 @@ import java.util.logging.SimpleFormatter;
 import ua.engexercises.model.DBGetData;
 import ua.engexercises.model.ExercisesModel;
 import ua.engexercises.model.RandomNumber;
-import ua.engexercises.view.ExercisesView;
+import ua.engexercises.view.ExercisesFrame;
 
 public class ExercisesMVCMain {
 	private final static Logger logger = Logger.getLogger("Test");
@@ -33,14 +33,24 @@ public class ExercisesMVCMain {
 			logger.log( Level.WARNING, "Exception in initLoggerFileHandler: ", exc );
 		}
 
-		ExercisesView view = new ExercisesView();
-		ExercisesModel model = new ExercisesModel( logger );
-		ExercisesController controller = new ExercisesController( model, view, logger );
+//		ExercisesView view = new ExercisesView();
+//		ExercisesModel model = new ExercisesModel( logger );
+//		ExercisesController controller = new ExercisesController( model, view, logger );
+//		try {
+//			controller.processingUser();
+//		} catch ( IOException exc ) {
+//			System.out.println( exc );			
+//		}
+		
+		ExercisesFrame view = new ExercisesFrame();
+		ExercisesModel model = new ExercisesModel(logger);
+		ExercisesSwingController controller = new ExercisesSwingController(model, view, logger);
+		
 		try {
-			controller.processingUser();
+			controller.initSwingController();
 		} catch ( IOException exc ) {
 			System.out.println( exc );			
-		}		
+		}
 	}
 
 }
