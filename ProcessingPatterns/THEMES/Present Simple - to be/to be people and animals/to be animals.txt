@@ -1,8 +1,8 @@
-It (to be) #LIST_ANIMALS_SINGLE_A#.	It is a #LIST_ANIMALS_SINGLE_A#.
-It (to be) #LIST_ANIMALS_SINGLE_AN#.	It is an #LIST_ANIMALS_SINGLE_AN#.
-It not (to be) #LIST_ANIMALS_SINGLE_A#.	It isn't a #LIST_ANIMALS_SINGLE_A#.
-It not (to be) #LIST_ANIMALS_SINGLE_AN#.	It isn't an #LIST_ANIMALS_SINGLE_AN#.
-Question it (to be) #LIST_ANIMALS_SINGLE_A#?	Is it a #LIST_ANIMALS_SINGLE_A#?
-Question it (to be) #LIST_ANIMALS_SINGLE_AN#?	Is it an #LIST_ANIMALS_SINGLE_AN#?
-A #LIST_ANIMALS_SINGLE_A# (to be) animal.	A #LIST_ANIMALS_SINGLE_A# is an animal.
-An #LIST_ANIMALS_SINGLE_AN# (to be) animal.	An #LIST_ANIMALS_SINGLE_AN# is an animal.
+It (to be) #ANIMALS_SINGLE_A#.	It is a #ANIMALS_SINGLE_A#.
+It (to be) #ANIMALS_SINGLE_AN#.	It is an #ANIMALS_SINGLE_AN#.
+It not (to be) #ANIMALS_SINGLE_A#.	It isn't a #ANIMALS_SINGLE_A#.
+It not (to be) #ANIMALS_SINGLE_AN#.	It isn't an #ANIMALS_SINGLE_AN#.
+Question it (to be) #ANIMALS_SINGLE_A#?	Is it a #ANIMALS_SINGLE_A#?
+Question it (to be) #ANIMALS_SINGLE_AN#?	Is it an #ANIMALS_SINGLE_AN#?
+A #ANIMALS_SINGLE_A# (to be) animal.	A #ANIMALS_SINGLE_A# is an animal.
+An #ANIMALS_SINGLE_AN# (to be) animal.	An #ANIMALS_SINGLE_AN# is an animal.

@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.swing.Icon;
-
 public class DBGetData {
 
 	HashMap<String, ArrayList<String>> dataDB;
@@ -140,5 +138,13 @@ public class DBGetData {
 
 	public static String getMessageDefaultTask() {
 		return DBGetDataConstants.MESSAGE_DEFAULT_TASK;
+	}
+
+	public static String getMessageCorectAnswer() {
+		return DBGetDataConstants.MESSAGE_CORRECT_ANSWER;
+	}
+
+	public static String getMessageNumberCorrectAnswers() {
+		return DBGetDataConstants.MESSAGE_NUMBER_CORRECT_ANSWERS;
 	}
 }

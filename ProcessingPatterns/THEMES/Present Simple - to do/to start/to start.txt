@@ -1,6 +1,6 @@
-#LIST_WHO_PLURAL_AND_I# (to start)	#LIST_WHO_PLURAL_AND_I# start.
-#LIST_WHO_SINGLE_WITHOUT_IT# (to start)	#LIST_WHO_SINGLE_WITHOUT_IT# starts.
-#LIST_WHO_PLURAL_AND_I# not (to start)	#LIST_WHO_PLURAL_AND_I# don't start.
-#LIST_WHO_SINGLE_WITHOUT_IT# not (to start)	#LIST_WHO_SINGLE_WITHOUT_IT# doesn't start.
-Question: #LIST_WHO_PLURAL_AND_I# (to start)?	Do #LIST_WHO_PLURAL_AND_I# start?
-Question: #LIST_WHO_SINGLE_WITHOUT_IT# (to start)?	Does #LIST_WHO_SINGLE_WITHOUT_IT# start?
+#WHO_PLURAL_AND_I# (to start)	#WHO_PLURAL_AND_I# start.
+#WHO_SINGLE_WITHOUT_IT# (to start)	#WHO_SINGLE_WITHOUT_IT# starts.
+#WHO_PLURAL_AND_I# not (to start)	#WHO_PLURAL_AND_I# don't start.
+#WHO_SINGLE_WITHOUT_IT# not (to start)	#WHO_SINGLE_WITHOUT_IT# doesn't start.
+Question: #WHO_PLURAL_AND_I# (to start)?	Do #WHO_PLURAL_AND_I# start?
+Question: #WHO_SINGLE_WITHOUT_IT# (to start)?	Does #WHO_SINGLE_WITHOUT_IT# start?

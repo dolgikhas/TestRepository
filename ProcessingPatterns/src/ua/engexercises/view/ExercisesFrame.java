@@ -18,7 +18,8 @@ public class ExercisesFrame extends JFrame {
 	private JButton btnSetCheckPatternMode;
 	private JButton btnStopCheckPatternMode;
 	private JLabel patternTask;
-	private JTextField answer;
+	private JTextField txtAnswerField;
+	private JLabel lblStatistic;
 
 	public void initView() {
 		getPatternPanel = new JPanel();
@@ -27,7 +28,8 @@ public class ExercisesFrame extends JFrame {
 		checkPatternPanel = new JPanel();
 		checkPatternPanel.setLayout(new GridLayout(2, 2));
 		
-		add(new JLabel("message"), BorderLayout.SOUTH);
+		lblStatistic = new JLabel("statistic", JLabel.CENTER);
+		add(lblStatistic, BorderLayout.SOUTH);
 	}
 	
 	public void completeInitView() {
@@ -40,9 +42,9 @@ public class ExercisesFrame extends JFrame {
 	}
 
 	public void createTextFieldAnswer() {
-		answer = new JTextField("");
-		answer.setEnabled(false);
-		checkPatternPanel.add(answer);
+		txtAnswerField = new JTextField("");
+		txtAnswerField.setEnabled(false);
+		checkPatternPanel.add(txtAnswerField);
 	}
 
 	public void createLabelPatternTask(String label) {
@@ -132,7 +134,7 @@ public class ExercisesFrame extends JFrame {
 		comboBoxVariants.setEnabled(false);
 		comboBoxPatterns.setEnabled(false);
 		btnSetCheckPatternMode.setEnabled(false);
-		answer.setEnabled(true);
+		txtAnswerField.setEnabled(true);
 		btnStopCheckPatternMode.setEnabled(true);
 	}
 	
@@ -141,8 +143,32 @@ public class ExercisesFrame extends JFrame {
 		comboBoxVariants.setEnabled(true);
 		comboBoxPatterns.setEnabled(true);
 		btnSetCheckPatternMode.setEnabled(true);
-		answer.setEnabled(false);		
+		txtAnswerField.setEnabled(false);		
 		btnStopCheckPatternMode.setEnabled(false);
+	}
+
+	public String getCurrentPattern() {
+		return comboBoxPatterns.getItemAt(comboBoxPatterns.getSelectedIndex());
+	}
+
+	public void setTask(String task) {
+		patternTask.setText(task);
+	}
+	
+	public void setStatistic(String text) {
+		lblStatistic.setText(text);
+	}
+
+	public String getUserInput() {
+		return txtAnswerField.getText();
+	}
+	
+	public JTextField getTxtAnswerField() {
+		return txtAnswerField;
+	}
+
+	public void setAnswerFieldValue(String text) {
+		txtAnswerField.setText(text);
 	}
 
 }

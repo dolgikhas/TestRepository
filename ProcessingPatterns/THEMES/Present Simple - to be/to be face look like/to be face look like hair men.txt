@@ -1,4 +1,4 @@
-#LIST_WHO_PLURAL# (to have) #LIST_ADJ_HAIR_MEN_PLURAL#	#LIST_WHO_PLURAL# have #LIST_ADJ_HAIR_MEN_PLURAL#.
-I (to have) #LIST_ADJ_HAIR_MEN#	I have a #LIST_ADJ_HAIR_MEN#.
-You (to have) #LIST_ADJ_HAIR_MEN#	You have a #LIST_ADJ_HAIR_MEN#.
-He (to have) #LIST_ADJ_HAIR_MEN#	He has a #LIST_ADJ_HAIR_MEN#.
+#WHO_PLURAL# (to have) #ADJ_HAIR_MEN_PLURAL#	#WHO_PLURAL# have #ADJ_HAIR_MEN_PLURAL#.
+I (to have) #ADJ_HAIR_MEN#	I have a #ADJ_HAIR_MEN#.
+You (to have) #ADJ_HAIR_MEN#	You have a #ADJ_HAIR_MEN#.
+He (to have) #ADJ_HAIR_MEN#	He has a #ADJ_HAIR_MEN#.

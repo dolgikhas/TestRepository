@@ -1,0 +1,9 @@
+I (to be nationality) #NATIONALITY#	I am #NATIONALITY#.
+#WHO_SINGLE_WITHOUT_IT# (to be nationality) #NATIONALITY#	#WHO_SINGLE_WITHOUT_IT# is #NATIONALITY#.
+#WHO_PLURAL# (to be nationality) #NATIONALITY#	#WHO_PLURAL# are #NATIONALITY#.
+I not (to be nationality) #NATIONALITY#	I am not #NATIONALITY#.
+#WHO_SINGLE_WITHOUT_IT# not (to be nationality) #NATIONALITY#	#WHO_SINGLE_WITHOUT_IT# is not #NATIONALITY#.
+#WHO_PLURAL# not (to be nationality) #NATIONALITY#	#WHO_PLURAL# are not #NATIONALITY#.
+Question: I (to be nationality) #NATIONALITY#?	Am I #NATIONALITY#?
+Question: #WHO_SINGLE_WITHOUT_IT# (to be nationality) #NATIONALITY#?	Is #WHO_SINGLE_WITHOUT_IT# #NATIONALITY#?
+Question: #WHO_PLURAL# (to be nationality) #NATIONALITY#?	Are #WHO_PLURAL# #NATIONALITY#?

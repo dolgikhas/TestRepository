@@ -1,18 +1,18 @@
-(#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT#)	A #LIST_ANIMALS_SINGLE_A# eats #LIST_EAT#.
-(#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT#)	A #LIST_ANIMALS_SINGLE_AN# eats #LIST_EAT#.
-(#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT_A#)	A #LIST_ANIMALS_SINGLE_A# eats a #LIST_EAT_A#.
-(#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT_A#)	An #LIST_ANIMALS_SINGLE_AN# eats a #LIST_EAT_A#.
-(#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT_AN#)	A #LIST_ANIMALS_SINGLE_A# eats an #LIST_EAT_AN#.
-(#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT_AN#)	An #LIST_ANIMALS_SINGLE_AN# eats an #LIST_EAT_AN#.
-(#LIST_ANIMALS_SINGLE_A#) not eats (#LIST_EAT#)	A #LIST_ANIMALS_SINGLE_A# does not eat #LIST_EAT#.
-(#LIST_ANIMALS_SINGLE_AN#) not eats (#LIST_EAT#)	An #LIST_ANIMALS_SINGLE_AN# does not eat #LIST_EAT#.
-(#LIST_ANIMALS_SINGLE_A#) not eat (#LIST_EAT_A#)	A #LIST_ANIMALS_SINGLE_A# does not eat a #LIST_EAT_A#.
-(#LIST_ANIMALS_SINGLE_AN#) not eat (#LIST_EAT_A#)	An #LIST_ANIMALS_SINGLE_AN# does not eat a #LIST_EAT_A#.
-(#LIST_ANIMALS_SINGLE_A#) not eat (#LIST_EAT_AN#)	A #LIST_ANIMALS_SINGLE_A# does not eat an #LIST_EAT_AN#.
-(#LIST_ANIMALS_SINGLE_AN#) not eat (#LIST_EAT_AN#)	An #LIST_ANIMALS_SINGLE_AN# does not eat an #LIST_EAT_AN#.
-Question: (#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT#)?	Does a #LIST_ANIMALS_SINGLE_A# eat #LIST_EAT#?
-Question: (#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT#)?	Does an #LIST_ANIMALS_SINGLE_AN# eat #LIST_EAT#?
-Question: (#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT_A#)?	Does a #LIST_ANIMALS_SINGLE_A# eat a #LIST_EAT_A#?
-Question: (#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT_A#)?	Does an #LIST_ANIMALS_SINGLE_AN# eat a #LIST_EAT_A#?
-Question: (#LIST_ANIMALS_SINGLE_A#) to eat (#LIST_EAT_AN#)?	Does a #LIST_ANIMALS_SINGLE_A# eat an #LIST_EAT_AN#?
-Question: (#LIST_ANIMALS_SINGLE_AN#) to eat (#LIST_EAT_AN#)?	Does an #LIST_ANIMALS_SINGLE_AN# eat an #LIST_EAT_AN#?
+(#ANIMALS_SINGLE_A#) to eat (#EAT#)	A #ANIMALS_SINGLE_A# eats #EAT#.
+(#ANIMALS_SINGLE_AN#) to eat (#EAT#)	A #ANIMALS_SINGLE_AN# eats #EAT#.
+(#ANIMALS_SINGLE_A#) to eat (#EAT_A#)	A #ANIMALS_SINGLE_A# eats a #EAT_A#.
+(#ANIMALS_SINGLE_AN#) to eat (#EAT_A#)	An #ANIMALS_SINGLE_AN# eats a #EAT_A#.
+(#ANIMALS_SINGLE_A#) to eat (#EAT_AN#)	A #ANIMALS_SINGLE_A# eats an #EAT_AN#.
+(#ANIMALS_SINGLE_AN#) to eat (#EAT_AN#)	An #ANIMALS_SINGLE_AN# eats an #EAT_AN#.
+(#ANIMALS_SINGLE_A#) not eats (#EAT#)	A #ANIMALS_SINGLE_A# does not eat #EAT#.
+(#ANIMALS_SINGLE_AN#) not eats (#EAT#)	An #ANIMALS_SINGLE_AN# does not eat #EAT#.
+(#ANIMALS_SINGLE_A#) not eat (#EAT_A#)	A #ANIMALS_SINGLE_A# does not eat a #EAT_A#.
+(#ANIMALS_SINGLE_AN#) not eat (#EAT_A#)	An #ANIMALS_SINGLE_AN# does not eat a #EAT_A#.
+(#ANIMALS_SINGLE_A#) not eat (#EAT_AN#)	A #ANIMALS_SINGLE_A# does not eat an #EAT_AN#.
+(#ANIMALS_SINGLE_AN#) not eat (#EAT_AN#)	An #ANIMALS_SINGLE_AN# does not eat an #EAT_AN#.
+Question: (#ANIMALS_SINGLE_A#) to eat (#EAT#)?	Does a #ANIMALS_SINGLE_A# eat #EAT#?
+Question: (#ANIMALS_SINGLE_AN#) to eat (#EAT#)?	Does an #ANIMALS_SINGLE_AN# eat #EAT#?
+Question: (#ANIMALS_SINGLE_A#) to eat (#EAT_A#)?	Does a #ANIMALS_SINGLE_A# eat a #EAT_A#?
+Question: (#ANIMALS_SINGLE_AN#) to eat (#EAT_A#)?	Does an #ANIMALS_SINGLE_AN# eat a #EAT_A#?
+Question: (#ANIMALS_SINGLE_A#) to eat (#EAT_AN#)?	Does a #ANIMALS_SINGLE_A# eat an #EAT_AN#?
+Question: (#ANIMALS_SINGLE_AN#) to eat (#EAT_AN#)?	Does an #ANIMALS_SINGLE_AN# eat an #EAT_AN#?

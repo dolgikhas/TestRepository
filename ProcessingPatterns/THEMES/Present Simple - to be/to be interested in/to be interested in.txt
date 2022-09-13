@@ -1,0 +1,9 @@
+I (to be interested in) #INTERESTED_IN#	I am interested in #INTERESTED_IN#.
+#WHO_SINGLE_WITHOUT_IT# (to be interested in) #INTERESTED_IN#	#WHO_SINGLE_WITHOUT_IT# is interested in #INTERESTED_IN#.
+#WHO_PLURAL# (to be interested in) #INTERESTED_IN#	#WHO_PLURAL# are interested in #INTERESTED_IN#.
+I not (to be interested in) #INTERESTED_IN#	I am not interested in #INTERESTED_IN#.
+#WHO_SINGLE_WITHOUT_IT# not (to be interested in) #INTERESTED_IN#	#WHO_SINGLE_WITHOUT_IT# is not interested in #INTERESTED_IN#.
+#WHO_PLURAL# not (to be interested in) #INTERESTED_IN#	#WHO_PLURAL# are not interested in #INTERESTED_IN#.
+Question: I (to be interested in) #INTERESTED_IN#?	Am I interested in #INTERESTED_IN#?
+Question: #WHO_SINGLE_WITHOUT_IT# (to be interested in) #INTERESTED_IN#?	Is #WHO_SINGLE_WITHOUT_IT# interested in #INTERESTED_IN#?
+Question: #WHO_PLURAL# (to be interested in) #INTERESTED_IN#?	Are #WHO_PLURAL# interested in #INTERESTED_IN#?

@@ -1,6 +1,6 @@
-(#LIST_WHO_PLURAL_AND_I#) to drink (#LIST_DRINK#)	#LIST_WHO_PLURAL_AND_I# drink #LIST_DRINK#.
-(#LIST_WHO_SINGLE#) to drink (#LIST_DRINK#)	#LIST_WHO# drinks #LIST_DRINK#.
-(#LIST_WHO_PLURAL_AND_I#) not to drink (#LIST_DRINK#)	#LIST_WHO_PLURAL_AND_I# do not drink #LIST_DRINK#.
-(#LIST_WHO_SINGLE#) not to drink (#LIST_DRINK#)	#LIST_WHO_SINGLE# does not drink #LIST_DRINK#.
-Question: (#LIST_WHO_PLURAL_AND_I#) to drink (#LIST_DRINK#)?	Do #LIST_WHO_PLURAL_AND_I# drink #LIST_DRINK#?
-Question: (#LIST_WHO_SINGLE#) to drink (#LIST_DRINK#)?	Does #LIST_WHO_SINGLE# drink #LIST_DRINK#?
+(#WHO_PLURAL_AND_I#) to drink (#DRINK#)	#WHO_PLURAL_AND_I# drink #DRINK#.
+(#WHO_SINGLE#) to drink (#DRINK#)	#WHO# drinks #DRINK#.
+(#WHO_PLURAL_AND_I#) not to drink (#DRINK#)	#WHO_PLURAL_AND_I# do not drink #DRINK#.
+(#WHO_SINGLE#) not to drink (#DRINK#)	#WHO_SINGLE# does not drink #DRINK#.
+Question: (#WHO_PLURAL_AND_I#) to drink (#DRINK#)?	Do #WHO_PLURAL_AND_I# drink #DRINK#?
+Question: (#WHO_SINGLE#) to drink (#DRINK#)?	Does #WHO_SINGLE# drink #DRINK#?

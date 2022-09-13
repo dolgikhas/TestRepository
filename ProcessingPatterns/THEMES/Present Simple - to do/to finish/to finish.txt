@@ -1,6 +1,6 @@
-#LIST_WHO_PLURAL_AND_I# (to finish)	#LIST_WHO_PLURAL_AND_I# finish.
-#LIST_WHO_SINGLE# (to finish)	#LIST_WHO_SINGLE# finishes.
-#LIST_WHO_PLURAL_AND_I# not (to finish)	#LIST_WHO_PLURAL_AND_I# don't finish.
-#LIST_WHO_SINGLE# not (to finish)	#LIST_WHO_SINGLE# doesn't finish.
-Question: #LIST_WHO_PLURAL_AND_I# (to finish)?	Do #LIST_WHO_PLURAL_AND_I# finish?
-Question: #LIST_WHO_SINGLE# (to finish)?	Does #LIST_WHO_SINGLE# finish?
+#WHO_PLURAL_AND_I# (to finish)	#WHO_PLURAL_AND_I# finish.
+#WHO_SINGLE# (to finish)	#WHO_SINGLE# finishes.
+#WHO_PLURAL_AND_I# not (to finish)	#WHO_PLURAL_AND_I# don't finish.
+#WHO_SINGLE# not (to finish)	#WHO_SINGLE# doesn't finish.
+Question: #WHO_PLURAL_AND_I# (to finish)?	Do #WHO_PLURAL_AND_I# finish?
+Question: #WHO_SINGLE# (to finish)?	Does #WHO_SINGLE# finish?

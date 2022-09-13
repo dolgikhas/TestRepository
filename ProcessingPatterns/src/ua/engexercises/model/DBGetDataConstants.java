@@ -31,4 +31,6 @@ public interface DBGetDataConstants {
 	public String LABEL_SET_CHECK_PATTERN_MODE = "Начать проверку паттернов";
 	public String LABEL_STOP_CHECK_PATTERN_MODE = "Завершить проверку паттернов";
 	public String MESSAGE_DEFAULT_TASK = "Задание:";
+	public String MESSAGE_CORRECT_ANSWER = "Правильно! :-)";
+	public String MESSAGE_NUMBER_CORRECT_ANSWERS = "Кол-во правильных ответов:";
 }

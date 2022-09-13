@@ -9,20 +9,26 @@ import javax.swing.JOptionPane;
 
 import ua.engexercises.model.DBGetData;
 import ua.engexercises.model.ExercisesModel;
+import ua.engexercises.model.PatternTask;
 import ua.engexercises.view.ExercisesFrame;
 
 public class ExercisesSwingController {
 	ExercisesModel model;
 	ExercisesFrame view;
 	Logger logger;
+	PatternTask patternTask;
+	private int numberCorrectAnswers;
 	
 	public ExercisesSwingController(ExercisesModel model, ExercisesFrame view, Logger logger) {
 		this.model = model;
 		this.view = view;
 		this.logger = logger;
+		numberCorrectAnswers = 0;
 	}
 
 	public void initSwingController() throws FileNotFoundException, IOException {
+		model.getCommonLists();
+
 		view.initView();
 		logger.info("view.initView() complete");
 		
@@ -35,9 +41,43 @@ public class ExercisesSwingController {
 		createButtonStopCheckPatternModeWithListener();
 
 		view.createLabelPatternTask(DBGetData.getMessageDefaultTask());
-		view.createTextFieldAnswer();
+		logger.info("view.createLabelPatternTask(DBGetData.getMessageDefaultTask())");
+		
+		createTextFieldAnswerWithListener();
 		
 		view.completeInitView();
+		logger.info("view.completeInitView()");
+	}
+
+	public void createTextFieldAnswerWithListener() {
+		view.createTextFieldAnswer();
+		view.getTxtAnswerField().addActionListener(event -> {
+			if (model.checkIsUserInputEqualToAnswer(view.getUserInput())) {
+				view.setStatistic(DBGetData.getMessageCorectAnswer() + " " +
+						DBGetData.getMessageNumberCorrectAnswers() + " " +
+						++numberCorrectAnswers);
+				
+				try {
+					model.setProcessingPatternObject(view.getCurrentTheme(), view.getCurrentVariant(),
+							view.getCurrentPattern());
+
+					patternTask = model.getPatternTask();
+					logger.info( "model.getPatternTask()" );
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				view.setTask(patternTask.getTask());
+				logger.info( "view.setTask(patternTask.getTask())" );
+				
+				view.setAnswerFieldValue("");
+				logger.info( "view.setAnswerFieldValue(\"\")" );
+
+			} else {
+				view.setStatistic(DBGetData.getMessageNotCorrectAnswer());
+			}
+		});
+		logger.info("view.createTextFieldAnswer()");
 	}
 
 	private void createButtonStopCheckPatternModeWithListener() {		
@@ -45,6 +85,7 @@ public class ExercisesSwingController {
 		view.getBtnStopCheckPatternMode().addActionListener(event -> {
 			view.enableGetPatternPanelAndDisableTextField();
 		});
+		logger.info("createButtonStopCheckPatternModeWithListener()");
 	}
 
 	private void createButtonSetCheckPatternModeWithListener() {
@@ -52,8 +93,23 @@ public class ExercisesSwingController {
 		view.getBtnSetCheckPatternMode().addActionListener(event -> {
 			view.disableGetPatternPanelAndEnableTextField();
 			
-//			view.setTask();
+			numberCorrectAnswers = 0;
+			
+			try {
+				model.setProcessingPatternObject(view.getCurrentTheme(), view.getCurrentVariant(),
+						view.getCurrentPattern());
+				
+				patternTask = model.getPatternTask();
+				logger.info( "model.getPatternTask()" );
+				
+				view.setTask(patternTask.getTask());
+				logger.info( "view.setTask(patternTask.getTask())" );
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		});
+		logger.info("createButtonSetCheckPatternModeWithListener()");
 	}
 
 	private void createComboBoxThemes() throws FileNotFoundException, IOException {
@@ -70,12 +126,14 @@ public class ExercisesSwingController {
 				e.printStackTrace();
 			}
 		});
+		logger.info("createComboBoxThemes()");
 	}
 
 	private void createComboBoxPatternsWithListener() throws FileNotFoundException, IOException {
 		ArrayList<String> patterns = model.getListPatterns(view.getCurrentTheme(),
 				view.getCurrentVariant());
 		view.createComboBoxPatterns(DBGetData.getLabelPattern(), patterns);
+		logger.info("createComboBoxPatternsWithListener()");
 	}
 
 	private void createComboBoxVariantsWithListener() throws FileNotFoundException, IOException {
@@ -92,5 +150,6 @@ public class ExercisesSwingController {
 			}
 			
 		});
+		logger.info("createComboBoxVariantsWithListener()");
 	}
 }

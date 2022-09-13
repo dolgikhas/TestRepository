@@ -1,4 +1,66 @@
-сент. 02, 2022 4:57:51 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-сент. 02, 2022 4:57:51 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController initSwingController
 INFO: view.initView() complete
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createComboBoxThemes
+INFO: createComboBoxThemes()
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createComboBoxVariantsWithListener
+INFO: createComboBoxVariantsWithListener()
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createComboBoxPatternsWithListener
+INFO: createComboBoxPatternsWithListener()
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createButtonSetCheckPatternModeWithListener
+INFO: createButtonSetCheckPatternModeWithListener()
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createButtonStopCheckPatternModeWithListener
+INFO: createButtonStopCheckPatternModeWithListener()
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+INFO: view.createLabelPatternTask(DBGetData.getMessageDefaultTask())
+сент. 13, 2022 12:36:31 PM ua.engexercises.controller.ExercisesSwingController createTextFieldAnswerWithListener
+INFO: view.createTextFieldAnswer()
+сент. 13, 2022 12:36:32 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+INFO: view.completeInitView()
+сент. 13, 2022 12:36:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to live with) forms
+сент. 13, 2022 12:36:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 3
+сент. 13, 2022 12:36:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: #WHO_SINGLE_WITHOUT_IT# not (to live) + #WHOM_FULL#	#WHO_SINGLE_WITHOUT_IT# doesn't live with #WHOM_FULL#.
+сент. 13, 2022 12:36:33 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: model.getPatternTask()
+сент. 13, 2022 12:36:33 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setTask(patternTask.getTask())
+сент. 13, 2022 12:36:42 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to live with) forms
+сент. 13, 2022 12:36:42 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 5
+сент. 13, 2022 12:36:42 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Question: #WHO_SINGLE_WITHOUT_IT# (to live) + #WHOM_FULL#?	Does #WHO_SINGLE_WITHOUT_IT# live with #WHOM_FULL#?
+сент. 13, 2022 12:36:42 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: model.getPatternTask()
+сент. 13, 2022 12:36:42 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setTask(patternTask.getTask())
+сент. 13, 2022 12:36:42 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setAnswerFieldValue("")
+сент. 13, 2022 12:36:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to live with) forms
+сент. 13, 2022 12:36:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 2
+сент. 13, 2022 12:36:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: #WHO_PLURAL_AND_I# not (to live) + #WHOM_FULL#	#WHO_PLURAL_AND_I# don't live with #WHOM_FULL#.
+сент. 13, 2022 12:36:47 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: model.getPatternTask()
+сент. 13, 2022 12:36:47 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setTask(patternTask.getTask())
+сент. 13, 2022 12:36:47 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setAnswerFieldValue("")
+сент. 13, 2022 12:36:55 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to live with) forms
+сент. 13, 2022 12:36:55 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 1
+сент. 13, 2022 12:36:55 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: #WHO_SINGLE_WITHOUT_IT# (to live) + #WHOM_FULL#	#WHO_SINGLE_WITHOUT_IT# lives with #WHOM_FULL#.
+сент. 13, 2022 12:36:55 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: model.getPatternTask()
+сент. 13, 2022 12:36:55 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setTask(patternTask.getTask())
+сент. 13, 2022 12:36:55 PM ua.engexercises.controller.ExercisesSwingController lambda$0
+INFO: view.setAnswerFieldValue("")

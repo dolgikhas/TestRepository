@@ -1,6 +1,6 @@
-#LIST_WHO_PLURAL_AND_I# (to work)	#LIST_WHO_PLURAL_AND_I# work.
-#LIST_WHO_SINGLE_WITHOUT_IT# (to work)	#LIST_WHO_SINGLE_WITHOUT_IT# works.
-#LIST_WHO_PLURAL_AND_I# not (to work)	#LIST_WHO_PLURAL_AND_I# don't work.
-#LIST_WHO_SINGLE_WITHOUT_IT# not (to work)	#LIST_WHO_SINGLE_WITHOUT_IT# doesn't work.
-Question: #LIST_WHO_PLURAL_AND_I# (to work)?	Do #LIST_WHO_PLURAL_AND_I# work?
-Question: #LIST_WHO_SINGLE_WITHOUT_IT# (to work)?	Does #LIST_WHO_SINGLE_WITHOUT_IT# work?
+#WHO_PLURAL_AND_I# (to work)	#WHO_PLURAL_AND_I# work.
+#WHO_SINGLE_WITHOUT_IT# (to work)	#WHO_SINGLE_WITHOUT_IT# works.
+#WHO_PLURAL_AND_I# not (to work)	#WHO_PLURAL_AND_I# don't work.
+#WHO_SINGLE_WITHOUT_IT# not (to work)	#WHO_SINGLE_WITHOUT_IT# doesn't work.
+Question: #WHO_PLURAL_AND_I# (to work)?	Do #WHO_PLURAL_AND_I# work?
+Question: #WHO_SINGLE_WITHOUT_IT# (to work)?	Does #WHO_SINGLE_WITHOUT_IT# work?
