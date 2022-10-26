@@ -92,7 +92,7 @@ public class Main {
 //				}
 //				System.out.println("\n\n\n");
 				outputExamplesToFile(word, listExamplesFull);				
-				System.out.println("word: " + word + " " + transcription + " processed!");
+				System.out.println(word + "\t" + transcription + "\tprocessed!");
 			}
 
 //			String word = "awkward";
