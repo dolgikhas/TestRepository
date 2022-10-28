@@ -12,6 +12,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
 
+import mny.processwords.sitedata.GetDataFromSite;
+import mny.processwords.sitedata.SiteKeys;
+
 public class Main {
 	static Document document;
 
@@ -19,9 +22,10 @@ public class Main {
 			.setAddress("https://dictionary.cambridge.org/ru/%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/" +
 					"%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9/WORD")
 			.setKeyTranscription("ipa dipa lpr-2 lpl-1")
+			.setKeyTranslation("trans dtrans dtrans-se ")
 			.setKeyExamples("eg deg")
 			.setKeyExamplesExtra("eg dexamp hax")
-			.setKeyTranslation(null)
+			.setKeyExamplesTranslation(null)
 			.build();
 
 	static SiteKeys keysExamplum = new SiteKeys.Builder()
@@ -29,17 +33,19 @@ public class Main {
 					"BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D1%83%D1%81%D1%81%D0%" +
 					"BA%D0%B8%D0%B9/WORD")
 			.setKeyTranscription(null)
+			.setKeyTranslation("res-word__answers")
 			.setKeyExamples("res-example__src")
 			.setKeyExamplesExtra(null)
-			.setKeyTranslation("res-example__dest")
+			.setKeyExamplesTranslation("res-example__dest")
 			.build();
 
 	static SiteKeys keysEnglishlib = new SiteKeys.Builder()
 			.setAddress("https://englishlib.org/dictionary/en-ru/WORD.html")
 			.setKeyTranscription(null)
+			.setKeyTranslation("else-trans")
 			.setKeyExamples("act_td")
 			.setKeyExamplesExtra(null)
-			.setKeyTranslation(null)
+			.setKeyExamplesTranslation(null)
 			.build();
 	
 	static SiteKeys keysContextReverso = new SiteKeys.Builder()
@@ -47,32 +53,17 @@ public class Main {
 					"%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D1%83%D1%81%D1%" +
 					"81%D0%BA%D0%B8%D0%B9/WORD")
 			.setKeyTranscription(null)
+			.setKeyTranslation("display-term")
 			.setKeyExamples("src ltr")
 			.setKeyExamplesExtra(null)
-			.setKeyTranslation(null)
+			.setKeyExamplesTranslation(null)
 			.build();
 	
 	static SiteKeys[] listSiteKeys = {keysCambridgeDictionary, keysExamplum, keysEnglishlib, keysContextReverso}; 
 	
 	public static void main(String[] args) {
-//		String word = "word";
-//		ArrayList<String> examples = new ArrayList<String>();
-//		examples.add("example 1");
-//		examples.add("example 2");
-//		examples.add("example 3");
-//		
-//		try {
-//			outputExamplesToFile(word, examples);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		
-//		System.out.println("Application works!");
-//		return;
 		try {
+/*
 			ArrayList<String> words = getListItems("words.txt");
 			for (String word : words) {
 				String transcription = "";
@@ -94,7 +85,7 @@ public class Main {
 				outputExamplesToFile(word, listExamplesFull);				
 				System.out.println(word + "\t" + transcription + "\tprocessed!");
 			}
-
+*/
 //			String word = "awkward";
 //			document = Jsoup.connect("https://context.reverso.net/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/" +
 //						"%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D1%83%D1%81%D1%" +
@@ -113,12 +104,30 @@ public class Main {
 //			Elements elements = document.select("li");
 //			for (Element element : elements)
 //				System.out.println(element.text());
-			
-//			// get list elements and its data for attribute and value
-//			Elements elements = document.getElementsByAttributeValue("class", "src ltr");
-//			for (Element element : elements)
-//				System.out.println(element.text());
+		
+		// keysCambridgeDictionary
+		// keysExamplum
+		// keysEnglishlib		
+		// keysContextReverso
 
+		String word = "sob";
+		SiteKeys siteKeys = keysCambridgeDictionary;
+		System.out.println("Cambridge Dictionary");
+		outputValuesByAttribute(word, siteKeys, siteKeys.getKeyTranslation());
+
+		siteKeys = keysExamplum;
+		System.out.println("\nExamplum");
+		outputValuesByAttribute(word, siteKeys, siteKeys.getKeyTranslation());
+
+		siteKeys = keysEnglishlib;
+		System.out.println("\nEnglishlib");
+		outputValuesByAttribute(word, siteKeys, siteKeys.getKeyTranslation());
+
+		siteKeys = keysContextReverso;
+		System.out.println("\nContextReverso");
+		outputValuesByAttribute(word, siteKeys, siteKeys.getKeyTranslation());
+		
+		
 ////			System.out.println("Title: " + document.selectFirst("title").text());
 //			ArrayList<String> examples = (ArrayList<String>) document.getElementsByAttributeValue("class", "res-example__src").eachText();
 //			ArrayList<String> translations = (ArrayList<String>) document.getElementsByAttributeValue("class", "res-example__dest").eachText();
@@ -136,6 +145,18 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private static void outputValuesByAttribute(String word, SiteKeys siteKeys, String key) throws IOException {
+		System.out.println(siteKeys.getAddress().replace("WORD", word));
+		document = Jsoup.connect(siteKeys.getAddress().replace("WORD", word)).get();
+
+//		// get list elements and its data for attribute and value
+		Elements elements = document.getElementsByAttributeValue("class", key);
+		System.out.println("get elements by attibute value");
+		for (Element element : elements)
+			System.out.println(element.text());
+		System.out.println("\nend output elements");
 	}
 	
 	public static ArrayList<String> getListItems(String fileName) throws FileNotFoundException, IOException {

@@ -30,10 +30,10 @@ public class ProcessEnglishWords {
 		ProcessWordsModel model = new ProcessWordsModel(logger);
 		ProcessWordsSwingController controller = new ProcessWordsSwingController(model, view, logger);
 		
-//		try {
+		try {
 			controller.initSwingController();
-//		} catch ( IOException exc ) {
-//			System.out.println( exc );			
-//		}
+		} catch ( IOException exc ) {
+			System.out.println( exc );			
+		}
 	}
 }
