@@ -6,6 +6,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import mny.processwords.controller.ProcessWordsSwingController;
+import mny.processwords.model.ProcessWordsModel;
+import mny.processwords.view.ProcessWordsFrame;
+
 public class ProcessEnglishWords {
 	private final static Logger logger = Logger.getLogger("ProcessEnglishWords");
 

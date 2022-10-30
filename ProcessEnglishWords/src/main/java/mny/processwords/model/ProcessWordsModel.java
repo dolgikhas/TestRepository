@@ -1,4 +1,4 @@
-package mny.processwords;
+package mny.processwords.model;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -145,18 +145,16 @@ public class ProcessWordsModel {
 		return "";
 	}
 
-	public String getTranslation(String word) throws IOException {
+	public ArrayList<String> getTranslation(String word) throws IOException {
 		logger.info("  ProcessWordsModel.getTranslation() >>");
-		String translation = "";
+		ArrayList<String> translations = new ArrayList<String>();
 		for (SiteKeys siteKey : listSiteKeys) {
 			GetDataFromSite getDataFromSite = new GetDataFromSite(siteKey);
-			translation = getDataFromSite.getTranslation(word);
-			if (!translation.isEmpty())
-				return translation;
+			translations.add(getDataFromSite.getTranslation(word));
 		}
 
 		logger.info("  ProcessWordsModel.getTranslation() <<");
-		return "";
+		return translations;
 	}
 
 }

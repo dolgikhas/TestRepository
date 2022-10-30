@@ -1,14 +1,18 @@
-package mny.processwords;
+package mny.processwords.controller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import mny.processwords.model.ProcessWordsModel;
+import mny.processwords.view.ProcessWordsFrame;
+import mny.processwords.view.ProcessElementsDlg;
 import mny.processwords.worddata.Word;
 
 public class ProcessWordsSwingController {
 	private ProcessWordsModel model;
 	private ProcessWordsFrame view;
+	private ProcessElementsDlg processElementsDlg;
 	private Logger logger;
 
 	public ProcessWordsSwingController(ProcessWordsModel model, ProcessWordsFrame view,
@@ -49,7 +53,11 @@ public class ProcessWordsSwingController {
 				String word = view.getWord();
 				view.setTranscription(model.getTranscription(word));
 				logger.info("view.setTranscription(model.getTranscription(word))");
-				view.setTranslation(model.getTranslation(word));
+//				view.setTranslation(model.getTranslation(word));
+				processElementsDlg = new ProcessElementsDlg(view);
+				processElementsDlg.initView(model.getTranslation(word));
+				processElementsDlg.setVisible(true);
+				
 				view.setStatistics("Загружены данные для слова " + word);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -59,5 +67,4 @@ public class ProcessWordsSwingController {
 		view.completeInitView();
 		logger.info("ProcessWordsSwingController.initSwingController() <<");
 	}
-
 }
