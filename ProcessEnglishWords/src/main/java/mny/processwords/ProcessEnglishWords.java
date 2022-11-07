@@ -1,4 +1,4 @@
-package mny.processwords.controller;
+package mny.processwords;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import mny.processwords.controller.ProcessWordsSwingController;
 import mny.processwords.model.ProcessWordsModel;
 import mny.processwords.view.ProcessWordsFrame;
 

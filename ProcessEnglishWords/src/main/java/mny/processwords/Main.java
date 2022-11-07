@@ -2,17 +2,19 @@ package mny.processwords;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
 
-import mny.processwords.sitedata.GetDataFromSite;
 import mny.processwords.sitedata.SiteKeys;
 
 public class Main {
@@ -62,6 +64,18 @@ public class Main {
 	static SiteKeys[] listSiteKeys = {keysCambridgeDictionary, keysExamplum, keysEnglishlib, keysContextReverso}; 
 	
 	public static void main(String[] args) {
+//		getDataFromSite();
+		
+		String path = "D:\\MNY\\ПЕРЕНОС\\ENGLISH\\check_words\\";
+		File dir = new File(path); //path указывает на директорию
+		File[] arrFiles = dir.listFiles();
+		List<File> lst = Arrays.asList(arrFiles);
+		for (File file : lst) {
+			System.out.println(file);
+		}
+	}
+
+	public static void getDataFromSite() {
 		try {
 /*
 			ArrayList<String> words = getListItems("words.txt");

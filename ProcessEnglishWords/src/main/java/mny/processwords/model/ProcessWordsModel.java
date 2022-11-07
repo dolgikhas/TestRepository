@@ -114,11 +114,11 @@ public class ProcessWordsModel {
 			logger.info("    file " + filePath + " opened successfully!");
 			String strLine;
 			while ( ( strLine = reader.readLine() ) != null ) {
-				logger.info("    read line " + strLine);
+//				logger.info("    read line " + strLine);
 				String[] array = strLine.split("\t");
 				String word = array[0];
 				if (!mapWordsData.containsKey(word)) {
-					logger.info("    create word " + word + " " + array[1] + " " + array[2] + " " + array[3]);
+//					logger.info("    create word " + word + " " + array[1] + " " + array[2] + " " + array[3]);
 					mapWordsData.put(word, new Word.WordBuilder()
 								.setWord(word)
 								.setTranscription(array[1])
@@ -158,8 +158,8 @@ public class ProcessWordsModel {
 	}
 
 	public void addNewWord(Word word) throws IOException {
-		addWordToUnicodeFile("words_new.txt", word);
-		addWordToUnicodeFile("words_doubt.txt", word);
+		addWordToUnicodeFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt", word);
+		addWordToUnicodeFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt", word);
 
 	}
 
@@ -187,7 +187,7 @@ public class ProcessWordsModel {
 	}
 	
 	public void outputExamplesToFile(String word, String text) throws FileNotFoundException, IOException {
-		String fileName = "examples\\" + word + ".txt";
+		String fileName = "D:\\ENGLISH. FULL\\WORDS\\examples\\" + word + ".txt";
 		
 		try (BufferedWriter bw	= new BufferedWriter(
 				new FileWriter(fileName) ) ) {
