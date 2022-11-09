@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.logging.Logger;
 
 import org.jsoup.Jsoup;
@@ -28,6 +29,7 @@ public class ProcessWordsModel {
 	private ArrayList<String> doubtWords;
 	private ArrayList<String> processedWords;
 	private ArrayList<String> checkedWords;
+	private HashSet<String> listAllWords;
 
 	static SiteKeys keysCambridgeDictionary = new SiteKeys.Builder()
 			.setAddress("https://dictionary.cambridge.org/ru/%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/" +
@@ -74,6 +76,7 @@ public class ProcessWordsModel {
 	
 	public ProcessWordsModel(Logger logger) {
 		this.logger = logger;
+		listAllWords = new HashSet<String>();
 	}
 
 	public boolean isWordExists(String word) {
@@ -81,12 +84,6 @@ public class ProcessWordsModel {
 	}
 
 	public Word getWord(String word) {
-//		return new Word.WordBuilder()
-//					   .setWord(word)
-//					   .setTranscription("[transcription]")
-//					   .setTranslation("ÔÂÂ‚Ó‰")
-//					   .setRepeat("0")
-//					   .build();
 		return mapWordsData.get(word);
 	}
 	
@@ -100,8 +97,24 @@ public class ProcessWordsModel {
 		processedWords = loadWordsDataFromFile("D:\\mny\\œ≈–≈ÕŒ—\\ENGLISH\\check_words\\words_processed.txt");
 		logger.info("  loadWordsDataFromFile() for words_processed");
 		checkedWords = loadWordsDataFromFile("D:\\mny\\œ≈–≈ÕŒ—\\ENGLISH\\check_words\\words_checked.txt");
-		logger.info("ProcessWordsModel.loadWordsData() <<");
+		logger.info("  loadWordsDataFromFile() for words_checked");
+		getListAllWords("all_words.txt");
+		logger.info("  getListAllWords() processed");
+		logger.info("ProcessWordsModel.loadWordsData() <<");		
 	}
+	
+	private void getListAllWords(String filePath) throws FileNotFoundException, IOException {
+		try (FileInputStream fis = new FileInputStream(filePath);
+			 InputStreamReader isr = new InputStreamReader(fis);
+			 BufferedReader reader = new BufferedReader(isr)) {
+				
+				String line;
+				while ((line = reader.readLine()) != null) {
+					listAllWords.add(line);	
+				}
+		}
+	}
+
 	
 	public ArrayList<String> loadWordsDataFromFile(String filePath) throws FileNotFoundException, IOException {
 		logger.info("  ProcessWordsModel.loadWordsDataFromFile() >>");
@@ -194,5 +207,85 @@ public class ProcessWordsModel {
 			bw.write(text);
 		}
 	}
+
+	public ArrayList<String> processIsWordsKnown(ArrayList<String> listExamples) {
+		ArrayList<String> wordsKnown = new ArrayList<String>();
+		ArrayList<String> wordsUnKnown = new ArrayList<String>();
+		
+		for (String example : listExamples) {
+			if (isSentenceContainCheckedWords(example))
+				wordsKnown.add(example);
+			else
+				wordsUnKnown.add(example);
+		}
+		
+		ArrayList<String> allExamples = new ArrayList<String>();
+		allExamples.add("=== EXAMPLES WITH KNOWN WORDS ===");
+		allExamples.addAll(wordsKnown);
+		allExamples.add("\n=== EXAMPLES WITH UNKNOWN WORDS ===");
+		allExamples.addAll(wordsUnKnown);		
+
+		return allExamples;
+	}
+	
+	public boolean isSentenceContainCheckedWords(String sentence) {
+		ArrayList<String> words = getWordsFromLine(sentence);
+		for (String word : words) {
+			if (!listAllWords.contains(word))
+				return false;
+		}
+		return true;
+	}
+	
+	private ArrayList<String> getWordsFromLine(String line) {
+		ArrayList<String> listWords = new ArrayList<String>();
+		String newLine = replaceNotCorrectSymbols(line);
+
+		String[] words = newLine.split(" ");
+		for (String word : words) {
+			if (!word.isEmpty() && (2 < word.length()))
+				listWords.add(word.toLowerCase());
+		}
+		
+		return listWords;
+	}
+	
+	private String replaceNotCorrectSymbols(String line) {
+		String newLine = line.replace('.', ' ');
+		newLine = newLine.replace(',', ' ');
+		newLine = newLine.replace('?', ' ');
+		newLine = newLine.replace('!', ' ');
+		newLine = newLine.replace('"', ' ');
+		newLine = newLine.replace('%', ' ');
+		newLine = newLine.replace('+', ' ');
+		newLine = newLine.replace('-', ' ');
+		newLine = newLine.replace('/', ' ');
+		newLine = newLine.replace('(', ' ');
+		newLine = newLine.replace(')', ' ');
+		newLine = newLine.replace('=', ' ');
+		newLine = newLine.replace('%', ' ');																						
+		newLine = newLine.replace('î', ' ');
+		newLine = newLine.replace(';', ' ');
+		newLine = newLine.replace('`', ' ');
+		newLine = newLine.replace(':', ' ');
+		newLine = newLine.replace('ì', ' ');
+		newLine = newLine.replace('$', ' ');
+		newLine = newLine.replace('#', ' ');
+		newLine = newLine.replace('0', ' ');
+		newLine = newLine.replace('1', ' ');
+		newLine = newLine.replace('2', ' ');
+		newLine = newLine.replace('3', ' ');
+		newLine = newLine.replace('4', ' ');
+		newLine = newLine.replace('5', ' ');
+		newLine = newLine.replace('6', ' ');
+		newLine = newLine.replace('7', ' ');
+		newLine = newLine.replace('8', ' ');
+		newLine = newLine.replace('9', ' ');
+		newLine = newLine.replace('Ö', ' ');
+		newLine = newLine.replace('\t', ' ');
+		
+		return newLine;
+	}
+
 
 }

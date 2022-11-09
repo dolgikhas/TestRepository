@@ -1,56 +1,60 @@
-םמÿב. 07, 2022 5:49:49 PM mny.processwords.ProcessEnglishWords initLoggerFileHandler
+םמÿב. 09, 2022 11:20:57 AM mny.processwords.ProcessEnglishWords initLoggerFileHandler
 INFO: Logger initialized
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.initView()
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.createWordControls()
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsData
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file D:\mny\ÏÅÐÅÍÎÑ\ENGLISH\check_words\words_new.txt opened successfully!
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsData
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_new
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file D:\mny\ÏÅÐÅÍÎÑ\ENGLISH\check_words\words_doubt.txt opened successfully!
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsData
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_doubt
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file D:\mny\ÏÅÐÅÍÎÑ\ENGLISH\check_words\words_processed.txt opened successfully!
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsData
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_processed
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file D:\mny\ÏÅÐÅÍÎÑ\ENGLISH\check_words\words_checked.txt opened successfully!
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.model.ProcessWordsModel loadWordsData
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
+INFO:   loadWordsDataFromFile() for words_checked
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
+INFO:   getListAllWords() processed
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() <<
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: model.loadWordsData()
-םמÿב. 07, 2022 5:49:50 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+םמÿב. 09, 2022 11:20:58 AM mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() <<
-םמÿב. 07, 2022 6:17:45 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
+םמÿב. 09, 2022 11:23:12 AM mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Enter word
-םמÿב. 07, 2022 6:17:45 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
+םמÿב. 09, 2022 11:23:13 AM mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Get word data and fill text fields
-םמÿב. 07, 2022 6:17:48 PM mny.processwords.model.ProcessWordsModel getExamples
+םמÿב. 09, 2022 11:23:15 AM mny.processwords.model.ProcessWordsModel getExamples
 INFO:   ProcessWordsModel.getExamples() >>
-םמÿב. 07, 2022 6:17:54 PM mny.processwords.model.ProcessWordsModel getExamples
+םמÿב. 09, 2022 11:23:26 AM mny.processwords.model.ProcessWordsModel getExamples
 INFO:   ProcessWordsModel.getExamples() <<
-םמÿב. 07, 2022 6:18:33 PM mny.processwords.controller.ProcessWordsSwingController lambda$4
+םמÿב. 09, 2022 11:26:03 AM mny.processwords.controller.ProcessWordsSwingController lambda$4
 INFO: get examples by ProcessElementsDlg dialog

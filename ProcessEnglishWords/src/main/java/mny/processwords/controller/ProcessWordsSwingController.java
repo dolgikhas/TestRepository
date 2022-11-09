@@ -2,6 +2,7 @@ package mny.processwords.controller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 import mny.processwords.model.ProcessWordsModel;
@@ -84,7 +85,9 @@ public class ProcessWordsSwingController {
 		
 		view.getBtnLoadExamples().addActionListener(event -> {
 			try {
-				ProcessElementsDlg processElementsDlg = new ProcessElementsDlg(view, model.getExamples(view.getWord()));
+				ArrayList<String> listExamples = model.getExamples(view.getWord());
+				listExamples = model.processIsWordsKnown(listExamples);
+				ProcessElementsDlg processElementsDlg = new ProcessElementsDlg(view, listExamples);
 				processElementsDlg.getBtnOK().addActionListener(e -> {
 					try {
 						model.outputExamplesToFile(view.getWord(), processElementsDlg.getTextArea().getText());
