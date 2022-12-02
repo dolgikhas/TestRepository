@@ -36,8 +36,8 @@ public class ProcessEnglishWords {
 		
 		try {
 			controller.initSwingController();
-		} catch ( IOException exc ) {
-			System.out.println( exc );			
+		} catch (IOException exc) {
+			System.out.println(exc); 
 		}
 	}
 }

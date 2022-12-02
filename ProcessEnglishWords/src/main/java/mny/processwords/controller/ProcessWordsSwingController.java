@@ -39,6 +39,7 @@ public class ProcessWordsSwingController {
 				Word word = model.getWord(view.getWord());
 				view.setTranscription(word.getTranscription());
 				view.setTranslation(word.getTranslation());
+				view.setStatistics("...слово найдено...");
 				logger.info("Get word data and fill text fields");
 			} else {
 				view.setTranscription("");
@@ -86,7 +87,7 @@ public class ProcessWordsSwingController {
 		view.getBtnLoadExamples().addActionListener(event -> {
 			try {
 				ArrayList<String> listExamples = model.getExamples(view.getWord());
-				listExamples = model.processIsWordsKnown(listExamples);
+				listExamples = model.processIsWordsKnown(listExamples, view.getWord());
 				ProcessElementsDlg processElementsDlg = new ProcessElementsDlg(view, listExamples);
 				processElementsDlg.getBtnOK().addActionListener(e -> {
 					try {

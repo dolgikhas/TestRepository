@@ -22,26 +22,26 @@ public class CreateListWordsFromExamples {
 	
 	
 	public static void main(String[] args) {		
-//		createListWordsFromExamples();
-		try {
-			getListAllWords("all_words.txt");
-			
-			Scanner scanner = new Scanner(System.in);
-			
-			String userInput = "";
-
-			while (!userInput.equals("q")) {
-				System.out.println("input sentence: ");				
-				userInput = scanner.nextLine();
-				
-				System.out.println(isSentenceContainCheckedWords(userInput));
-			}
-			
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		createListWordsFromExamples();
+//		try {
+//			getListAllWords("all_words.txt");
+//			
+//			Scanner scanner = new Scanner(System.in);
+//			
+//			String userInput = "";
+//
+//			while (!userInput.equals("q")) {
+//				System.out.println("input sentence: ");				
+//				userInput = scanner.nextLine();
+//				
+//				System.out.println(isSentenceContainCheckedWords(userInput));
+//			}
+//			
+//			
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	private static void getListAllWords(String filePath) throws FileNotFoundException, IOException {

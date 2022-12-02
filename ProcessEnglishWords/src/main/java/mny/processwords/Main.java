@@ -65,14 +65,33 @@ public class Main {
 	
 	public static void main(String[] args) {
 //		getDataFromSite();
+//		
+//		String path = "D:\\MNY\\ПЕРЕНОС\\ENGLISH\\check_words\\";
+//		File dir = new File(path); //path указывает на директорию
+//		File[] arrFiles = dir.listFiles();
+//		List<File> lst = Arrays.asList(arrFiles);
+//		for (File file : lst) {
+//			System.out.println(file);
+//		}
 		
-		String path = "D:\\MNY\\ПЕРЕНОС\\ENGLISH\\check_words\\";
-		File dir = new File(path); //path указывает на директорию
-		File[] arrFiles = dir.listFiles();
-		List<File> lst = Arrays.asList(arrFiles);
-		for (File file : lst) {
-			System.out.println(file);
+        Document document;
+		try {
+			System.out.println("before get document");
+			
+			document = Jsoup.connect("https://daso.archives.gov.ua/wp-content/earchives/metrika1.php").get();
+			
+			System.out.println("before get elements by attribute value");
+			
+			ArrayList<String> elements = (ArrayList<String>) document.getElementsByAttribute("li").eachText();
+			for (int i = 0; i < elements.size(); i++) {
+				System.out.println(elements.get(i));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
+		System.out.println("\n\n\nend application");
 	}
 
 	public static void getDataFromSite() {

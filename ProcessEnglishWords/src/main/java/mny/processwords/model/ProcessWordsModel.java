@@ -208,7 +208,9 @@ public class ProcessWordsModel {
 		}
 	}
 
-	public ArrayList<String> processIsWordsKnown(ArrayList<String> listExamples) {
+	public ArrayList<String> processIsWordsKnown(ArrayList<String> listExamples, String word) {
+		listAllWords.add(word);
+		
 		ArrayList<String> wordsKnown = new ArrayList<String>();
 		ArrayList<String> wordsUnKnown = new ArrayList<String>();
 		
