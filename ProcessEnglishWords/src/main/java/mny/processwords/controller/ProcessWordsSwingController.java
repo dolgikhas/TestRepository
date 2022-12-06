@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import javax.swing.JOptionPane;
+
 import mny.processwords.model.ProcessWordsModel;
 import mny.processwords.view.ProcessElementsDlg;
 import mny.processwords.view.ProcessWordsFrame;
@@ -46,27 +48,18 @@ public class ProcessWordsSwingController {
 				view.setTranslation("");
 				view.setStatistics("Слово не найдено");
 				logger.info("Word data not found");
+				
+				int selection = JOptionPane.showConfirmDialog(view, "Данные по слову " + view.getWord() + " не найдены. " +
+						"Загрузить данные по слову?", "Слово не найдено",
+						JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+				if (selection == JOptionPane.OK_OPTION) {
+					loadWordData();
+				}
 			}
 		});
 		
 		view.getBtnLoadWordsData().addActionListener(event -> {
-			try {
-				String word = view.getWord();
-				view.setTranscription(model.getTranscription(word));
-				logger.info("view.setTranscription(model.getTranscription(word))");
-				
-				ProcessElementsDlg processTranslations = new ProcessElementsDlg(view, model.getTranslation(word));
-				processTranslations.getBtnOK().addActionListener(e -> {
-					view.setTranslation(processTranslations.getTextArea().getText());
-					processTranslations.setVisible(false);
-				});
-				processTranslations.setVisible(true);
-				logger.info("get translation by ProcessElementsDlg dialog");
-				
-				view.setStatistics("Загружены данные для слова " + word);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			loadWordData();
 		});
 		
 		view.getBtnAddWord().addActionListener(event -> {
@@ -109,6 +102,26 @@ public class ProcessWordsSwingController {
 		
 		view.completeInitView();
 		logger.info("ProcessWordsSwingController.initSwingController() <<");
+	}
+
+	public void loadWordData() {
+		try {
+			String word = view.getWord();
+			view.setTranscription(model.getTranscription(word));
+			logger.info("view.setTranscription(model.getTranscription(word))");
+			
+			ProcessElementsDlg processTranslations = new ProcessElementsDlg(view, model.getTranslation(word));
+			processTranslations.getBtnOK().addActionListener(e -> {
+				view.setTranslation(processTranslations.getTextArea().getText());
+				processTranslations.setVisible(false);
+			});
+			processTranslations.setVisible(true);
+			logger.info("get translation by ProcessElementsDlg dialog");
+			
+			view.setStatistics("Загружены данные для слова " + word);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
