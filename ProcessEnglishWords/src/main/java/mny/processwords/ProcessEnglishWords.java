@@ -27,7 +27,7 @@ public class ProcessEnglishWords {
 		try {
 			initLoggerFileHandler();
 		} catch ( Exception exc ) {
-			logger.log( Level.WARNING, "Exception in initLoggerFileHandler: ", exc );
+			logger.log(Level.WARNING, "Exception in initLoggerFileHandler: ", exc);
 		}
 		
 		ProcessWordsFrame view = new ProcessWordsFrame();

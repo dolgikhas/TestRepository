@@ -90,13 +90,13 @@ public class ProcessWordsModel {
 	public void loadWordsData() throws FileNotFoundException, IOException {
 		logger.info("ProcessWordsModel.loadWordsData() >>");
 		mapWordsData = new HashMap<String, Word>();
-		newWords = loadWordsDataFromFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt");
+		newWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt");
 		logger.info("  loadWordsDataFromFile() for words_new");
-		doubtWords = loadWordsDataFromFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt");
+		doubtWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt");
 		logger.info("  loadWordsDataFromFile() for words_doubt");
-		processedWords = loadWordsDataFromFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_processed.txt");
+		processedWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_processed.txt");
 		logger.info("  loadWordsDataFromFile() for words_processed");
-		checkedWords = loadWordsDataFromFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_checked.txt");
+		checkedWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_checked.txt");
 		logger.info("  loadWordsDataFromFile() for words_checked");
 		getListAllWords("all_words.txt");
 		logger.info("  getListAllWords() processed");
@@ -171,9 +171,8 @@ public class ProcessWordsModel {
 	}
 
 	public void addNewWord(Word word) throws IOException {
-		addWordToUnicodeFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt", word);
-		addWordToUnicodeFile("D:\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt", word);
-
+		addWordToUnicodeFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt", word);
+		addWordToUnicodeFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt", word);
 	}
 
 	private void addWordToUnicodeFile(String filePath, Word word) throws IOException {

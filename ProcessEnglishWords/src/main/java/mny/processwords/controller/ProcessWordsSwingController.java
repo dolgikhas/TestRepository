@@ -54,7 +54,15 @@ public class ProcessWordsSwingController {
 						JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 				if (selection == JOptionPane.OK_OPTION) {
 					loadWordData();
+					
+					selection = JOptionPane.showConfirmDialog(view, "Добавить новое слово в файлы со словами?",
+								"Новое слово", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+					if (selection == JOptionPane.OK_OPTION) {
+						addNewWordToFiles();
+					}
 				}
+				
+
 			}
 		});
 		
@@ -63,18 +71,7 @@ public class ProcessWordsSwingController {
 		});
 		
 		view.getBtnAddWord().addActionListener(event -> {
-			try {
-				model.addNewWord(new Word.WordBuilder()
-										 .setWord(view.getWord())
-										 .setTranscription(view.getTranscription())
-										 .setTranslation(view.getTranslation())
-										 .setRepeat("0")
-										 .build());
-				logger.info("add new word data for word " + view.getWord());
-				view.setStatistics("Слово " + view.getWord() + " добавлено ;-)");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			addNewWordToFiles();
 		});
 		
 		view.getBtnLoadExamples().addActionListener(event -> {
@@ -85,23 +82,39 @@ public class ProcessWordsSwingController {
 				processElementsDlg.getBtnOK().addActionListener(e -> {
 					try {
 						model.outputExamplesToFile(view.getWord(), processElementsDlg.getTextArea().getText());
-					} catch (FileNotFoundException e1) {
-						e1.printStackTrace();
 					} catch (IOException e1) {
+						view.setStatistics("ОШИБКА при добавлении примеров для слова " + view.getWord());
 						e1.printStackTrace();
 					}
 					processElementsDlg.setVisible(false);
 				});
 				processElementsDlg.setVisible(true);
+				logger.info("get examples by ProcessElementsDlg dialog");			
+				view.setStatistics("Примеры для Слова " + view.getWord() + " добавлены!");
 			} catch (IOException e) {
 				e.printStackTrace();
+				view.setStatistics("ОШИБКА при получении примеров для слова " + view.getWord());
 			}
-			logger.info("get examples by ProcessElementsDlg dialog");			
-			view.setStatistics("Примеры для Слова " + view.getWord() + " добавлены!");
 		});
 		
 		view.completeInitView();
 		logger.info("ProcessWordsSwingController.initSwingController() <<");
+	}
+
+	public void addNewWordToFiles() {
+		try {
+			model.addNewWord(new Word.WordBuilder()
+									 .setWord(view.getWord())
+									 .setTranscription(view.getTranscription())
+									 .setTranslation(view.getTranslation())
+									 .setRepeat("0")
+									 .build());
+			logger.info("add new word data for word " + view.getWord());
+			view.setStatistics("Слово " + view.getWord() + " добавлено ;-)");
+		} catch (IOException e) {
+			e.printStackTrace();
+			view.setStatistics("ОШИБКА при добавлении нового слова " + view.getWord());
+		}
 	}
 
 	public void loadWordData() {
@@ -121,6 +134,7 @@ public class ProcessWordsSwingController {
 			view.setStatistics("Загружены данные для слова " + word);
 		} catch (IOException e) {
 			e.printStackTrace();
+			view.setStatistics("ОШИБКА при загрузке данных слова " + view.getWord());
 		}
 	}
 
