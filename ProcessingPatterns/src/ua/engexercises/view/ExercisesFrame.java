@@ -10,6 +10,11 @@ import ua.engexercises.model.*;
 
 
 public class ExercisesFrame extends JFrame {
+	private JPanel getOptionWorkPanel;
+	private ButtonGroup optionWorkButtonGroup;
+	private JRadioButton optionRandomTheme;
+	private JRadioButton optionDebugTheme;
+	private JButton btnSetOptionWork;
 	private JPanel getPatternPanel;
 	private JComboBox<String> comboBoxThemes;
 	private JComboBox<String> comboBoxVariants;
@@ -22,19 +27,20 @@ public class ExercisesFrame extends JFrame {
 	private JLabel lblStatistic;
 
 	public void initView() {
+		getOptionWorkPanel = new JPanel();
+		getOptionWorkPanel.setLayout(new GridLayout(3, 1));
+		
 		getPatternPanel = new JPanel();
 		getPatternPanel.setLayout(new GridLayout(4,2));
 
 		checkPatternPanel = new JPanel();
-		checkPatternPanel.setLayout(new GridLayout(2, 2));
-		
-		lblStatistic = new JLabel("statistic", JLabel.CENTER);
-		add(lblStatistic, BorderLayout.SOUTH);
+		checkPatternPanel.setLayout(new GridLayout(3, 1));
 	}
 	
 	public void completeInitView() {
-		add(getPatternPanel, BorderLayout.NORTH);
-		add(checkPatternPanel);
+		add(getOptionWorkPanel, BorderLayout.NORTH);
+		add(getPatternPanel);
+		add(checkPatternPanel, BorderLayout.SOUTH);
 
 		pack();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,6 +51,8 @@ public class ExercisesFrame extends JFrame {
 		txtAnswerField = new JTextField("");
 		txtAnswerField.setEnabled(false);
 		checkPatternPanel.add(txtAnswerField);
+		lblStatistic = new JLabel("statistic", JLabel.CENTER);
+		checkPatternPanel.add(lblStatistic);
 	}
 
 	public void createLabelPatternTask(String label) {
@@ -69,6 +77,7 @@ public class ExercisesFrame extends JFrame {
 	public void createButtonSetCheckPatternMode(String label) {
 		btnSetCheckPatternMode = new JButton(label);
 		getPatternPanel.add(btnSetCheckPatternMode);
+		btnSetCheckPatternMode.setEnabled(false);
 	}
 	
 	public JComboBox<String> getComboBoxThemes() {
@@ -102,16 +111,19 @@ public class ExercisesFrame extends JFrame {
 	public void createComboBoxThemes(String labelTheme, ArrayList<String> themes) {
 		comboBoxThemes = new JComboBox<>();		
 		createComboBox(comboBoxThemes, labelTheme, themes);
+		comboBoxThemes.setEnabled(false);
 	}
 
 	public void createComboBoxVariants(String labelVariant, ArrayList<String> variants) {
 		comboBoxVariants = new JComboBox<>();		
 		createComboBox(comboBoxVariants, labelVariant, variants);
+		comboBoxVariants.setEnabled(false);
 	}
 
 	public void createComboBoxPatterns(String labelPattern, ArrayList<String> patterns) {
 		comboBoxPatterns = new JComboBox<>();	
 		createComboBox(comboBoxPatterns, labelPattern, patterns);
+		comboBoxPatterns.setEnabled(false);
 	}
 
 	public void refreshComboBoxVariants(ArrayList<String> listVariants) {
@@ -169,6 +181,35 @@ public class ExercisesFrame extends JFrame {
 
 	public void setAnswerFieldValue(String text) {
 		txtAnswerField.setText(text);
+	}
+
+	public void createOptionWork() {
+		optionWorkButtonGroup = new ButtonGroup();
+		optionRandomTheme = new JRadioButton("Режим произвольной темы");
+		optionRandomTheme.setSelected(true);
+		optionWorkButtonGroup.add(optionRandomTheme);
+		getOptionWorkPanel.add(optionRandomTheme);
+		optionDebugTheme = new JRadioButton("Режим выбора темы");
+		getOptionWorkPanel.add(optionDebugTheme);
+		optionWorkButtonGroup.add(optionDebugTheme);
+		btnSetOptionWork = new JButton("Задать режим работы программы");
+		getOptionWorkPanel.add(btnSetOptionWork);
+	}
+
+	public JButton getBtnSetOptionWork() {
+		return btnSetOptionWork;
+	}
+
+	public JRadioButton getRadBtnRandomTheme() {
+		return optionRandomTheme;
+	}
+
+	public void disableElementsForOptionRandomThemes() {
+		comboBoxThemes.setEnabled(false);
+		comboBoxVariants.setEnabled(false);
+		comboBoxPatterns.setEnabled(false);
+		btnSetCheckPatternMode.setEnabled(false);
+		btnStopCheckPatternMode.setEnabled(true);
 	}
 
 }

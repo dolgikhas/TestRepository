@@ -33,15 +33,6 @@ public class ExercisesMVCMain {
 			logger.log( Level.WARNING, "Exception in initLoggerFileHandler: ", exc );
 		}
 
-//		ExercisesView view = new ExercisesView();
-//		ExercisesModel model = new ExercisesModel( logger );
-//		ExercisesController controller = new ExercisesController( model, view, logger );
-//		try {
-//			controller.processingUser();
-//		} catch ( IOException exc ) {
-//			System.out.println( exc );			
-//		}
-		
 		ExercisesFrame view = new ExercisesFrame();
 		ExercisesModel model = new ExercisesModel(logger);
 		ExercisesSwingController controller = new ExercisesSwingController(model, view, logger);
@@ -49,7 +40,7 @@ public class ExercisesMVCMain {
 		try {
 			controller.initSwingController();
 		} catch ( IOException exc ) {
-			System.out.println( exc );			
+			System.out.println( exc );
 		}
 	}
 

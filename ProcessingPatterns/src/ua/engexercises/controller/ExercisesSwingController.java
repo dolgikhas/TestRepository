@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 import ua.engexercises.model.DBGetData;
@@ -12,12 +13,16 @@ import ua.engexercises.model.ExercisesModel;
 import ua.engexercises.model.PatternTask;
 import ua.engexercises.view.ExercisesFrame;
 
+enum OptionWork{RANDOM_THEME, CONRETE_THEME};
+
 public class ExercisesSwingController {
 	ExercisesModel model;
 	ExercisesFrame view;
 	Logger logger;
 	PatternTask patternTask;
 	private int numberCorrectAnswers;
+	private OptionWork optionWork;
+	public final int AMOUNT_CORRECT_ANSWERS = 3;
 	
 	public ExercisesSwingController(ExercisesModel model, ExercisesFrame view, Logger logger) {
 		this.model = model;
@@ -31,6 +36,8 @@ public class ExercisesSwingController {
 
 		view.initView();
 		logger.info("view.initView() complete");
+		
+		createOptionWork();
 		
 		createComboBoxThemes();
 		
@@ -49,10 +56,49 @@ public class ExercisesSwingController {
 		logger.info("view.completeInitView()");
 	}
 
+	private void createOptionWork() {
+		view.createOptionWork();
+		view.getBtnSetOptionWork().addActionListener(event -> {
+			if (view.getRadBtnRandomTheme().isSelected()) {
+				optionWork = OptionWork.RANDOM_THEME;
+				view.disableElementsForOptionRandomThemes();
+				setRandomThemePatternAndForm();
+				view.disableGetPatternPanelAndEnableTextField();			
+				setTaskFromSelectedPattern();
+				logger.info("view.getBtnSetOptionWork().addActionListener() for random theme");
+			} else {
+				optionWork = OptionWork.CONRETE_THEME;
+				view.enableGetPatternPanelAndDisableTextField();
+				logger.info("view.getBtnSetOptionWork().addActionListener() for concrete theme");
+			}
+		});
+		logger.info("createOptionWork()");
+
+	}
+
+	private void setRandomThemePatternAndForm() {
+		view.getComboBoxThemes().setSelectedItem((int)(Math.random() * 100 %
+				view.getComboBoxThemes().getItemCount()));
+		view.getComboBoxVariants().setSelectedIndex((int)(Math.random() * 100 %
+				view.getComboBoxVariants().getItemCount()));
+		view.getComboBoxPatterns().setSelectedIndex((int)(Math.random() * 100 %
+				view.getComboBoxPatterns().getItemCount()));
+		logger.info("controller.setRandomThemePatternAndForm()");
+	}
+
 	public void createTextFieldAnswerWithListener() {
 		view.createTextFieldAnswer();
 		view.getTxtAnswerField().addActionListener(event -> {
 			if (model.checkIsUserInputEqualToAnswer(view.getUserInput())) {
+				if (optionWork == OptionWork.RANDOM_THEME &&
+						AMOUNT_CORRECT_ANSWERS <= numberCorrectAnswers) {
+					setRandomThemePatternAndForm();
+					setTaskFromSelectedPattern();
+					view.setAnswerFieldValue("");
+					view.setStatistic("Выбрана новая тема!");
+					return;
+				}
+				
 				view.setStatistic(DBGetData.getMessageCorectAnswer() + " " +
 						DBGetData.getMessageNumberCorrectAnswers() + " " +
 						++numberCorrectAnswers);
@@ -83,7 +129,14 @@ public class ExercisesSwingController {
 	private void createButtonStopCheckPatternModeWithListener() {		
 		view.createButtonStopCheckPatternMode(DBGetData.getLblStopCheckPatternMode());
 		view.getBtnStopCheckPatternMode().addActionListener(event -> {
-			view.enableGetPatternPanelAndDisableTextField();
+			if (optionWork == OptionWork.RANDOM_THEME) {
+				setRandomThemePatternAndForm();
+				setTaskFromSelectedPattern();
+				view.setAnswerFieldValue("");
+				view.setStatistic("Выбрана новая тема!");
+			} else {
+				view.enableGetPatternPanelAndDisableTextField();
+			}
 		});
 		logger.info("createButtonStopCheckPatternModeWithListener()");
 	}
@@ -91,25 +144,28 @@ public class ExercisesSwingController {
 	private void createButtonSetCheckPatternModeWithListener() {
 		view.createButtonSetCheckPatternMode(DBGetData.getLblSetCheckPatternMode());
 		view.getBtnSetCheckPatternMode().addActionListener(event -> {
-			view.disableGetPatternPanelAndEnableTextField();
-			
-			numberCorrectAnswers = 0;
-			
-			try {
-				model.setProcessingPatternObject(view.getCurrentTheme(), view.getCurrentVariant(),
-						view.getCurrentPattern());
-				
-				patternTask = model.getPatternTask();
-				logger.info( "model.getPatternTask()" );
-				
-				view.setTask(patternTask.getTask());
-				logger.info( "view.setTask(patternTask.getTask())" );
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			view.disableGetPatternPanelAndEnableTextField();			
+			setTaskFromSelectedPattern();
 		});
 		logger.info("createButtonSetCheckPatternModeWithListener()");
+	}
+
+	public void setTaskFromSelectedPattern() {
+		numberCorrectAnswers = 0;
+		
+		try {
+			model.setProcessingPatternObject(view.getCurrentTheme(), view.getCurrentVariant(),
+					view.getCurrentPattern());
+			
+			patternTask = model.getPatternTask();
+			logger.info( "model.getPatternTask()" );
+			
+			view.setTask(patternTask.getTask());
+			logger.info( "view.setTask(patternTask.getTask())" );
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void createComboBoxThemes() throws FileNotFoundException, IOException {
