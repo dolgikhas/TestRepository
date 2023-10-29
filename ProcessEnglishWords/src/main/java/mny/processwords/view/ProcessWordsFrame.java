@@ -115,4 +115,8 @@ public class ProcessWordsFrame extends JFrame {
 	public JButton getBtnLoadExamples() {
 		return btnLoadExamples;
 	}
+
+	public void setWord(String word) {
+		txtWord.setText(word);
+	}
 }

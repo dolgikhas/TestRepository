@@ -44,7 +44,7 @@ public class CreateListWordsFromExamples {
 //		}
 	}
 	
-	private static void getListAllWords(String filePath) throws FileNotFoundException, IOException {
+	public static void getListAllWords(String filePath) throws FileNotFoundException, IOException {
 		try (FileInputStream fis = new FileInputStream(filePath);
 			       InputStreamReader isr = new InputStreamReader(fis);
 			       BufferedReader reader = new BufferedReader(isr)) {
@@ -65,14 +65,14 @@ public class CreateListWordsFromExamples {
 		return true;
 	}
 
-	private static void createListWordsFromExamples() {
+	public static void createListWordsFromExamples() {
 		String path = "D:\\ENGLISH. FULL\\WORDS\\examples\\";
 		File dir = new File(path); //path указывает на директорию
 		File[] arrFiles = dir.listFiles();
 		List<File> lst = Arrays.asList(arrFiles);
 		try {
 			for (File file : lst) {
-				System.out.println(file.getName());
+//				System.out.println(file.getName());
 				
 				if (!file.getName().contains(".txt"))
 					continue;

@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
+import mny.processwords.CreateListWordsFromExamples;
 import mny.processwords.model.ProcessWordsModel;
 import mny.processwords.view.ProcessElementsDlg;
 import mny.processwords.view.ProcessWordsFrame;
@@ -32,11 +33,16 @@ public class ProcessWordsSwingController {
 		view.createWordControls();
 		logger.info("view.createWordControls()");
 		
+		CreateListWordsFromExamples.createListWordsFromExamples();
+		logger.info("CreateListWordsFromExamples.createListWordsFromExamples()");
+		
 		model.loadWordsData();
 		logger.info("model.loadWordsData()");
 
 		view.getWordTextEditor().addActionListener(event -> {
 			logger.info("Enter word");
+			view.setWord(view.getWord().trim());
+			logger.info("Trim word");
 			if (model.isWordExists(view.getWord())) {
 				Word word = model.getWord(view.getWord());
 				view.setTranscription(word.getTranscription());

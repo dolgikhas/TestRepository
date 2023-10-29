@@ -90,13 +90,11 @@ public class ProcessWordsModel {
 	public void loadWordsData() throws FileNotFoundException, IOException {
 		logger.info("ProcessWordsModel.loadWordsData() >>");
 		mapWordsData = new HashMap<String, Word>();
-		newWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt");
+		newWords = loadWordsDataFromFile("D:\\MNY\\оепемня\\ENGLISH\\check_words\\words_new.txt");
 		logger.info("  loadWordsDataFromFile() for words_new");
-		doubtWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt");
-		logger.info("  loadWordsDataFromFile() for words_doubt");
-		processedWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_processed.txt");
+		processedWords = loadWordsDataFromFile("D:\\MNY\\оепемня\\ENGLISH\\check_words\\words_processed.txt");
 		logger.info("  loadWordsDataFromFile() for words_processed");
-		checkedWords = loadWordsDataFromFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_checked.txt");
+		checkedWords = loadWordsDataFromFile("D:\\MNY\\оепемня\\ENGLISH\\check_words\\words_checked.txt");
 		logger.info("  loadWordsDataFromFile() for words_checked");
 		getListAllWords("all_words.txt");
 		logger.info("  getListAllWords() processed");
@@ -138,6 +136,11 @@ public class ProcessWordsModel {
 								.setTranslation(array[2])
 								.setRepeat(array[3])
 								.build());
+					
+					if (!word.equals(word.trim())) {
+						System.out.println(word + " - WORD WITH SPACES!!!");
+					}
+
 				}
 				words.add(word);
 			}
@@ -171,8 +174,8 @@ public class ProcessWordsModel {
 	}
 
 	public void addNewWord(Word word) throws IOException {
-		addWordToUnicodeFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_new.txt", word);
-		addWordToUnicodeFile("C:\\Disc D\\mny\\оепемня\\ENGLISH\\check_words\\words_doubt.txt", word);
+		addWordToUnicodeFile("D:\\MNY\\оепемня\\ENGLISH\\check_words\\words_new.txt", word);
+		addWordToUnicodeFile("D:\\MNY\\оепемня\\ENGLISH\\check_words\\words_doubt.txt", word);
 	}
 
 	private void addWordToUnicodeFile(String filePath, Word word) throws IOException {
