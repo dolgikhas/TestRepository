@@ -1,0 +1,7 @@
+mother
+sister
+daughter
+aunt
+wife
+niece
+cousin

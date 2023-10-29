@@ -1,0 +1,3 @@
+(to be) #DAY_WEEK# today?	Is it #DAY_WEEK# today?
+Is it #DAY_WEEK# today? Answer: yes	Yes, it is.
+Is it #DAY_WEEK# today? Answer: no	No, it isn't.

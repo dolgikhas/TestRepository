@@ -1,0 +1,6 @@
+That (to be) #THINGS_GIVE_A#.	That is a #THINGS_GIVE_A#.
+That (to be) #THINGS_GIVE_AN#.	That is an #THINGS_GIVE_AN#.
+Those (to be) #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
+This (to be) #THINGS_GIVE_A#.	This is a #THINGS_GIVE_A#.
+This (to be) #THINGS_GIVE_AN#.	This is an #THINGS_GIVE_AN#.
+These (to be) #THINGS_PLURAL#.	These are #THINGS_PLURAL#.

@@ -1,0 +1,18 @@
+I (to be) in #COUNTRIES#.	I am in #COUNTRIES#.
+#WHO_SINGLE_WITH_NAMES# (to be) in #COUNTRIES#.	#WHO_SINGLE_WITH_NAMES# is in #COUNTRIES#.
+#WHO_PLURAL# (to be) in #COUNTRIES#.	#WHO_PLURAL# are in #COUNTRIES#.
+I (to be) not in #COUNTRIES#.	I am not in #COUNTRIES#.
+#WHO_SINGLE_WITH_NAMES# (to be) not in #COUNTRIES#.	#WHO_SINGLE_WITH_NAMES# is not in #COUNTRIES#.
+#WHO_PLURAL# (to be) not in #COUNTRIES#.	#WHO_PLURAL# are not in #COUNTRIES#.
+Question: I (to be) in #COUNTRIES#?	Am I in #COUNTRIES#?
+Question: #WHO_SINGLE_WITH_NAMES# (to be) in #COUNTRIES#?	Is #WHO_SINGLE_WITH_NAMES# in #COUNTRIES#?
+Question: #WHO_PLURAL# (to be) in #COUNTRIES#?	Are #WHO_PLURAL# in #COUNTRIES#?
+I (to be) from #COUNTRIES#.	I am from #COUNTRIES#.
+#WHO_SfromGLE_WITH_NAMES# (to be) from #COUNTRIES#.	#WHO_SfromGLE_WITH_NAMES# is from #COUNTRIES#.
+#WHO_PLURAL# (to be) from #COUNTRIES#.	#WHO_PLURAL# are from #COUNTRIES#.
+I (to be) not from #COUNTRIES#.	I am not from #COUNTRIES#.
+#WHO_SfromGLE_WITH_NAMES# (to be) not from #COUNTRIES#.	#WHO_SfromGLE_WITH_NAMES# is not from #COUNTRIES#.
+#WHO_PLURAL# (to be) not from #COUNTRIES#.	#WHO_PLURAL# are not from #COUNTRIES#.
+Question: I (to be) from #COUNTRIES#?	Am I from #COUNTRIES#?
+Question: #WHO_SfromGLE_WITH_NAMES# (to be) from #COUNTRIES#?	Is #WHO_SfromGLE_WITH_NAMES# from #COUNTRIES#?
+Question: #WHO_PLURAL# (to be) from #COUNTRIES#?	Are #WHO_PLURAL# from #COUNTRIES#?

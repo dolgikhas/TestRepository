@@ -1,0 +1,20 @@
+Who is here? Answer: #PEOPLE_SINGLE#	Here is a #PEOPLE_SINGLE#.
+Who is there? Answer: #PEOPLE_SINGLE#	There is a #PEOPLE_SINGLE#.
+Who are here? Answer: #PEOPLE_PLURAL#	Here are #PEOPLE_PLURAL#.
+Who are there? Answer: #PEOPLE_PLURAL#	There are #PEOPLE_PLURAL#.
+How many #PEOPLE_PLURAL# are there? Answer: #RANDOM_NUMBERS_2_10_WITHOUT_ONE#	There are #RANDOM_NUMBERS_2_10_WITHOUT_ONE# #PEOPLE_PLURAL#.
+How many #PEOPLE_PLURAL# are there? Answer: no #PEOPLE_PLURAL#.	There are no #PEOPLE_PLURAL#.
+How many #PEOPLE_PLURAL# are here? Answer: #RANDOM_NUMBERS_2_10_WITHOUT_ONE#	Here are #RANDOM_NUMBERS_2_10_WITHOUT_ONE# #PEOPLE_PLURAL#.
+How many #PEOPLE_PLURAL# are here? Answer: no #PEOPLE_PLURAL#.	Here are no #PEOPLE_PLURAL#.
+Who is in the photo? Answer: #PEOPLE_SINGLE#	A #PEOPLE_SINGLE# is in the photo.
+Who are in the photo? Answer: #PEOPLE_PLURAL#	#PEOPLE_PLURAL# are in the photo.
+Who is in the photo? Answer: #WHOSE_WITHOUT_IT# #FAMILY_MEMBERS_SINGLE_FULL#	#WHOSE_WITHOUT_IT# #FAMILY_MEMBERS_SINGLE_FULL# is in the photo.
+Who are in the photo? Answer: #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL#	#WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# are in the photo.
+Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL#? Answer: here. Long answer	#WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# is here.
+Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL#? Answer: there. Long answer	#WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# is there.
+Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL#? Answer: here. Long answer	#WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# are here.
+Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL#? Answer: there. Long answer	#WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# are there.
+Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_MEN_SINGLE_FULL#? Answer: here. Short answer	He is here.
+Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_WOMEN_SINGLE_FULL#? Answer: here. Short answer	She is here.
+Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL#? Answer: here. Short answer	They are here.
+Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL#? Answer: there. Short answer	They are there.

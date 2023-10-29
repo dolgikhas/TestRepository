@@ -1,0 +1,6 @@
+Where #WHO_PLURAL_AND_I# (to come) from?	Where do #WHO_PLURAL_AND_I# come from?
+Where #WHO_SINGLE_WITH_NAMES# (to come) from?	Where does #WHO_SINGLE_WITH_NAMES# come from?
+Where do #WHO_PLURAL_AND_I# come from? Answer: #CITIES#	#WHO_PLURAL_AND_I# come from #CITIES#.
+Where does #WHO_SINGLE_WITH_NAMES# come from? Answer: #CITIES#	#WHO_SINGLE_WITH_NAMES# comes from #CITIES#.
+Where do #WHO_PLURAL_AND_I# come from? Answer: #COUNTRIES#	#WHO_PLURAL_AND_I# come from #COUNTRIES#.
+Where does #WHO_SINGLE_WITH_NAMES# come from? Answer: #COUNTRIES#	#WHO_SINGLE_WITH_NAMES# comes from #COUNTRIES#.

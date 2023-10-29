@@ -1,180 +1,52 @@
-апр. 30, 2023 3:57:14 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
+окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-апр. 30, 2023 3:57:14 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesSwingController initSwingController
 INFO: view.initView() complete
-апр. 30, 2023 3:57:14 PM ua.engexercises.controller.ExercisesSwingController createOptionWork
+окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesSwingController createOptionWork
 INFO: createOptionWork()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createComboBoxThemes
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxThemes
 INFO: createComboBoxThemes()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createComboBoxVariantsWithListener
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxVariantsWithListener
 INFO: createComboBoxVariantsWithListener()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createComboBoxPatternsWithListener
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxPatternsWithListener
 INFO: createComboBoxPatternsWithListener()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createButtonSetCheckPatternModeWithListener
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createButtonSetCheckPatternModeWithListener
 INFO: createButtonSetCheckPatternModeWithListener()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createButtonStopCheckPatternModeWithListener
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createButtonStopCheckPatternModeWithListener
 INFO: createButtonStopCheckPatternModeWithListener()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
 INFO: view.createLabelPatternTask(DBGetData.getMessageDefaultTask())
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController createTextFieldAnswerWithListener
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
+INFO: view.createBtnShowAnswer()
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
+INFO: view.getBtnShowAnswer().addActionListener(...)
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createTextFieldAnswerWithListener
 INFO: view.createTextFieldAnswer()
-апр. 30, 2023 3:57:15 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController initSwingController
 INFO: view.completeInitView()
-апр. 30, 2023 3:57:17 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:57:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to ask whom) forms
-апр. 30, 2023 3:57:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 4
-апр. 30, 2023 3:57:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Question: (#WHO_PLURAL_AND_I#) to ask (#WHOM_FULL#)	Do #WHO_PLURAL_AND_I# ask #WHOM_FULL#?
-апр. 30, 2023 3:57:17 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+окт. 28, 2023 5:45:08 PM ua.engexercises.controller.ExercisesSwingController lambda$1
+INFO: view.getBtnSetOptionWork().addActionListener() for concrete theme
+окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be profession) forms
+окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 16
+окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Are you a #PROFESSIONS_SINGLE#? Answer: yes	Yes, you are.
+окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+INFO: model.setProcessingPatternObject()
+окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
 INFO: model.getPatternTask()
-апр. 30, 2023 3:57:17 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
 INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:17 PM ua.engexercises.controller.ExercisesSwingController lambda$0
-INFO: view.getBtnSetOptionWork().addActionListener() for random theme
-апр. 30, 2023 3:57:26 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to ask whom) forms
-апр. 30, 2023 3:57:26 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 2
-апр. 30, 2023 3:57:26 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: (#WHO_PLURAL_AND_I#) not to ask (#WHOM_FULL#)	#WHO_PLURAL_AND_I# do not ask #WHOM_FULL#.
-апр. 30, 2023 3:57:26 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:57:26 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:26 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:57:33 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input contain contraction
-апр. 30, 2023 3:57:33 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input without contractions: you do not ask it.
-апр. 30, 2023 3:57:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to ask whom) forms
-апр. 30, 2023 3:57:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 3
-апр. 30, 2023 3:57:33 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: (#WHO_SINGLE#) not to ask (#WHOM_FULL#)	#WHO_SINGLE# does not ask #WHOM_FULL#.
-апр. 30, 2023 3:57:33 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:57:33 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:33 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:57:41 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input contain contraction
-апр. 30, 2023 3:57:41 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input without contractions: it does not ask them.
-апр. 30, 2023 3:57:41 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to ask whom) forms
-апр. 30, 2023 3:57:41 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 2
-апр. 30, 2023 3:57:41 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: (#WHO_PLURAL_AND_I#) not to ask (#WHOM_FULL#)	#WHO_PLURAL_AND_I# do not ask #WHOM_FULL#.
-апр. 30, 2023 3:57:41 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:57:41 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:41 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:57:47 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input contain contraction
-апр. 30, 2023 3:57:47 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
-INFO: user input without contractions: you do not ask us.
-апр. 30, 2023 3:57:47 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:57:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to like) forms
-апр. 30, 2023 3:57:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 4
-апр. 30, 2023 3:57:47 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Questions: #WHO_PLURAL_AND_I# (to like) #WHOM_FULL#?	Do #WHO_PLURAL_AND_I# like #WHOM_FULL#?
-апр. 30, 2023 3:57:47 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: model.getPatternTask()
-апр. 30, 2023 3:57:47 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:57 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to like) forms
-апр. 30, 2023 3:57:57 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 3
-апр. 30, 2023 3:57:57 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: #WHO_SINGLE_WITHOUT_IT# not (to like) #WHOM_FULL#	#WHO_SINGLE_WITHOUT_IT# doesn't like #WHOM_FULL#.
-апр. 30, 2023 3:57:57 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:57:57 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:57:57 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:58:04 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to like) forms
-апр. 30, 2023 3:58:04 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 1
-апр. 30, 2023 3:58:04 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: #WHO_SINGLE_WITHOUT_IT# (to like) #WHOM_FULL#	#WHO_SINGLE_WITHOUT_IT# likes #WHOM_FULL#.
-апр. 30, 2023 3:58:04 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:58:04 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:58:04 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:58:11 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to like) forms
-апр. 30, 2023 3:58:11 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 4
-апр. 30, 2023 3:58:11 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Questions: #WHO_PLURAL_AND_I# (to like) #WHOM_FULL#?	Do #WHO_PLURAL_AND_I# like #WHOM_FULL#?
-апр. 30, 2023 3:58:11 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: model.getPatternTask()
-апр. 30, 2023 3:58:11 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:58:11 PM ua.engexercises.controller.ExercisesSwingController lambda$1
-INFO: view.setAnswerFieldValue("")
-апр. 30, 2023 3:58:16 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:58:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to understand) forms
-апр. 30, 2023 3:58:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be profession) forms
+окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
 INFO: get random number for get form: 5
-апр. 30, 2023 3:58:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Question: #WHO_SINGLE_WITHOUT_IT# understand?	Does #WHO_SINGLE_WITHOUT_IT# understand?
-апр. 30, 2023 3:58:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: you not - #PROFESSIONS_SINGLE#	you are not a #PROFESSIONS_SINGLE#.
+окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
 INFO: model.getPatternTask()
-апр. 30, 2023 3:58:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
 INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:58:21 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:58:21 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to take whose thing) forms
-апр. 30, 2023 3:58:21 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 0
-апр. 30, 2023 3:58:21 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: #WHO_PLURAL_AND_I# (to take) #WHOSE_WITHOUT_IT# #THINGS_GIVE#	#WHO_PLURAL_AND_I# take #WHOSE_WITHOUT_IT# #THINGS_GIVE#.
-апр. 30, 2023 3:58:21 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: model.getPatternTask()
-апр. 30, 2023 3:58:21 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:58:23 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:58:23 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to start) forms
-апр. 30, 2023 3:58:23 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 2
-апр. 30, 2023 3:58:23 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: #WHO_PLURAL_AND_I# not (to start)	#WHO_PLURAL_AND_I# don't start.
-апр. 30, 2023 3:58:23 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: model.getPatternTask()
-апр. 30, 2023 3:58:23 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: view.setTask(patternTask.getTask())
-апр. 30, 2023 3:58:25 PM ua.engexercises.controller.ExercisesSwingController setRandomThemePatternAndForm
-INFO: controller.setRandomThemePatternAndForm()
-апр. 30, 2023 3:58:25 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to hope) forms
-апр. 30, 2023 3:58:25 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 4
-апр. 30, 2023 3:58:25 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Question: #WHO_PLURAL_AND_I# (to hope)?	Do #WHO_PLURAL_AND_I# hope?
-апр. 30, 2023 3:58:25 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: model.getPatternTask()
-апр. 30, 2023 3:58:25 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
-INFO: view.setTask(patternTask.getTask())
+окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setAnswerFieldValue("")

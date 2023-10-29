@@ -1,0 +1,12 @@
+Question: Where do #WHO_PLURAL_AND_I# live? Answer: #CITIES#	#WHO_PLURAL_AND_I# live in #CITIES#.
+Question: Where does #WHO_SINGLE_WITH_NAMES# live? Answer: #CITIES#	#WHO_SINGLE_WITH_NAMES# lives in #CITIES#.
+Question: Where do #WHO_PLURAL_AND_I# live? Answer: #COUNTRIES#	#WHO_PLURAL_AND_I# live in #COUNTRIES#.
+Question: Where does #WHO_SINGLE_WITH_NAMES# live? Answer: #COUNTRIES#	#WHO_SINGLE_WITH_NAMES# lives in #COUNTRIES#.
+Question: When (to live) #WHO_PLURAL_AND_I# in #CITIES#?	When do #WHO_PLURAL_AND_I# live in #CITIES#?
+Question: When (to live) #WHO_SINGLE_WITH_NAMES# in #CITIES#?	When does #WHO_SINGLE_WITH_NAMES# live in #CITIES#?
+Question: When (to live) #WHO_PLURAL_AND_I# in #COUNTRIES#?	When do #WHO_PLURAL_AND_I# live in #COUNTRIES#?
+Question: When (to live) #WHO_SINGLE_WITH_NAMES# in #COUNTRIES#?	When does #WHO_SINGLE_WITH_NAMES# live in #COUNTRIES#?
+Question: Where (to live) #WHO_PLURAL_AND_I# in #CITIES#?	Where do #WHO_PLURAL_AND_I# live in #CITIES#?
+Question: Where (to live) #WHO_SINGLE_WITH_NAMES# in #CITIES#?	Where does #WHO_SINGLE_WITH_NAMES# live in #CITIES#?
+Question: Where (to live) #WHO_PLURAL_AND_I# in #COUNTRIES#?	Where do #WHO_PLURAL_AND_I# live in #COUNTRIES#?
+Question: Where (to live) #WHO_SINGLE_WITH_NAMES# in #COUNTRIES#?	Where does #WHO_SINGLE_WITH_NAMES# live in #COUNTRIES#?

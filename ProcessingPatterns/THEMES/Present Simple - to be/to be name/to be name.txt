@@ -1,12 +1,10 @@
-Question what (#WHOSE_FULL#) name?	What is #WHOSE_FULL# name?
-Question what (#WHOSE_SINGLE#) first name?	What is #WHOSE_SINGLE# first name?
-Question what (#WHOSE_FULL#) last name?	What is #WHOSE_FULL# last name?
-#WHOSE_MAN# name - #NAMES_FIRST_MEN# #NAMES_LAST#	#WHOSE_MAN# name is #NAMES_FIRST_MEN# #NAMES_LAST#.
-#WHOSE_WOMAN# name - #NAMES_FIRST_WOMEN# #NAMES_LAST#	#WHOSE_WOMAN# name is #NAMES_FIRST_WOMEN# #NAMES_LAST#.
-its name - #NAMES_IT#	its name is #NAMES_IT#.
-#ANIMALS_SINGLE_A# name - #NAMES_IT#	#ANIMALS_SINGLE_A#'s name is #NAMES_IT#.
-#ANIMALS_SINGLE_AN# name - #NAMES_IT#	#ANIMALS_SINGLE_AN#'s name is #NAMES_IT#.
-#WHOSE_MAN# first name - #NAMES_FIRST_MEN#	#WHOSE_MAN# first name is #NAMES_FIRST_MEN#.
-#WHOSE_WOMAN# first name is #NAMES_FIRST_WOMEN#	#WHOSE_WOMAN# first name is #NAMES_FIRST_WOMEN#.
-#WHOSE_MAN# last name - #NAMES_LAST#	#WHOSE_MAN# last name is #NAMES_LAST#.
-#WHOSE_WOMAN# last name - #NAMES_LAST#	#WHOSE_WOMAN# last name is #NAMES_LAST#.
+What is #WHOSE_PLURAL# name? Answer: #NAMES_LAST#	#WHOSE_PLURAL# name is #NAMES_LAST#.
+What is its name? Answer:#NAMES_IT#	its name is #NAMES_IT#.
+What is #WHOSE_MAN# first name? Answer: #NAMES_FIRST_MEN#	#WHOSE_MAN# first name is #NAMES_FIRST_MEN#.
+What is #WHOSE_WOMAN# first name? Answer: #NAMES_FIRST_WOMEN#	#WHOSE_WOMAN# first name is #NAMES_FIRST_WOMEN#.
+What is #WHOSE_MAN# last name ? Answer: #NAMES_LAST#	#WHOSE_MAN# last name is #NAMES_LAST#.
+What is #WHOSE_WOMAN# last name? Answer: #NAMES_LAST#	#WHOSE_WOMAN# last name is #NAMES_LAST#.
+What is #ANIMALS_SINGLE_A# name? Answer: #NAMES_IT#	#ANIMALS_SINGLE_A#'s name is #NAMES_IT#.
+What is #ANIMALS_SINGLE_AN# name? Answer: #NAMES_IT#	#ANIMALS_SINGLE_AN#'s name is #NAMES_IT#.
+What is #WHOSE_MAN# name? Answer: #NAMES_FIRST_MEN# #NAMES_LAST#	#WHOSE_MAN# name is #NAMES_FIRST_MEN# #NAMES_LAST#.
+What is #WHOSE_WOMAN# name? Answer: #NAMES_FIRST_WOMEN# #NAMES_LAST#	#WHOSE_WOMAN# name is #NAMES_FIRST_WOMEN# #NAMES_LAST#.

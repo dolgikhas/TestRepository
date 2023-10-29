@@ -1,0 +1,9 @@
+cats
+horses
+spiders
+mouses
+crabs
+birds
+bears
+turtles
+elephants

@@ -10,3 +10,11 @@ Question I - #PROFESSIONS_SINGLE#?	Am I a #PROFESSIONS_SINGLE#?
 Question #WHO_SINGLE# - #PROFESSIONS_SINGLE#?	Is #WHO_SINGLE# a #PROFESSIONS_SINGLE#?
 Question you - #PROFESSIONS_SINGLE#?	Are you a #PROFESSIONS_SINGLE#?
 Question  #WHO_PLURAL# - #PROFESSIONS_PLURAL#?	Are #WHO_PLURAL# #PROFESSIONS_PLURAL#?
+Am I a #PROFESSIONS_SINGLE#? Answer: yes	Yes, I am.
+Am I a #PROFESSIONS_SINGLE#? Answer: no	No, I am not.
+Is #WHO_SINGLE# a #PROFESSIONS_SINGLE#? Answer: yes	Yes, #WHO_SINGLE# is.
+Is #WHO_SINGLE# a #PROFESSIONS_SINGLE#? Answer: no	No, #WHO_SINGLE# is not.
+Are you a #PROFESSIONS_SINGLE#? Answer: yes	Yes, you are.
+Are you a #PROFESSIONS_SINGLE#? Answer: no	No, you are not.
+Are #WHO_PLURAL# #PROFESSIONS_PLURAL#? Answer: yes	Yes, #WHO_PLURAL# are.
+Are #WHO_PLURAL# #PROFESSIONS_PLURAL#? Answer: no	No, #WHO_PLURAL# are not.

@@ -1,0 +1,28 @@
+What is here? Answer: #THINGS_GIVE_A#	Here is a #THINGS_GIVE_A#.
+What is there? Answer: #THINGS_GIVE_A#	There is a #THINGS_GIVE_A#.
+What is here? Answer: #THINGS_GIVE_AN#	Here is an #THINGS_GIVE_AN#.
+What is there? Answer: #THINGS_GIVE_AN#	There is an #THINGS_GIVE_AN#.
+What are here? Answer: #THINGS_PLURAL#	Here are #THINGS_PLURAL#.
+What are there? Answer: #THINGS_PLURAL#	There are #THINGS_PLURAL#.
+How many #THINGS_PLURAL# are there? Answer: #RANDOM_NUMBERS_2_10_WITHOUT_ONE#	There are #RANDOM_NUMBERS_2_10_WITHOUT_ONE# #THINGS_PLURAL#.
+How many #THINGS_PLURAL# are there? Answer: no #THINGS_PLURAL#.	There are no #THINGS_PLURAL#.
+How many #THINGS_PLURAL# are here? Answer: #RANDOM_NUMBERS_2_10_WITHOUT_ONE#	Here are #RANDOM_NUMBERS_2_10_WITHOUT_ONE# #THINGS_PLURAL#.
+How many #THINGS_PLURAL# are here? Answer: no #THINGS_PLURAL#.	Here are no #THINGS_PLURAL#.
+What is in the photo? Answer: #THINGS_GIVE_A#	A #THINGS_GIVE_A# is in the photo.
+What is in the photo? Answer: #THINGS_GIVE_AN#	An #THINGS_GIVE_AN# is in the photo.
+What are in the photo? Answer: #THINGS_PLURAL#	#THINGS_PLURAL# are in the photo.
+What is in the photo? Answer: #WHOSE_WITHOUT_IT# #THINGS_GIVE_A#	#WHOSE_WITHOUT_IT# #THINGS_GIVE_A# is in the photo.
+What is in the photo? Answer: #WHOSE_WITHOUT_IT# #THINGS_GIVE_AN#	#WHOSE_WITHOUT_IT# #THINGS_GIVE_AN# is in the photo.
+What are in the photo? Answer: #WHOSE_SINGLE# #THINGS_PLURAL#	#WHOSE_SINGLE# #THINGS_PLURAL# are in the photo.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_A#? Answer: here. Long answer	#WHOSE_SINGLE# #THINGS_GIVE_A# is here.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_A#? Answer: there. Long answer	#WHOSE_SINGLE# #THINGS_GIVE_A# is there.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_AN#? Answer: here. Long answer	#WHOSE_SINGLE# #THINGS_GIVE_AN# is here.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_AN#? Answer: there. Long answer	#WHOSE_SINGLE# #THINGS_GIVE_AN# is there.
+Where are #WHOSE_SINGLE# #THINGS_PLURAL#? Answer: here. Long answer	#WHOSE_SINGLE# #THINGS_PLURAL# are here.
+Where are #WHOSE_SINGLE# #THINGS_PLURAL#? Answer: there. Long answer	#WHOSE_SINGLE# #THINGS_PLURAL# are there.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_A#? Answer: here. Short answer	It is here.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_A#? Answer: there. Short answer	It is there.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_AN#? Answer: here. Short answer	It is here.
+Where is #WHOSE_SINGLE# #THINGS_GIVE_AN#? Answer: there. Short answer	It is there.
+Where are #WHOSE_SINGLE# #THINGS_PLURAL#? Answer: here. Short answer	They are here.
+Where are #WHOSE_SINGLE# #THINGS_PLURAL#? Answer: there. Short answer	They are there.

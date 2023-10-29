@@ -25,6 +25,7 @@ public class ExercisesFrame extends JFrame {
 	private JLabel patternTask;
 	private JTextField txtAnswerField;
 	private JLabel lblStatistic;
+	private JButton btnShowAnswer;
 
 	public void initView() {
 		getOptionWorkPanel = new JPanel();
@@ -34,7 +35,7 @@ public class ExercisesFrame extends JFrame {
 		getPatternPanel.setLayout(new GridLayout(4,2));
 
 		checkPatternPanel = new JPanel();
-		checkPatternPanel.setLayout(new GridLayout(3, 1));
+		checkPatternPanel.setLayout(new GridLayout(4, 1));
 	}
 	
 	public void completeInitView() {
@@ -210,6 +211,15 @@ public class ExercisesFrame extends JFrame {
 		comboBoxPatterns.setEnabled(false);
 		btnSetCheckPatternMode.setEnabled(false);
 		btnStopCheckPatternMode.setEnabled(true);
+	}
+
+	public void createBtnShowAnswer() {
+		btnShowAnswer = new JButton("Показать ответ");
+		checkPatternPanel.add(btnShowAnswer);
+	}
+
+	public AbstractButton getBtnShowAnswer() {
+		return btnShowAnswer;
 	}
 
 }

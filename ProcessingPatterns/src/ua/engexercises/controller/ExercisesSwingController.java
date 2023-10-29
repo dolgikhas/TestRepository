@@ -47,13 +47,25 @@ public class ExercisesSwingController {
 		createButtonSetCheckPatternModeWithListener();
 		createButtonStopCheckPatternModeWithListener();
 
-		view.createLabelPatternTask(DBGetData.getMessageDefaultTask());
-		logger.info("view.createLabelPatternTask(DBGetData.getMessageDefaultTask())");
+		createPatternTaskAndButtonShowAnswer();
 		
 		createTextFieldAnswerWithListener();
 		
 		view.completeInitView();
 		logger.info("view.completeInitView()");
+	}
+
+	private void createPatternTaskAndButtonShowAnswer() {
+		view.createLabelPatternTask(DBGetData.getMessageDefaultTask());
+		logger.info("view.createLabelPatternTask(DBGetData.getMessageDefaultTask())");
+		
+		view.createBtnShowAnswer();
+		logger.info("view.createBtnShowAnswer()");
+		view.getBtnShowAnswer().addActionListener(event -> {
+			JOptionPane.showMessageDialog(null, model.getAnswer());
+
+		});
+		logger.info("view.getBtnShowAnswer().addActionListener(...)");
 	}
 
 	private void createOptionWork() {
@@ -156,6 +168,7 @@ public class ExercisesSwingController {
 		try {
 			model.setProcessingPatternObject(view.getCurrentTheme(), view.getCurrentVariant(),
 					view.getCurrentPattern());
+			logger.info( "model.setProcessingPatternObject()" );
 			
 			patternTask = model.getPatternTask();
 			logger.info( "model.getPatternTask()" );

@@ -1,0 +1,6 @@
+Where is #WHO_SINGLE_WITH_NAMES#? Answer: #PLACES_AT#.	#WHO_SINGLE_WITH_NAMES# is at #PLACES_AT#.
+Where am I? Answer: #PLACES_AT#.	I am at #PLACES_AT#.
+Where are #WHO_PLURAL#? Answer: #PLACES_AT#.	#WHO_PLURAL# are at #PLACES_AT#.
+#WHO_SINGLE_WITH_NAMES# (to be) #PLACES_AT#.	#WHO_SINGLE_WITH_NAMES# is at #PLACES_AT#.
+I (to be) #PLACES_AT#.	I am at #PLACES_AT#.
+#WHO_PLURAL# (to be) #PLACES_AT#.	#WHO_PLURAL# are at #PLACES_AT#.

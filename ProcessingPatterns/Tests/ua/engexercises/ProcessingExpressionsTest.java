@@ -13,10 +13,12 @@ class ProcessingExpressionsTest {
 	
 	@Test
 	void testProcessingExpressionsReplaceVariable() throws Exception {
-		result = ProcessingExpressions.replaceVariable( result, "" );
+		result = ProcessingExpressions.replaceVariable( result,
+					ProcessingExpressions.getNextVariable(result), "" );
 		assertEquals( "() to see (#" + testData.listWhomKey + "#)",
 						result );		
-		result = ProcessingExpressions.replaceVariable( result, "" );
+		result = ProcessingExpressions.replaceVariable( result,
+					ProcessingExpressions.getNextVariable(result), "" );
 		assertEquals( "() to see ()", result );		
 	}
 
@@ -24,7 +26,7 @@ class ProcessingExpressionsTest {
 	void testProcessingExpressionsWithTaskSeePatternAndLishWhoKey() throws Exception {
 		String variable = ProcessingExpressions.getNextVariable(result);
 		assertEquals( testData.listWhoKey, variable );
-		result = ProcessingExpressions.replaceVariable( result, "" );
+		result = ProcessingExpressions.replaceVariable( result, variable, "" );
 		assertEquals( testData.listWhomKey,
 						ProcessingExpressions.getNextVariable(result) );		
 	}
@@ -33,7 +35,7 @@ class ProcessingExpressionsTest {
 	void testProcessingExpressionsGetNextVariableAndReplaceVariable() throws Exception {
 		String variable = ProcessingExpressions.getNextVariable(result);
 		assertEquals( testData.listWhoKey, variable );
-		result = ProcessingExpressions.replaceVariable( result, "" );
+		result = ProcessingExpressions.replaceVariable( result, variable, "" );
 		assertEquals( testData.listWhomKey,
 				ProcessingExpressions.getNextVariable(result) );		
 	}

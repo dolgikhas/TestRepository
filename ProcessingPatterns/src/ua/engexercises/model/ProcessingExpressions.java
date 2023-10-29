@@ -5,13 +5,16 @@ public class ProcessingExpressions {
 
 	public static String getNextVariable(String expression) {
 		int start = expression.indexOf( ProcessingPattern.HASH_SYMBOL );
+		
+		if (-1 == start)
+			return expression;
+		
 		int end = expression.indexOf( ProcessingPattern.HASH_SYMBOL, start + 1 );
 		return expression.substring( start + 1, end );
 	}
 
-	public static String replaceVariable(String expression, String value) {
-		return expression.replace( HASH_SYMBOL + getNextVariable( expression )
-				+ HASH_SYMBOL, value );
+	public static String replaceVariable(String expression, String variable, String value) {
+		return expression.replace( HASH_SYMBOL + variable + HASH_SYMBOL, value );
 	}
 
 	public static PatternTask replaceVariablesByCommonElements(PatternTask patternData,
@@ -34,13 +37,13 @@ public class ProcessingExpressions {
 				}
 			}
 			
-			task = ProcessingExpressions.replaceVariable( task, randomElement );
-			answer = ProcessingExpressions.replaceVariable( answer, randomElement );
+			task = ProcessingExpressions.replaceVariable(task, variable, randomElement);
+			answer = ProcessingExpressions.replaceVariable(answer, variable, randomElement);
 		}
-
+		
 		return new PatternTask.Builder()
-							  .setAnswer( answer )
-							  .setTask( task )
+							  .setAnswer(answer)
+							  .setTask(task)
 							  .build();
 	}
 
@@ -78,8 +81,7 @@ public class ProcessingExpressions {
 		if ( subject.equals("they") && objectStr.equals("them") )
 			return true;
 		if ( subject.equals("they") && objectStr.equals("their") )
-			return true;
-			
+			return true;			
 			
 		return false;
 	}

@@ -146,5 +146,9 @@ public class ExercisesModel {
 		commonElements = new CommonElements( dbData );
 	}
 
+	public String getAnswer() {
+		return patternTask.getAnswer();
+	}
+
 
 }

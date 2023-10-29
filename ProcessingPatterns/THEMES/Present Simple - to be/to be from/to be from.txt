@@ -1,0 +1,23 @@
+Where (to be) #WHO_SINGLE_WITH_NAMES# from?	Where is #WHO_SINGLE_WITH_NAMES# from?
+Where (to be) #WHO_PLURAL# from?	Where are #WHO_PLURAL# from?
+Where (to be) I from?	Where am I from?
+Where (to be) #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# from?	Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# from?
+Where (to be) #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# from?	Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# from?
+Where is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# from? Answer: #COUNTRIES#	#WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# is from #COUNTRIES#.
+Where are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# from? Answer: #COUNTRIES#	#WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# are from #COUNTRIES#.
+Where is #WHO_SINGLE_WITH_NAMES# from? Answer: #COUNTRIES#	#WHO_SINGLE_WITH_NAMES# is from #COUNTRIES#.
+Where are #WHO_PLURAL# from? Answer: #COUNTRIES#	#WHO_PLURAL# are from #COUNTRIES#.
+Where am I from? Answer: #COUNTRIES#	I am from #COUNTRIES#.
+Is #WHO_SINGLE_MAN# from #COUNTRIES#? Answer: Yes	Yes, he is.
+Is #WHO_SINGLE_MAN# from #COUNTRIES#? Answer: No	No, he isn't.
+Is #WHO_SINGLE_WOMAN# from #COUNTRIES#? Answer: Yes	Yes, she is.
+Is #WHO_SINGLE_WOMAN# from #COUNTRIES#? Answer: No	No, she isn't.
+Is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_MEN# from #COUNTRIES#? Answer: Yes	Yes, he is.
+Is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_MEN# from #COUNTRIES#? Answer: No	No, he isn't.
+Is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_WOMEN# from #COUNTRIES#? Answer: Yes	Yes, she is.
+Is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_WOMEN# from #COUNTRIES#? Answer: No	No, she isn't.
+Which country is #WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# from? Answer: #COUNTRIES#	#WHOSE_SINGLE# #FAMILY_MEMBERS_SINGLE_FULL# is from #COUNTRIES#.
+Which country are #WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# from? Answer: #COUNTRIES#	#WHOSE_SINGLE# #FAMILY_MEMBERS_PLURAL_FULL# are from #COUNTRIES#.
+Which country is #WHO_SINGLE_WITH_NAMES# from? Answer: #COUNTRIES#	#WHO_SINGLE_WITH_NAMES# is from #COUNTRIES#.
+Which country are #WHO_PLURAL# from? Answer: #COUNTRIES#	#WHO_PLURAL# are from #COUNTRIES#.
+Which country am I from? Answer: #COUNTRIES#	I am from #COUNTRIES#.

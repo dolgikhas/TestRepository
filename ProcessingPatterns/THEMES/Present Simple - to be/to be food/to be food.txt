@@ -1,0 +1,6 @@
+It (to be) - #EAT_A#	It is a #EAT_A#.
+It (to be) - #EAT_AN#	It is an #EAT_AN#.
+It not (to be) - #EAT_A#	It is not a #EAT_A#.
+It not (to be) - #EAT_AN#	It is not an #EAT_AN#.
+Question: it (to be) - #EAT_A#	Is it a #EAT_A#?
+Question: it (to be) - #EAT_AN#	Is it an #EAT_AN#?

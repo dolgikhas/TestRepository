@@ -25,3 +25,11 @@ Question #NAMES_FIRST_WOMEN# (to be) #WHO_SINGLE_WOMAN#?	Is #NAMES_FIRST_WOMEN# 
 Question it (to be) #WHO_SINGLE_MAN#?	Is it a #WHO_SINGLE_MAN#?
 Question it (to be) #WHO_SINGLE_WOMAN#?	Is it a #WHO_SINGLE_WOMAN#?
 Question #WHO_PLURAL# (to be) #PEOPLE_PLURAL#?	Are #WHO_PLURAL# #PEOPLE_PLURAL#?
+Who (to be) this?	Who is this?
+Who (to be) that?	Who is that?
+Who (to be) these?	Who are these?
+Who (to be) those?	Who are those?
+Who (to be) this? Answer: #PEOPLE_SINGLE#.	This is a #PEOPLE_SINGLE#.
+Who (to be) that? Answer: #PEOPLE_SINGLE#.	That is a #PEOPLE_SINGLE#.
+Who (to be) these? Answer: #PEOPLE_PLURAL#.	These are #PEOPLE_PLURAL#.
+Who (to be) those? Answer: #PEOPLE_PLURAL#.	Those are #PEOPLE_PLURAL#.

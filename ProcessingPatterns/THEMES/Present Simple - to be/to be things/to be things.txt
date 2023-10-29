@@ -1,0 +1,18 @@
+This - #THINGS_GIVE_A#.	This is a #THINGS_GIVE_A#.
+This - #THINGS_GIVE_AN#.	This is an #THINGS_GIVE_AN#.
+Question: this - #THINGS_GIVE_A#?	Is this a #THINGS_GIVE_A#?
+Question: this - #THINGS_GIVE_AN#?	Is this an #THINGS_GIVE_AN#?
+Question: What is this? Answer: #THINGS_GIVE_A#.	This is a #THINGS_GIVE_A#.
+Question: What is this? Answer: #THINGS_GIVE_AN#.	This is an #THINGS_GIVE_AN#.
+That - #THINGS_GIVE_A#.	That is a #THINGS_GIVE_A#.
+That - #THINGS_GIVE_AN#.	That is an #THINGS_GIVE_AN#.
+Question: that - #THINGS_GIVE_A#?	Is that a #THINGS_GIVE_A#?
+Question: that - #THINGS_GIVE_AN#?	Is that an #THINGS_GIVE_AN#?
+Question: What is that? Answer: #THINGS_GIVE_A#.	That is a #THINGS_GIVE_A#.
+Question: What is that? Answer: #THINGS_GIVE_AN#.	That is an #THINGS_GIVE_AN#.
+Those - #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
+Those - #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
+Question: those - #THINGS_PLURAL#?	Are those #THINGS_PLURAL#?
+Question: those - #THINGS_PLURAL#?	Are those #THINGS_PLURAL#?
+Question: What are those? Answer: #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
+Question: What are those? Answer: #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.

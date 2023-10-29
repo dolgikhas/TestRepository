@@ -1,0 +1,7 @@
+Today - #DAY_WEEK#.	Today is #DAY_WEEK#.
+#WHOSE_WITHOUT_IT# day - #DAY_WEEK#.	#WHOSE_WITHOUT_IT# day is #DAY_WEEK#.
+#WHOSE_WITHOUT_IT# birthday - #MONTHS#.	#WHOSE_WITHOUT_IT# birthday is in #MONTHS#.
+What day - today?	What day is it today?
+What - #WHOSE_WITHOUT_IT# day?	What is #WHOSE_WITHOUT_IT# day?
+What day - today? Answer: #DAY_WEEK#	Today is #DAY_WEEK#.
+What - #WHOSE_WITHOUT_IT# day? Answer: #DAY_WEEK#	#WHOSE_WITHOUT_IT# day is #DAY_WEEK#.

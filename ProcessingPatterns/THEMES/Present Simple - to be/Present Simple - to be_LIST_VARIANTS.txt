@@ -3,10 +3,21 @@ to be profession
 to be age
 to be look like
 to be face look like
-to be people and animals
 to be emotions
 to be family members
-to be people, animals, food
 to be interested in
 to be nationality
 to be family status
+to be people
+to be animals
+to be food
+to be here, there
+to be this, that
+to be whose
+to be from
+to be contacts
+to be date
+to be color
+to be things
+to be where
+to be when

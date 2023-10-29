@@ -7,3 +7,5 @@ computer
 guitar
 desk
 notebook
+note
+suitcase

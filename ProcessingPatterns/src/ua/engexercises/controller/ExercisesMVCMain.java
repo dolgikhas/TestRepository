@@ -8,6 +8,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import javax.swing.JOptionPane;
+
 import ua.engexercises.model.DBGetData;
 import ua.engexercises.model.ExercisesModel;
 import ua.engexercises.model.RandomNumber;
@@ -41,6 +43,7 @@ public class ExercisesMVCMain {
 			controller.initSwingController();
 		} catch ( IOException exc ) {
 			System.out.println( exc );
+			JOptionPane.showMessageDialog(view, exc);
 		}
 	}
 

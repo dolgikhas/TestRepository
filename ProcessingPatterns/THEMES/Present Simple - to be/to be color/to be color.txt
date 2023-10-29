@@ -1,0 +1,3 @@
+#WHOSE_WITHOUT_IT# color (to be) #COLOR#.	#WHOSE_WITHOUT_IT# color is #COLOR#.
+What (to be) #WHOSE_WITHOUT_IT# color?	What is #WHOSE_WITHOUT_IT# color?
+What is #WHOSE_WITHOUT_IT# color? Answer: #COLOR#	#WHOSE_WITHOUT_IT# color is #COLOR#.
