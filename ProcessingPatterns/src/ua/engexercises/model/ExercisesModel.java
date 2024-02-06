@@ -14,7 +14,7 @@ public class ExercisesModel {
 	private ProcessingPattern patternData;
 	private PatternTask patternTask;
 	private HashMap<String, String> mapContractions;
-
+	private String previousPattern;
 	
 	public ExercisesModel( Logger logger ) {
 		dbData = new DBGetData();
@@ -64,6 +64,16 @@ public class ExercisesModel {
 		
 		// 3. get random pattern form from list
 		String[] patternStr = patternForms.get(randomNumber).split("\t");
+		System.out.println("current patter: " + patternForms.get(randomNumber));
+		
+//		if (1 != patternForms.size()) {
+//			while (previousPattern.equals(patternForms.get(randomNumber))) {
+//				patternStr = patternForms.get(randomNumber).split("\t");
+//				System.out.println("get next pattern, because of equals with previous pattern");
+//			}
+//			previousPattern = patternForms.get(randomNumber);
+//		}
+		
 		String patternTaskStr = patternStr[ 0 ];
 		String patternAnswer = patternStr[ 1 ];
 		logger.info( "pattern answer and task from pattern file: " + patternTaskStr + "\t" + patternAnswer );
@@ -116,6 +126,13 @@ public class ExercisesModel {
 	}
 
 	private String replaceContractions(String strLine ) {
+		boolean endsWithPoint = false;
+		
+		if (strLine.endsWith(".")) {
+			strLine = strLine.substring(0, strLine.length() - 1);
+			endsWithPoint = true;
+		}
+		
 		String result = "";
 		String[] arrStrItems = strLine.split(" ");
 		for ( String strItem : arrStrItems ) {
@@ -128,10 +145,18 @@ public class ExercisesModel {
 		}
 		result = result.strip();
 		
+		if (endsWithPoint) {
+			result += ".";
+		}
+		
 		return result;
 	}
 
 	private boolean isAnswerContainsContractions(String strLine) {
+		if (strLine.endsWith(".")) {
+			strLine = strLine.substring(0, strLine.length() - 1);
+		}
+		
 		String[] arrStrItems = strLine.split(" ");
 		for ( String strItem : arrStrItems ) {
 			if (mapContractions.containsKey(strItem))

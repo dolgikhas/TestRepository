@@ -9,3 +9,5 @@ desk
 notebook
 eraser
 egg
+note
+suitcase

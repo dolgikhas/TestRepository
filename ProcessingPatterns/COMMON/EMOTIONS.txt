@@ -1,3 +1,5 @@
 happy
 sad
 angry
+scared
+bored

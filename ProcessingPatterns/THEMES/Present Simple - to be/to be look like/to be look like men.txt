@@ -1,10 +1,12 @@
-I - #ADJ_LOOK_MEN#.	I am #ADJ_LOOK_MEN#.
-#NAMES_FIRST_MEN# - #ADJ_LOOK_MEN#	#NAMES_FIRST_MEN# is #ADJ_LOOK_MEN#.
-#WHO_PLURAL# - #ADJ_LOOK_MEN#	#WHO_PLURAL# are #ADJ_LOOK_MEN#.
-I not - #ADJ_LOOK_MEN#	I am not #ADJ_LOOK#.
-#NAMES_FIRST_MEN# not - #ADJ_LOOK_MEN#	#NAMES_FIRST_MEN# is not #ADJ_LOOK_MEN#.
-#WHO_PLURAL# not - #ADJ_LOOK_MEN#	#WHO_PLURAL# are not #ADJ_LOOK_MEN#.
-Question I - #ADJ_LOOK_MEN#?	Am I #ADJ_LOOK_MEN#?
-Question #NAMES_FIRST_MEN# - #ADJ_LOOK_MEN#?	Is #NAMES_FIRST_MEN# #ADJ_LOOK_MEN#?
-Question #WHO_PLURAL# - #ADJ_LOOK_MEN#?	Are #WHO_PLURAL# #ADJ_LOOK_MEN#?
-Question what - he like?	What is he like?
+Question: he (to be) #ADJ_LOOK_MEN#?	Is he #ADJ_LOOK_MEN#?
+what is he like? Answer: #ADJ_LOOK_MEN#	he is #ADJ_LOOK_MEN#.
+Is he #ADJ_LOOK_MEN#? Answer: Yes	Yes, he is.
+Is he #ADJ_LOOK_MEN#? Answer: No	No, he is not.
+Am I #ADJ_LOOK_MEN#? Answer: Yes (you)	Yes, you are.
+Am I #ADJ_LOOK_MEN#? Answer: No (you)	No, you are not.
+Is #NAMES_FIRST_MEN# #ADJ_LOOK_MEN#? Answer: Yes	Yes, he is.
+Is #NAMES_FIRST_MEN# #ADJ_LOOK_MEN#? Answer: No	No, he is not.
+Are #WHO_PLURAL# #ADJ_LOOK_MEN#? Answer: Yes	Yes, #WHO_PLURAL# are.
+Are #WHO_PLURAL# #ADJ_LOOK_MEN#? Answer: No	No, #WHO_PLURAL# are not.
+Are you #ADJ_LOOK_MEN#? Answer: Yes (I)	Yes, I am.
+Are you  #ADJ_LOOK_MEN#? Answer: No (I)	No, I am not.

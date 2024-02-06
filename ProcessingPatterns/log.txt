@@ -1,52 +1,114 @@
-окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
+февр. 06, 2024 3:54:02 PM ua.engexercises.controller.ExercisesMVCMain initLoggerFileHandler
 INFO: Logger initialized
-окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController initSwingController
 INFO: view.initView() complete
-окт. 28, 2023 5:44:59 PM ua.engexercises.controller.ExercisesSwingController createOptionWork
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createOptionWork
 INFO: createOptionWork()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxThemes
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createComboBoxThemes
 INFO: createComboBoxThemes()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxVariantsWithListener
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createComboBoxVariantsWithListener
 INFO: createComboBoxVariantsWithListener()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createComboBoxPatternsWithListener
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createComboBoxPatternsWithListener
 INFO: createComboBoxPatternsWithListener()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createButtonSetCheckPatternModeWithListener
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createButtonSetCheckPatternModeWithListener
 INFO: createButtonSetCheckPatternModeWithListener()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createButtonStopCheckPatternModeWithListener
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createButtonStopCheckPatternModeWithListener
 INFO: createButtonStopCheckPatternModeWithListener()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
 INFO: view.createLabelPatternTask(DBGetData.getMessageDefaultTask())
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
 INFO: view.createBtnShowAnswer()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createPatternTaskAndButtonShowAnswer
 INFO: view.getBtnShowAnswer().addActionListener(...)
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController createTextFieldAnswerWithListener
+февр. 06, 2024 3:54:04 PM ua.engexercises.controller.ExercisesSwingController createTextFieldAnswerWithListener
 INFO: view.createTextFieldAnswer()
-окт. 28, 2023 5:45:00 PM ua.engexercises.controller.ExercisesSwingController initSwingController
+февр. 06, 2024 3:54:05 PM ua.engexercises.controller.ExercisesSwingController initSwingController
 INFO: view.completeInitView()
-окт. 28, 2023 5:45:08 PM ua.engexercises.controller.ExercisesSwingController lambda$1
+февр. 06, 2024 3:55:02 PM ua.engexercises.controller.ExercisesSwingController lambda$1
 INFO: view.getBtnSetOptionWork().addActionListener() for concrete theme
-окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to be profession) forms
-окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 16
-окт. 28, 2023 5:45:16 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: Are you a #PROFESSIONS_SINGLE#? Answer: yes	Yes, you are.
-окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+февр. 06, 2024 3:55:13 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:55:13 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 4
+февр. 06, 2024 3:55:13 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Am I #ADJ_LOOK_MEN#? Answer: Yes (you)	Yes, you are.
+февр. 06, 2024 3:55:13 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
 INFO: model.setProcessingPatternObject()
-окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+февр. 06, 2024 3:55:13 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
 INFO: model.getPatternTask()
-окт. 28, 2023 5:45:16 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
+февр. 06, 2024 3:55:13 PM ua.engexercises.controller.ExercisesSwingController setTaskFromSelectedPattern
 INFO: view.setTask(patternTask.getTask())
-окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get list pattern (to be profession) forms
-окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: get random number for get form: 5
-окт. 28, 2023 5:45:40 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
-INFO: pattern answer and task from pattern file: you not - #PROFESSIONS_SINGLE#	you are not a #PROFESSIONS_SINGLE#.
-окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+февр. 06, 2024 3:56:02 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:02 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 11
+февр. 06, 2024 3:56:02 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Are you  #ADJ_LOOK_MEN#? Answer: No (I)	No, I am not.
+февр. 06, 2024 3:56:02 PM ua.engexercises.controller.ExercisesSwingController lambda$2
 INFO: model.getPatternTask()
-окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+февр. 06, 2024 3:56:02 PM ua.engexercises.controller.ExercisesSwingController lambda$2
 INFO: view.setTask(patternTask.getTask())
-окт. 28, 2023 5:45:40 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+февр. 06, 2024 3:56:02 PM ua.engexercises.controller.ExercisesSwingController lambda$2
 INFO: view.setAnswerFieldValue("")
+февр. 06, 2024 3:56:07 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:07 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 7
+февр. 06, 2024 3:56:07 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Is #NAMES_FIRST_MEN# #ADJ_LOOK_MEN#? Answer: No	No, he is not.
+февр. 06, 2024 3:56:07 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: model.getPatternTask()
+февр. 06, 2024 3:56:07 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setTask(patternTask.getTask())
+февр. 06, 2024 3:56:07 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setAnswerFieldValue("")
+февр. 06, 2024 3:56:14 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
+INFO: user input contain contraction
+февр. 06, 2024 3:56:14 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
+INFO: user input without contractions: no, he is not.
+февр. 06, 2024 3:56:14 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:14 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 2
+февр. 06, 2024 3:56:14 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Is he #ADJ_LOOK_MEN#? Answer: Yes	Yes, he is.
+февр. 06, 2024 3:56:14 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: model.getPatternTask()
+февр. 06, 2024 3:56:14 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setTask(patternTask.getTask())
+февр. 06, 2024 3:56:14 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setAnswerFieldValue("")
+февр. 06, 2024 3:56:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 0
+февр. 06, 2024 3:56:17 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Question: he (to be) #ADJ_LOOK_MEN#?	Is he #ADJ_LOOK_MEN#?
+февр. 06, 2024 3:56:17 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: model.getPatternTask()
+февр. 06, 2024 3:56:17 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setTask(patternTask.getTask())
+февр. 06, 2024 3:56:17 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setAnswerFieldValue("")
+февр. 06, 2024 3:56:22 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:22 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 5
+февр. 06, 2024 3:56:22 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answer and task from pattern file: Am I #ADJ_LOOK_MEN#? Answer: No (you)	No, you are not.
+февр. 06, 2024 3:56:22 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: model.getPatternTask()
+февр. 06, 2024 3:56:22 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setTask(patternTask.getTask())
+февр. 06, 2024 3:56:22 PM ua.engexercises.controller.ExercisesSwingController lambda$2
+INFO: view.setAnswerFieldValue("")
+февр. 06, 2024 3:56:29 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
+INFO: user input contain contraction
+февр. 06, 2024 3:56:29 PM ua.engexercises.model.ExercisesModel checkIsUserInputEqualToAnswer
+INFO: user input without contractions: no, you are not.
+февр. 06, 2024 3:56:29 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get list pattern (to be look like men) forms
+февр. 06, 2024 3:56:29 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: get random number for get form: 3
+февр. 06, 2024 3:56:29 PM ua.engexercises.model.ExercisesModel setProcessingPatternObject
+INFO: pattern answe

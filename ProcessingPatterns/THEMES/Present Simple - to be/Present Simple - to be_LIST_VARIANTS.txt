@@ -21,3 +21,4 @@ to be color
 to be things
 to be where
 to be when
+to be phys.conditions

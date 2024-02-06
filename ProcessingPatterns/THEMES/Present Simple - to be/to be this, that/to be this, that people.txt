@@ -1,4 +1,4 @@
-This (to be) #NAMES_FIRST_MEN#.	This is #NAMES_FIRST_MEN#.
-This (to be) #NAMES_FIRST_WOMEN#.	This is #NAMES_FIRST_WOMEN#.
-That (to be) #NAMES_FIRST_MEN#.	That is #NAMES_FIRST_MEN#.
-That (to be) #NAMES_FIRST_WOMEN#.	That is #NAMES_FIRST_WOMEN#.
+This (to be) #WHO_SINGLE_PEOPLE#.	This is a #WHO_SINGLE_PEOPLE#.
+That (to be) #WHO_SINGLE_PEOPLE#.	That is a #WHO_SINGLE_PEOPLE#.
+Who is this? Answer: #WHO_SINGLE_PEOPLE#.	This is a #WHO_SINGLE_PEOPLE#.
+Who is that? Answer: #WHO_SINGLE_PEOPLE#.	That is a #WHO_SINGLE_PEOPLE#.

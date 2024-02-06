@@ -1,6 +1,36 @@
+What is that? Answer: #THINGS_GIVE_A#.	That is a #THINGS_GIVE_A#.
+What is that? Answer: #THINGS_GIVE_AN#.	That is an #THINGS_GIVE_AN#.
+What are those? Answer: #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
+What is this? Answer: #THINGS_GIVE_A#.	This is a #THINGS_GIVE_A#.
+What is this? Answer: #THINGS_GIVE_AN#.	This is an #THINGS_GIVE_AN#.
+What are these? Answer: #THINGS_PLURAL#.	These are #THINGS_PLURAL#.
 That (to be) #THINGS_GIVE_A#.	That is a #THINGS_GIVE_A#.
 That (to be) #THINGS_GIVE_AN#.	That is an #THINGS_GIVE_AN#.
 Those (to be) #THINGS_PLURAL#.	Those are #THINGS_PLURAL#.
 This (to be) #THINGS_GIVE_A#.	This is a #THINGS_GIVE_A#.
 This (to be) #THINGS_GIVE_AN#.	This is an #THINGS_GIVE_AN#.
 These (to be) #THINGS_PLURAL#.	These are #THINGS_PLURAL#.
+What is that? Answer: #COLOR# #THINGS_GIVE_A#.	That is a #COLOR# #THINGS_GIVE_A#.
+What is that? Answer: #COLOR# #THINGS_GIVE_AN#.	That is a #COLOR# #THINGS_GIVE_AN#.
+What are those? Answer: #COLOR# #THINGS_PLURAL#.	Those are #COLOR# #THINGS_PLURAL#.
+What is this? Answer: #COLOR# #THINGS_GIVE_A#.	This is a #COLOR# #THINGS_GIVE_A#.
+What is this? Answer: #COLOR# #THINGS_GIVE_AN#.	This is a #COLOR# #THINGS_GIVE_AN#.
+What are these? Answer: #COLOR# #THINGS_PLURAL#.	These are #COLOR# #THINGS_PLURAL#.
+That (to be) #COLOR# #THINGS_GIVE_A#.	That is a #COLOR# #THINGS_GIVE_A#.
+That (to be) #COLOR# #THINGS_GIVE_AN#.	That is a #COLOR# #THINGS_GIVE_AN#.
+Those (to be) #COLOR# #THINGS_PLURAL#.	Those are #COLOR# #THINGS_PLURAL#.
+This (to be) #COLOR# #THINGS_GIVE_A#.	This is a #COLOR# #THINGS_GIVE_A#.
+This (to be) #COLOR# #THINGS_GIVE_AN#.	This is a #COLOR# #THINGS_GIVE_AN#.
+These (to be) #COLOR# #THINGS_PLURAL#.	These are #COLOR# #THINGS_PLURAL#.
+What is that? Answer: #SIZE_THINGS# #THINGS_GIVE_A#.	That is a #SIZE_THINGS# #THINGS_GIVE_A#.
+What is that? Answer: #SIZE_THINGS# #THINGS_GIVE_AN#.	That is a #SIZE_THINGS# #THINGS_GIVE_AN#.
+What are those? Answer: #SIZE_THINGS# #THINGS_PLURAL#.	Those are #SIZE_THINGS# #THINGS_PLURAL#.
+What is this? Answer: #SIZE_THINGS# #THINGS_GIVE_A#.	This is a #SIZE_THINGS# #THINGS_GIVE_A#.
+What is this? Answer: #SIZE_THINGS# #THINGS_GIVE_AN#.	This is a #SIZE_THINGS# #THINGS_GIVE_AN#.
+What are these? Answer: #SIZE_THINGS# #THINGS_PLURAL#.	These are #SIZE_THINGS# #THINGS_PLURAL#.
+That (to be) #SIZE_THINGS# #THINGS_GIVE_A#.	That is a #SIZE_THINGS# #THINGS_GIVE_A#.
+That (to be) #SIZE_THINGS# #THINGS_GIVE_AN#.	That is a #SIZE_THINGS# #THINGS_GIVE_AN#.
+Those (to be) #SIZE_THINGS# #THINGS_PLURAL#.	Those are #SIZE_THINGS# #THINGS_PLURAL#.
+This (to be) #SIZE_THINGS# #THINGS_GIVE_A#.	This is a #SIZE_THINGS# #THINGS_GIVE_A#.
+This (to be) #SIZE_THINGS# #THINGS_GIVE_AN#.	This is a #SIZE_THINGS# #THINGS_GIVE_AN#.
+These (to be) #SIZE_THINGS# #THINGS_PLURAL#.	These are #SIZE_THINGS# #THINGS_PLURAL#.

@@ -4,3 +4,9 @@ These (to be) #ANIMALS_PLURAL#.	These are #ANIMALS_PLURAL#.
 That (to be) #ANIMALS_SINGLE_A#.	That is a #ANIMALS_SINGLE_A#.
 That (to be) #ANIMALS_SINGLE_AN#.	That is an #ANIMALS_SINGLE_AN#.
 Those (to be) #ANIMALS_PLURAL#.	Those are #ANIMALS_PLURAL#.
+Who is this? Answer: #ANIMALS_SINGLE_A#	This is a #ANIMALS_SINGLE_A#.
+Who is this? Answer: #ANIMALS_SINGLE_AN#	This is an #ANIMALS_SINGLE_AN#.
+Who are these? Answer: #ANIMALS_PLURAL#.	These are #ANIMALS_PLURAL#.
+Who is that? Answer: #ANIMALS_SINGLE_A#	That is a #ANIMALS_SINGLE_A#.
+Who is that? Answer: #ANIMALS_SINGLE_AN#	That is an #ANIMALS_SINGLE_AN#.
+Who are those? Answer: #ANIMALS_PLURAL#.	Those are #ANIMALS_PLURAL#.
