@@ -22,8 +22,6 @@ public class ProcessWordsFrame extends JFrame {
 	private JButton btnLoadWordData;
 	private JButton btnAddWord;
 	private JButton btnLoadExamples;
-//	private JButton btnUpdateWord;
-//	private JButton btnDeleteWord;
 	private JLabel lblStatistics;
 
 	public void initView() {
@@ -54,10 +52,6 @@ public class ProcessWordsFrame extends JFrame {
 		middlePanel.add(btnLoadWordData);
 		btnAddWord = new JButton("Добавить слово");
 		middlePanel.add(btnAddWord);
-//		btnUpdateWord = new JButton("Обновить слово");
-//		middlePanel.add(btnUpdateWord);
-//		btnDeleteWord = new JButton("Удалить слово");
-//		middlePanel.add(btnDeleteWord);
 		btnLoadExamples = new JButton("Загрузить примеры");
 		middlePanel.add(btnLoadExamples);
 		
@@ -119,4 +113,5 @@ public class ProcessWordsFrame extends JFrame {
 	public void setWord(String word) {
 		txtWord.setText(word);
 	}
+
 }

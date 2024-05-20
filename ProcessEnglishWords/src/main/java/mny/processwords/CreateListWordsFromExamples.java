@@ -19,30 +19,11 @@ import mny.processwords.worddata.Word;
 
 public class CreateListWordsFromExamples {
 	static HashSet<String> listAllWords = new HashSet<String>();
+
 	
-	
-	public static void main(String[] args) {		
-		createListWordsFromExamples();
-//		try {
-//			getListAllWords("all_words.txt");
-//			
-//			Scanner scanner = new Scanner(System.in);
-//			
-//			String userInput = "";
-//
-//			while (!userInput.equals("q")) {
-//				System.out.println("input sentence: ");				
-//				userInput = scanner.nextLine();
-//				
-//				System.out.println(isSentenceContainCheckedWords(userInput));
-//			}
-//			
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-	}
+//	public static void main(String[] args) {		
+//		createListWordsFromExamples();
+//	}
 	
 	public static void getListAllWords(String filePath) throws FileNotFoundException, IOException {
 		try (FileInputStream fis = new FileInputStream(filePath);
@@ -65,19 +46,17 @@ public class CreateListWordsFromExamples {
 		return true;
 	}
 
-	public static void createListWordsFromExamples() {
-		String path = "D:\\ENGLISH. FULL\\WORDS\\examples\\";
-		File dir = new File(path); //path указывает на директорию
+	public static void createListWordsFromExamples(String pathExamples) {
+		File dir = new File(pathExamples);
 		File[] arrFiles = dir.listFiles();
 		List<File> lst = Arrays.asList(arrFiles);
 		try {
 			for (File file : lst) {
-//				System.out.println(file.getName());
 				
 				if (!file.getName().contains(".txt"))
 					continue;
 				
-				processingFile(path, file);
+				processingFile(pathExamples, file);
 			}
 				
 			writeWordsToFile("all_words.txt");

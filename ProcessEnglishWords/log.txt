@@ -1,76 +1,50 @@
-февр. 27, 2023 3:16:17 PM mny.processwords.ProcessEnglishWords initLoggerFileHandler
+трав. 20, 2024 2:30:32 ПП mny.processwords.ProcessEnglishWords initLoggerFileHandler
 INFO: Logger initialized
-февр. 27, 2023 3:16:19 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.initView()
-февр. 27, 2023 3:16:19 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.createWordControls()
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+INFO: CreateListWordsFromExamples.createListWordsFromExamples()
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:     file C:\Disc D\mny\ПЕРЕНОС\ENGLISH\check_words\words_new.txt opened successfully!
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_new.txt opened successfully!
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_new
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:     file C:\Disc D\mny\ПЕРЕНОС\ENGLISH\check_words\words_doubt.txt opened successfully!
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_processed.txt opened successfully!
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsData
-INFO:   loadWordsDataFromFile() for words_doubt
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:     file C:\Disc D\mny\ПЕРЕНОС\ENGLISH\check_words\words_processed.txt opened successfully!
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_processed
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-февр. 27, 2023 3:16:19 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
-INFO:     file C:\Disc D\mny\ПЕРЕНОС\ENGLISH\check_words\words_checked.txt opened successfully!
-февр. 27, 2023 3:16:20 PM mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_checked.txt opened successfully!
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-февр. 27, 2023 3:16:20 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_checked
-февр. 27, 2023 3:16:20 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   getListAllWords() processed
-февр. 27, 2023 3:16:20 PM mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 20, 2024 2:30:35 ПП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() <<
-февр. 27, 2023 3:16:20 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: model.loadWordsData()
-февр. 27, 2023 3:16:20 PM mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 20, 2024 2:30:35 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() <<
-февр. 27, 2023 3:16:57 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
+трав. 20, 2024 2:30:38 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Enter word
-февр. 27, 2023 3:16:57 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
-INFO: Word data not found
-февр. 27, 2023 3:17:00 PM mny.processwords.controller.ProcessWordsSwingController loadWordData
-INFO: view.setTranscription(model.getTranscription(word))
-февр. 27, 2023 3:17:00 PM mny.processwords.model.ProcessWordsModel getTranslation
-INFO:   ProcessWordsModel.getTranslation() >>
-февр. 27, 2023 3:17:03 PM mny.processwords.model.ProcessWordsModel getTranslation
-INFO:   ProcessWordsModel.getTranslation() <<
-февр. 27, 2023 3:17:23 PM mny.processwords.controller.ProcessWordsSwingController loadWordData
-INFO: get translation by ProcessElementsDlg dialog
-февр. 27, 2023 3:17:25 PM mny.processwords.controller.ProcessWordsSwingController addNewWordToFiles
-INFO: add new word data for word hardworking
-февр. 27, 2023 3:17:26 PM mny.processwords.model.ProcessWordsModel getExamples
-INFO:   ProcessWordsModel.getExamples() >>
-февр. 27, 2023 3:17:29 PM mny.processwords.model.ProcessWordsModel getExamples
-INFO:   ProcessWordsModel.getExamples() <<
-февр. 27, 2023 3:54:23 PM mny.processwords.controller.ProcessWordsSwingController lambda$3
-INFO: get examples by ProcessElementsDlg dialog
-февр. 27, 2023 3:55:13 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
-INFO: Enter word
-февр. 27, 2023 3:55:13 PM mny.processwords.controller.ProcessWordsSwingController lambda$0
+трав. 20, 2024 2:30:38 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Trim word
+трав. 20, 2024 2:30:38 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Get word data and fill text fields
-мар. 01, 2023 5:12:47 PM mny.processwords.model.ProcessWordsModel getExamples
-INFO:   ProcessWordsModel.getExamples() >>

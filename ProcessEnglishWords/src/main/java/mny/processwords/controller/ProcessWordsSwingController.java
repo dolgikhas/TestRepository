@@ -1,5 +1,6 @@
 package mny.processwords.controller;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,15 +9,18 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 import mny.processwords.CreateListWordsFromExamples;
+import mny.processwords.model.Paths;
 import mny.processwords.model.ProcessWordsModel;
 import mny.processwords.view.ProcessElementsDlg;
 import mny.processwords.view.ProcessWordsFrame;
+import mny.processwords.view.SetPathsDlg;
 import mny.processwords.worddata.Word;
 
 public class ProcessWordsSwingController {
 	private ProcessWordsModel model;
 	private ProcessWordsFrame view;
 	private Logger logger;
+	private Paths pathValues;
 
 	public ProcessWordsSwingController(ProcessWordsModel model, ProcessWordsFrame view,
 			Logger logger) {
@@ -33,10 +37,10 @@ public class ProcessWordsSwingController {
 		view.createWordControls();
 		logger.info("view.createWordControls()");
 		
-		CreateListWordsFromExamples.createListWordsFromExamples();
+		CreateListWordsFromExamples.createListWordsFromExamples(pathValues.getExamples());
 		logger.info("CreateListWordsFromExamples.createListWordsFromExamples()");
 		
-		model.loadWordsData();
+		model.loadWordsData(pathValues.getCheckWords());
 		logger.info("model.loadWordsData()");
 
 		view.getWordTextEditor().addActionListener(event -> {
@@ -82,21 +86,38 @@ public class ProcessWordsSwingController {
 		
 		view.getBtnLoadExamples().addActionListener(event -> {
 			try {
-				ArrayList<String> listExamples = model.getExamples(view.getWord());
-				listExamples = model.processIsWordsKnown(listExamples, view.getWord());
-				ProcessElementsDlg processElementsDlg = new ProcessElementsDlg(view, listExamples);
-				processElementsDlg.getBtnOK().addActionListener(e -> {
-					try {
-						model.outputExamplesToFile(view.getWord(), processElementsDlg.getTextArea().getText());
-					} catch (IOException e1) {
-						view.setStatistics("ОШИБКА при добавлении примеров для слова " + view.getWord());
-						e1.printStackTrace();
-					}
-					processElementsDlg.setVisible(false);
-				});
-				processElementsDlg.setVisible(true);
-				logger.info("get examples by ProcessElementsDlg dialog");			
-				view.setStatistics("Примеры для Слова " + view.getWord() + " добавлены!");
+				boolean loadExamples = true;
+				
+				if (checkIsExampleExists(view.getWord())) {
+					loadExamples = false;
+					
+					int selection = JOptionPane.showConfirmDialog(view,
+							"Примеры для данного слова существуют. Нужно искать новые примеры?",
+							"Поиск примеров для слова", JOptionPane.OK_CANCEL_OPTION,
+							JOptionPane.QUESTION_MESSAGE);
+					if (JOptionPane.OK_OPTION == selection)
+						loadExamples = true;
+				}
+					
+				if (loadExamples) {
+					ArrayList<String> listExamples = model.getExamples(view.getWord());
+					listExamples = model.processIsWordsKnown(listExamples, view.getWord());
+					ProcessElementsDlg processElementsDlg = new ProcessElementsDlg(view, listExamples);
+					processElementsDlg.getBtnOK().addActionListener(e -> {
+						try {
+							model.outputExamplesToFile(view.getWord(), processElementsDlg.getTextArea().getText());
+						} catch (IOException e1) {
+							view.setStatistics("ОШИБКА при добавлении примеров для слова " + view.getWord());
+							e1.printStackTrace();
+						}
+						processElementsDlg.setVisible(false);
+					});
+					processElementsDlg.setVisible(true);
+					logger.info("get examples by ProcessElementsDlg dialog");			
+					view.setStatistics("Примеры для слова " + view.getWord() + " добавлены!");
+				} else {
+					view.setStatistics("Примеры для слова " + view.getWord() + " уже существуют.");
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 				view.setStatistics("ОШИБКА при получении примеров для слова " + view.getWord());
@@ -114,7 +135,8 @@ public class ProcessWordsSwingController {
 									 .setTranscription(view.getTranscription())
 									 .setTranslation(view.getTranslation())
 									 .setRepeat("0")
-									 .build());
+									 .build(),
+							 pathValues.getCheckWords());
 			logger.info("add new word data for word " + view.getWord());
 			view.setStatistics("Слово " + view.getWord() + " добавлено ;-)");
 		} catch (IOException e) {
@@ -142,6 +164,20 @@ public class ProcessWordsSwingController {
 			e.printStackTrace();
 			view.setStatistics("ОШИБКА при загрузке данных слова " + view.getWord());
 		}
+	}
+
+	public void setPathValues(Paths ipathValues) {
+		this.pathValues = ipathValues;
+	}
+	
+	private boolean checkIsExampleExists(String word) {
+		String exampleWordPath = pathValues.getExamples() + word + ".txt"; 
+		File file = new File(exampleWordPath);
+		if (file.exists()) {
+			return true;
+		}
+
+		return false;
 	}
 
 }
