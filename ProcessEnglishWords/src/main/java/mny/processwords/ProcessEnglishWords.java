@@ -58,6 +58,4 @@ public class ProcessEnglishWords {
 			System.out.println(exc); 
 		}
 	}
-
-
 }

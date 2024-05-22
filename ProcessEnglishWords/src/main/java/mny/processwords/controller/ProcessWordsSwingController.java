@@ -13,7 +13,6 @@ import mny.processwords.model.Paths;
 import mny.processwords.model.ProcessWordsModel;
 import mny.processwords.view.ProcessElementsDlg;
 import mny.processwords.view.ProcessWordsFrame;
-import mny.processwords.view.SetPathsDlg;
 import mny.processwords.worddata.Word;
 
 public class ProcessWordsSwingController {
