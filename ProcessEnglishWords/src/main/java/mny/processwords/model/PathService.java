@@ -24,6 +24,9 @@ public class PathService {
 			} else if (path.startsWith("CHECK_WORDS: ")) {
 				String strCheckWords[] = path.split(": ");
 				pathValues.setCheckWords(strCheckWords[1]);
+			} else if (path.startsWith("GOOGLE_EXAMPLES: ")) {
+				String strGoogleExamples[] = path.split(": ");
+				pathValues.setGoogleExamples(strGoogleExamples[1]);
 			}
 		}
 	}

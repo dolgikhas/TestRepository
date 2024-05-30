@@ -2,6 +2,7 @@ package mny.processwords.model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,10 +10,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
@@ -30,6 +36,11 @@ public class ProcessWordsModel {
 	private ArrayList<String> processedWords;
 	private ArrayList<String> checkedWords;
 	private HashSet<String> listAllWords;
+	private Paths pathValues;
+
+	public void setPathValues(Paths pathValues) {
+		this.pathValues = pathValues;
+	}
 
 	static SiteKeys keysCambridgeDictionary = new SiteKeys.Builder()
 			.setAddress("https://dictionary.cambridge.org/ru/%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/" +
@@ -87,17 +98,24 @@ public class ProcessWordsModel {
 		return mapWordsData.get(word);
 	}
 	
-	public void loadWordsData(String pathCheckWords) throws FileNotFoundException, IOException {
+	public void loadWordsData() throws FileNotFoundException, IOException {
 		logger.info("ProcessWordsModel.loadWordsData() >>");
+		
+		String pathCheckWords = pathValues.getCheckWords();
+		
 		mapWordsData = new HashMap<String, Word>();
 		newWords = loadWordsDataFromFile(pathCheckWords + "words_new.txt");
 		logger.info("  loadWordsDataFromFile() for words_new");
+		
 		processedWords = loadWordsDataFromFile(pathCheckWords + "words_processed.txt");
 		logger.info("  loadWordsDataFromFile() for words_processed");
+		
 		checkedWords = loadWordsDataFromFile(pathCheckWords + "words_checked.txt");
 		logger.info("  loadWordsDataFromFile() for words_checked");
+		
 		getListAllWords("all_words.txt");
 		logger.info("  getListAllWords() processed");
+		
 		logger.info("ProcessWordsModel.loadWordsData() <<");		
 	}
 	
@@ -201,12 +219,26 @@ public class ProcessWordsModel {
 		return examples;
 	}
 	
-	public void outputExamplesToFile(String word, String text) throws FileNotFoundException, IOException {
-		String fileName = "D:\\ENGLISH. FULL\\WORDS\\examples\\" + word + ".txt";
+	public void outputExamplesToFile(String word, String examples) throws FileNotFoundException, IOException {
+		String examplesPath = pathValues.getExamples() + word + ".txt";
 		
-		try (BufferedWriter bw	= new BufferedWriter(
-				new FileWriter(fileName) ) ) {
-			bw.write(text);
+		try (BufferedWriter bw	= new BufferedWriter(new FileWriter(examplesPath))) {
+			bw.write(examples);
+		}
+		
+		String examplesGooglePath = pathValues.getGoogleExamples() + word + ".txt";
+		try {
+			File sourceFile = new File(examplesPath);
+			File destinationFile = new File(examplesGooglePath);
+		    Files.copy(sourceFile.toPath(), destinationFile.toPath());
+		} catch (FileAlreadyExistsException e) {
+			JOptionPane.showMessageDialog(null, "Файл с примером уже существует на Google Disc!",
+					"Проблема с копированием файл с примерами", JOptionPane.WARNING_MESSAGE);
+		} catch (NoSuchFileException e) {
+			JOptionPane.showMessageDialog(null, "Не удалось скопировать файл с примерами уже существует на Google Disc!",
+					"Проблема с копированием файла с примерами", JOptionPane.ERROR_MESSAGE);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

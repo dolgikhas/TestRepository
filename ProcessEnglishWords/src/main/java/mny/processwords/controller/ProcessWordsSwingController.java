@@ -39,7 +39,8 @@ public class ProcessWordsSwingController {
 		CreateListWordsFromExamples.createListWordsFromExamples(pathValues.getExamples());
 		logger.info("CreateListWordsFromExamples.createListWordsFromExamples()");
 		
-		model.loadWordsData(pathValues.getCheckWords());
+		model.setPathValues(pathValues);
+		model.loadWordsData();
 		logger.info("model.loadWordsData()");
 
 		view.getWordTextEditor().addActionListener(event -> {

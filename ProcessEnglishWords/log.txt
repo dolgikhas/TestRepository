@@ -1,50 +1,110 @@
-трав. 22, 2024 3:11:21 ПП mny.processwords.ProcessEnglishWords initLoggerFileHandler
+трав. 30, 2024 11:43:38 ДП mny.processwords.ProcessEnglishWords initLoggerFileHandler
 INFO: Logger initialized
-трав. 22, 2024 3:11:23 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:41 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() >>
-трав. 22, 2024 3:11:23 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:41 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.initView()
-трав. 22, 2024 3:11:23 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:41 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: view.createWordControls()
-трав. 22, 2024 3:11:24 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:42 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: CreateListWordsFromExamples.createListWordsFromExamples()
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:42 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() >>
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:42 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:42 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_new.txt opened successfully!
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_new
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_processed.txt opened successfully!
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_processed
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() >>
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:     file G:\Мій диск\ПЕРЕНОС\ENGLISH\check_words\words_checked.txt opened successfully!
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsDataFromFile
 INFO:   ProcessWordsModel.loadWordsDataFromFile() <<
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   loadWordsDataFromFile() for words_checked
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO:   getListAllWords() processed
-трав. 22, 2024 3:11:24 ПП mny.processwords.model.ProcessWordsModel loadWordsData
+трав. 30, 2024 11:43:43 ДП mny.processwords.model.ProcessWordsModel loadWordsData
 INFO: ProcessWordsModel.loadWordsData() <<
-трав. 22, 2024 3:11:24 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:43 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: model.loadWordsData()
-трав. 22, 2024 3:11:24 ПП mny.processwords.controller.ProcessWordsSwingController initSwingController
+трав. 30, 2024 11:43:43 ДП mny.processwords.controller.ProcessWordsSwingController initSwingController
 INFO: ProcessWordsSwingController.initSwingController() <<
-трав. 22, 2024 3:11:30 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
+трав. 30, 2024 11:43:45 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Enter word
-трав. 22, 2024 3:11:30 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
+трав. 30, 2024 11:43:45 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
 INFO: Trim word
-трав. 22, 2024 3:11:30 ПП mny.processwords.controller.ProcessWordsSwingController lambda$0
-INFO: Get word data and fill text fields
+трав. 30, 2024 11:43:45 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Word data not found
+трав. 30, 2024 11:44:06 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: view.setTranscription(model.getTranscription(word))
+трав. 30, 2024 11:44:06 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() >>
+трав. 30, 2024 11:44:08 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() <<
+трав. 30, 2024 11:44:14 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: get translation by ProcessElementsDlg dialog
+трав. 30, 2024 11:44:16 ДП mny.processwords.controller.ProcessWordsSwingController addNewWordToFiles
+INFO: add new word data for word sympathetic
+трав. 30, 2024 11:44:16 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() >>
+трав. 30, 2024 11:44:18 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() <<
+трав. 30, 2024 11:49:23 ДП mny.processwords.controller.ProcessWordsSwingController lambda$3
+INFO: get examples by ProcessElementsDlg dialog
+трав. 30, 2024 11:49:32 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Enter word
+трав. 30, 2024 11:49:32 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Trim word
+трав. 30, 2024 11:49:32 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Word data not found
+трав. 30, 2024 11:49:37 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: view.setTranscription(model.getTranscription(word))
+трав. 30, 2024 11:49:37 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() >>
+трав. 30, 2024 11:49:39 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() <<
+трав. 30, 2024 11:49:50 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: get translation by ProcessElementsDlg dialog
+трав. 30, 2024 11:49:51 ДП mny.processwords.controller.ProcessWordsSwingController addNewWordToFiles
+INFO: add new word data for word educated
+трав. 30, 2024 11:49:53 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() >>
+трав. 30, 2024 11:49:54 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() <<
+трав. 30, 2024 11:52:21 ДП mny.processwords.controller.ProcessWordsSwingController lambda$3
+INFO: get examples by ProcessElementsDlg dialog
+трав. 30, 2024 11:52:33 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Enter word
+трав. 30, 2024 11:52:33 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Trim word
+трав. 30, 2024 11:52:33 ДП mny.processwords.controller.ProcessWordsSwingController lambda$0
+INFO: Word data not found
+трав. 30, 2024 11:52:34 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: view.setTranscription(model.getTranscription(word))
+трав. 30, 2024 11:52:34 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() >>
+трав. 30, 2024 11:52:36 ДП mny.processwords.model.ProcessWordsModel getTranslation
+INFO:   ProcessWordsModel.getTranslation() <<
+трав. 30, 2024 11:53:29 ДП mny.processwords.controller.ProcessWordsSwingController loadWordData
+INFO: get translation by ProcessElementsDlg dialog
+трав. 30, 2024 11:53:30 ДП mny.processwords.controller.ProcessWordsSwingController addNewWordToFiles
+INFO: add new word data for word pleasant
+трав. 30, 2024 11:53:30 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() >>
+трав. 30, 2024 11:53:32 ДП mny.processwords.model.ProcessWordsModel getExamples
+INFO:   ProcessWordsModel.getExamples() <<
+трав. 30, 2024 11:55:28 ДП mny.processwords.controller.ProcessWordsSwingController lambda$3
+INFO: get examples by ProcessElementsDlg dialog

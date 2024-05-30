@@ -3,7 +3,14 @@ package mny.processwords.model;
 public class Paths {
 	private String examples;
 	private String checkWords;
+	private String googleExamples;
 	
+	public String getGoogleExamples() {
+		return googleExamples;
+	}
+	public void setGoogleExamples(String googleExamples) {
+		this.googleExamples = googleExamples;
+	}
 	public String getExamples() {
 		return examples;
 	}
