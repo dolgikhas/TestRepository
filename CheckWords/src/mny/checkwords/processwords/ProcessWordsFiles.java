@@ -27,7 +27,7 @@ public class ProcessWordsFiles {
 		try (FileInputStream fileInputString = new FileInputStream(pathFileOldWords);
 			 InputStreamReader inputStringReader = new InputStreamReader(fileInputString, StandardCharsets.UTF_16);
 			 BufferedReader reader = new BufferedReader(inputStringReader);
-			 BufferedWriter newWordsFile = new BufferedWriter(new FileWriter(pathFileNewWords, StandardCharsets.UTF_16))) {
+			 BufferedWriter newWordsFile = new BufferedWriter(new FileWriter(pathFileNewWords))) {
 
 			logger.info("file " + pathFileOldWords + " opened successfully!");
 			String strLine;

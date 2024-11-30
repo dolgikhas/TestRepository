@@ -12,13 +12,26 @@ public class View extends JFrame {
 	private Model model;
 	
 	private JPanel pnlSelectOptionWordsForCheckAndWord;
-	private JLabel lblSelectOption;
-	private ButtonGroup optVisibleGroup;
-	private JRadioButton optVisible;
-	private JLabel lblEmpty;
-	private JRadioButton optNotVisible;
+	private JLabel lblSelectWordOptionVisible;
+	private ButtonGroup optWordVisibleGroup;
+	private JRadioButton optWordVisible;
+	private JLabel lblWordEmptyOptionVisible;
+	private JRadioButton optWordNotVisible;
+
+	private JLabel lblSelectTranslationOptionVisible;
+	private ButtonGroup optTranslationVisibleGroup;
+	private JRadioButton optTranslationVisible;
+	private JLabel lblTranslationEmptyOptionVisible;
+	private JRadioButton optTranslationNotVisible;
+
 	private JLabel lblSelectWordsForCheck;
 	private JComboBox combWordsForCheck;
+	private JButton btnStartCheckWords;
+	private JButton btnStopCheckWords;
+	private JButton btnRepeatPlayExample;
+	private JButton btnPlayNextExample;
+	private JButton btnShowWord;
+	private JButton btnStopCheckWordsAndSaveResult;
 	private JLabel lblWord;
 	private JTextField txtWord;
 	private JLabel lblTranscription;
@@ -26,12 +39,7 @@ public class View extends JFrame {
 	private JLabel lblTranslation;
 	private JTextField txtTranslation;
 	private JLabel lblExamples;
-	private JButton btnCheckWords;
-	private JButton btnStopCheckWords;
-	private JButton btnRepeatPlayExample;
-	private JButton btnPlayNextExample;
-	private JButton btnShowWord;
-	private JLabel lblEmpty2;
+	private JLabel lblStatistics;
 
 	private JPanel pnlWordExamples;	
 	private JTextArea txtExamples;
@@ -42,6 +50,7 @@ public class View extends JFrame {
 	private JButton btnAsterisk;
 	private JButton btnMinus;
 	private JButton btnMinus4;
+	private JButton btnPutWordToDoubtFile;
 	private JButton btnPreviousWord;
 	
 	public void setModel(Model model) {
@@ -50,14 +59,14 @@ public class View extends JFrame {
 	
 	public void initView() {
 		pnlSelectOptionWordsForCheckAndWord = new JPanel();
-		pnlSelectOptionWordsForCheckAndWord.setLayout(new GridLayout(10, 2));
+		pnlSelectOptionWordsForCheckAndWord.setLayout(new GridLayout(12, 2));
 		pnlWordExamples = new JPanel();
 		pnlResult = new JPanel();
 	}
 
 	public void createControls() {
-		createControlsSelectOptionVisibility();
-		
+		createControlsSelectWordOptionVisibility();
+		createControlsSelectTranslationOptionVisibility();
 		createControlsSelectWordsForCheck();
 
 		createButtonsForCheckWords();
@@ -69,17 +78,29 @@ public class View extends JFrame {
 		createControlsResultsShowAndPreviousWord();
 	}
 
+	private void createControlsSelectTranslationOptionVisibility() {
+		lblSelectTranslationOptionVisible = createLabel("Выбери опцию отображения перевода", pnlSelectOptionWordsForCheckAndWord);		
+		optTranslationVisibleGroup = new ButtonGroup();
+		optTranslationVisible = initRadioButton("Показывать перевод", optTranslationVisibleGroup, pnlSelectOptionWordsForCheckAndWord);
+		optTranslationVisible.addActionListener(event -> btnShowTranslation.setEnabled(false));
+		lblTranslationEmptyOptionVisible = createLabel("", pnlSelectOptionWordsForCheckAndWord);
+		optTranslationNotVisible = initRadioButton("Не показывать перевод", optTranslationVisibleGroup, pnlSelectOptionWordsForCheckAndWord);		
+		optTranslationNotVisible.addActionListener(event -> btnShowTranslation.setEnabled(true));
+		optTranslationNotVisible.setSelected(true);
+	}
+
 	private void createControlExamplesArea() {
 		txtExamples = createTextArea(pnlWordExamples);
 		txtExamples.setEditable(false);
 	}
 
 	private void createControlsResultsShowAndPreviousWord() {
-		btnShowTranslation = createButton("Показать перевод(-ы)", pnlResult);
+		btnShowTranslation = createButton("Перевод (-ы)", pnlResult);
 		btnPlus = createButton("+", pnlResult);
 		btnAsterisk = createButton("*", pnlResult);
 		btnMinus = createButton("-", pnlResult);
 		btnMinus4 = createButton("-4", pnlResult);
+		btnPutWordToDoubtFile = createButton("Сомнит-е", pnlResult);
 		btnPreviousWord = createButton("Предыдущее", pnlResult);
 		
 		disableControlsResults();
@@ -91,6 +112,7 @@ public class View extends JFrame {
 		btnAsterisk.setEnabled(false);
 		btnMinus.setEnabled(false);
 		btnMinus4.setEnabled(false);
+		btnPutWordToDoubtFile.setEnabled(false);
 		btnPreviousWord.setEnabled(false);
 	}
 
@@ -102,15 +124,16 @@ public class View extends JFrame {
 		lblTranslation = createLabel("Перевод", pnlSelectOptionWordsForCheckAndWord);
 		txtTranslation = createTextFieldNotEditable(pnlSelectOptionWordsForCheckAndWord);
 		lblExamples = createLabel("Примеры", pnlSelectOptionWordsForCheckAndWord);
+		lblStatistics = createLabel("", pnlSelectOptionWordsForCheckAndWord);
 	}
 
 	private void createButtonsForCheckWords() {
-		btnCheckWords = createButton("Поехали!", pnlSelectOptionWordsForCheckAndWord);
+		btnStartCheckWords = createButton("Поехали!", pnlSelectOptionWordsForCheckAndWord);
 		btnStopCheckWords = createButton("Остановить проверку", pnlSelectOptionWordsForCheckAndWord);
 		btnRepeatPlayExample = createButton("Повторить пример", pnlSelectOptionWordsForCheckAndWord);
 		btnPlayNextExample = createButton("Следующий пример", pnlSelectOptionWordsForCheckAndWord);
 		btnShowWord = createButton("Показать слово", pnlSelectOptionWordsForCheckAndWord);
-		lblEmpty2 = createLabel("", pnlSelectOptionWordsForCheckAndWord);
+		btnStopCheckWordsAndSaveResult = createButton("Остановить и сохранить результаты", pnlSelectOptionWordsForCheckAndWord);
 		
 		disableButtonsForCheckWords();
 	}
@@ -120,15 +143,15 @@ public class View extends JFrame {
 		combWordsForCheck = createComboBox(model.getListWordFiles(), pnlSelectOptionWordsForCheckAndWord);
 	}
 
-	private void createControlsSelectOptionVisibility() {
-		lblSelectOption = createLabel("Выбери опцию отображения слов", pnlSelectOptionWordsForCheckAndWord);		
-		optVisibleGroup = new ButtonGroup();
-		optVisible = initRadioButton("Показывать слова", optVisibleGroup, pnlSelectOptionWordsForCheckAndWord);
-		optVisible.addActionListener(event -> btnShowWord.setEnabled(false));
-		lblEmpty = createLabel("", pnlSelectOptionWordsForCheckAndWord);
-		optNotVisible = initRadioButton("Не показывать слова", optVisibleGroup, pnlSelectOptionWordsForCheckAndWord);		
-		optNotVisible.addActionListener(event -> btnShowWord.setEnabled(true));
-		optNotVisible.setSelected(true);		
+	private void createControlsSelectWordOptionVisibility() {
+		lblSelectWordOptionVisible = createLabel("Выбери опцию отображения слов", pnlSelectOptionWordsForCheckAndWord);		
+		optWordVisibleGroup = new ButtonGroup();
+		optWordVisible = initRadioButton("Показывать слова", optWordVisibleGroup, pnlSelectOptionWordsForCheckAndWord);
+		optWordVisible.addActionListener(event -> btnShowWord.setEnabled(false));
+		lblWordEmptyOptionVisible = createLabel("", pnlSelectOptionWordsForCheckAndWord);
+		optWordNotVisible = initRadioButton("Не показывать слова", optWordVisibleGroup, pnlSelectOptionWordsForCheckAndWord);		
+		optWordNotVisible.addActionListener(event -> btnShowWord.setEnabled(true));
+		optWordNotVisible.setSelected(true);		
 	}
 
 	private JComboBox createComboBox(ArrayList<String> list, JPanel panel) {
@@ -188,7 +211,7 @@ public class View extends JFrame {
 	}
 
 	public JButton getButtonCheckWords() {
-		return btnCheckWords;
+		return btnStartCheckWords;
 	}
 
 	public String getFileWordsToCheck() {
@@ -196,7 +219,7 @@ public class View extends JFrame {
 	}
 
 	public void disableButtonAndListForStartCheckWords() {
-		btnCheckWords.setEnabled(false);
+		btnStartCheckWords.setEnabled(false);
 		combWordsForCheck.setEnabled(false);
 	}
 
@@ -206,10 +229,11 @@ public class View extends JFrame {
 
 	public void enableButtonsForCheckWords() {
 		btnStopCheckWords.setEnabled(true);
+		btnStopCheckWordsAndSaveResult.setEnabled(true);
 		btnRepeatPlayExample.setEnabled(true);
 		btnPlayNextExample.setEnabled(true);
 		
-		if (optNotVisible.isSelected()) {
+		if (optWordNotVisible.isSelected()) {
 			btnShowWord.setEnabled(true);
 		}
 		
@@ -218,23 +242,25 @@ public class View extends JFrame {
 		btnAsterisk.setEnabled(true);
 		btnMinus.setEnabled(true);
 		btnMinus4.setEnabled(true);
+		btnPutWordToDoubtFile.setEnabled(true);
 		btnPreviousWord.setEnabled(true);
 	}
 
 	public void disableButtonsForCheckWords() {
 		btnStopCheckWords.setEnabled(false);
+		btnStopCheckWordsAndSaveResult.setEnabled(false);
 		btnRepeatPlayExample.setEnabled(false);
 		btnPlayNextExample.setEnabled(false);
 		btnShowWord.setEnabled(false);
 	}
 
 	public void enableButtonAndListForStartCheckWords() {
-		btnCheckWords.setEnabled(true);
+		btnStartCheckWords.setEnabled(true);
 		combWordsForCheck.setEnabled(true);
 	}
 
 	public boolean isOptionShowWordSelected() {
-		return optVisible.isSelected();
+		return optWordVisible.isSelected();
 	}
 
 	public void displayWord(String word) {
@@ -280,6 +306,10 @@ public class View extends JFrame {
 	public JButton getButtonMinus4() {
 		return btnMinus4;
 	}
+	
+	public JButton getButtonPutWordToDoubtFile() {
+		return btnPutWordToDoubtFile;
+	}
 
 	public JButton getButtonPreviousWord() {
 		return btnPreviousWord;
@@ -291,5 +321,41 @@ public class View extends JFrame {
 
 	public void disableButtonPlayNextExample() {
 		btnPlayNextExample.setEnabled(false);
+	}
+
+	public boolean isOptionShowTranslationSelected() {
+		return optTranslationVisible.isSelected();
+	}
+
+	public void disableButtonPreviousWord() {
+		btnPreviousWord.setEnabled(false);
+	}
+
+	public void enableButtonPreviousWord() {
+		btnPreviousWord.setEnabled(true);
+	}
+
+	public void enableButtonPlayNextExample() {
+		btnPlayNextExample.setEnabled(true);
+	}
+
+	public void disableButtonShowTranslation() {
+		btnShowTranslation.setEnabled(false);
+	}
+
+	public void enableButtonShowTranslation() {
+		btnShowTranslation.setEnabled(true);
+	}
+	
+	public JButton getButtonStopCheckWordsAndSaveResult() {
+		return btnStopCheckWordsAndSaveResult;
+	}
+	
+	public void displayStatistics(String text) {
+		lblStatistics.setText(text);
+	}
+
+	public void disableButtonPutWordToDoubtFile() {
+		btnPutWordToDoubtFile.setEnabled(false);
 	}
 }

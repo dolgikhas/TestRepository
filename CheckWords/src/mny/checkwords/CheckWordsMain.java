@@ -20,27 +20,11 @@ import javazoom.jl.player.advanced.*;
 import javazoom.jl.player.*;
 
 public class CheckWordsMain {
-	private final static Logger logger = Logger.getLogger("CheckWords");
-
 	public static void main(String[] args) {
 		Model model = new Model();
 		View view = new View();
 		
-		Controller controller = new Controller(model, view, logger);
-		controller.processUser();				
+		Controller controller = new Controller(model, view);
+		controller.processUser();
 	}
-
-	private static void processWordsFiles() {
-		ProcessWordsFiles processWordsFiles = new ProcessWordsFiles("D:\\ENGLISH. FULL\\WORDS\\words\\");
-		
-		processWordsFiles.createWordsFiles("D:\\ENGLISH. FULL\\WORDS\\check_words\\words_new.txt",
-				"D:\\ENGLISH. FULL\\WORDS\\words_new.txt");
-		processWordsFiles.createWordsFiles("D:\\ENGLISH. FULL\\WORDS\\check_words\\words_processed.txt",
-				"D:\\ENGLISH. FULL\\WORDS\\words_processed.txt");
-		processWordsFiles.createWordsFiles("D:\\ENGLISH. FULL\\WORDS\\check_words\\words_checked.txt",
-				"D:\\ENGLISH. FULL\\WORDS\\words_checked.txt");
-		processWordsFiles.createWordsFiles("D:\\ENGLISH. FULL\\WORDS\\check_words\\words_doubt.txt",
-				"D:\\ENGLISH. FULL\\WORDS\\words_doubt.txt");
-	}
-
 }

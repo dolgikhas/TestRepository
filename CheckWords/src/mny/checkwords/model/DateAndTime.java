@@ -5,12 +5,12 @@ import java.time.LocalTime;
 
 public class DateAndTime {
 	public static String getFileWordsWithDateAndTime(String fileWords) {
-//		String currentDate = getCurrentDate();
-//		String currentTime = getCurrentTime();
-//		String fileWordsWithDateAndTime = fileWords.substring(0, fileWords.length() - 4) + "_" +
-//					currentDate + "_" + currentTime + ".txt";
-//		return fileWordsWithDateAndTime;
-		return fileWords;
+		String currentDate = getCurrentDate();
+		String currentTime = getCurrentTime();
+		String fileWordsWithDateAndTime = fileWords.substring(0, fileWords.length() - 4) + "_" +
+					currentDate + "_" + currentTime + ".txt";
+		return fileWordsWithDateAndTime;
+//		return fileWords;
 	}
 
 	public static String getCurrentTime() {

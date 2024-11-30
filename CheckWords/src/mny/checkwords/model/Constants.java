@@ -7,6 +7,7 @@ public interface Constants {
 	String PATH_EXAMPLES = "D:\\ENGLISH. FULL\\WORDS\\examples\\";
 	String PATH_SOUNDS = "D:\\ENGLISH. FULL\\WORDS\\sounds\\";
 	
+	String FILE_CHECKED_WORDS = "words_checked.txt";
 	String FILE_NEW_WORDS = "words_new.txt";
 	String FILE_PROCESSED_WORDS = "words_processed.txt";
 	String FILE_DOUBT_WORDS = "words_doubt.txt"; 
