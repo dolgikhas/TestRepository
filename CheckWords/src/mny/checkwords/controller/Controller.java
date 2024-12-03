@@ -65,16 +65,17 @@ public class Controller {
 	private void setListenerToButtonStopCheckWordsAndSaveResult() {
 		view.getButtonStopCheckWordsAndSaveResult().addActionListener(event -> {
 			try {
+				CheckWordsLog.writeToLogFile("нажата кнопка \"Остановить проверку и сохранить результаты\"");
 				model.saveCheckWordResultsWithWordsWithoutResults(view.getFileWordsToCheck());
 				
 				JOptionPane.showMessageDialog(null, "Слова успешно сохранены!",
 						null, JOptionPane.INFORMATION_MESSAGE);
-				
+			
+				view.setEmptyTextFields();
 				view.disableButtonsForCheckWords();
 				view.disableControlsResults();
 				view.enableButtonAndListForStartCheckWords();				
 			} catch (Exception exception) {
-				// TODO Auto-generated catch block
 				exception.printStackTrace();
 			}
 		});
@@ -82,9 +83,7 @@ public class Controller {
 
 	private void setListenerToButtonPutWordToDoubtFile() {
 		view.getButtonPutWordToDoubtFile().addActionListener(event -> {
-			//logger.info("\tbuttonPutWordToDoubtFile was pressed");
-			word.setResultCheck(ResultCheck.Doubt);
-			//logger.info("\tset " + ResultCheck.Doubt + " for: " + word.getWord());			
+			word.setResultCheck(ResultCheck.Doubt);			
 			getAndDisplayNextWordOrMessageEndCheckWords();
 			
 		});
@@ -128,10 +127,8 @@ public class Controller {
 
 	private void setListenerToButtonPreviousWord() {
 		view.getButtonPreviousWord().addActionListener(event -> {
-			//logger.info("\tbuttonPreviousWord was pressed");
 			if (model.isPreviousWord()) {
 				word = model.getPreviousWord();
-				//logger.info("\t\tget previous word: " + word.getWord());
 				showWordAndExamples();
 				disableButttonPreviousWordIfNeed();
 			}
@@ -163,17 +160,22 @@ public class Controller {
 
 	private void setListenerToButtonPlus() {
 		view.getButtonPlus().addActionListener(event -> {
-			//logger.info("\tbuttonPlus was pressed");
-			word.setResultCheck(ResultCheck.Plus);
-			//logger.info("\tset " + ResultCheck.Plus + " for: " + word.getWord());			
+			word.setResultCheck(ResultCheck.Plus);			
 			getAndDisplayNextWordOrMessageEndCheckWords();
 		});
 	}
 
 	private void getAndDisplayNextWordOrMessageEndCheckWords() {
+		try {
+			CheckWordsLog.writeToLogFile(word.getWord(), word.getResultCheck());
+		} catch (IOException exception) {
+			JOptionPane.showMessageDialog(null, "Проблема при записи слова и результата в log-файл",
+					null, JOptionPane.ERROR_MESSAGE);
+			exception.printStackTrace();
+		}
+		
 		if (model.isNextWord()) {
 			word = model.getNextWord();
-			//logger.info("\tget next word: " + word.getWord());
 			showWordAndExamples();
 			
 			if (!model.isFirstWord()) {
@@ -192,6 +194,7 @@ public class Controller {
 			
 			// TODO: добавить повторную проверку по доп.списку
 
+			view.setEmptyTextFields();
 			view.disableButtonsForCheckWords();
 			view.disableControlsResults();
 			view.enableButtonAndListForStartCheckWords();				
@@ -211,7 +214,6 @@ public class Controller {
 		soundExamples.playFirstExample();
 		
 		if (!soundExamples.isNextExample()) {
-			//logger.info("word " + word.getWord() + " has only 1 example. so need to disable buttonPlayNextExample");
 			view.disableButtonPlayNextExample();
 		} else {
 			view.enableButtonPlayNextExample();
@@ -220,9 +222,7 @@ public class Controller {
 
 	private void showExamples() throws FileNotFoundException, IOException {
 		listExamples = model.getExamples(word);
-		//logger.info("model.getExamples exit");
 		String strExamples = getStringFromList(listExamples);
-		//logger.info("get examples: " + strExamples);
 		
 		view.getTextAreaExamples().setText(strExamples);
 	}
@@ -249,7 +249,12 @@ public class Controller {
 	}
 
 	private void setListenerToButtonStopCheckWords() {
-		view.getButtonStopCheckWords().addActionListener(event -> {
+		view.getButtonStopCheckWords().addActionListener(event -> {			
+			try {
+				CheckWordsLog.writeToLogFile("нажата кнопка \"Остановить проверку\"");
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
 			view.disableButtonsForCheckWords();
 			view.disableControlsResults();
 			view.enableButtonAndListForStartCheckWords();
@@ -260,18 +265,18 @@ public class Controller {
 		view.getButtonCheckWords().addActionListener(event -> {
 			try {
 				manageControlsAndStartCheckWords();
-			} catch (FileNotFoundException e) {
+			} catch (FileNotFoundException exception) {
 				JOptionPane.showMessageDialog(null, "Ошибка при открытии файла " + view.getFileWordsToCheck(),
 					null, JOptionPane.ERROR_MESSAGE);
-				e.printStackTrace();
+				exception.printStackTrace();
 				
 				view.disableButtonsForCheckWords();
 				view.disableControlsResults();
 				view.enableButtonAndListForStartCheckWords();
-			} catch (IOException e) {
+			} catch (IOException exception) {
 				JOptionPane.showMessageDialog(null, "Непонятная ошибка при обработке файла со словами",
 						null, JOptionPane.ERROR_MESSAGE);
-				e.printStackTrace();
+				exception.printStackTrace();
 				
 				view.disableButtonsForCheckWords();
 				view.disableControlsResults();
@@ -284,7 +289,6 @@ public class Controller {
 		view.enableButtonsForCheckWords();
 		view.disableButtonAndListForStartCheckWords();
 		String fileWordsToCheck = view.getFileWordsToCheck();
-		//logger.info("\tselected file for check: " + fileWordsToCheck);
 		
 		if (fileWordsToCheck.equals(Constants.FILE_DOUBT_WORDS)) {
 			view.disableButtonPutWordToDoubtFile();
@@ -298,6 +302,8 @@ public class Controller {
 		
 		getAndDisplayFirstWordToCheck();
 		disableButttonPreviousWordIfNeed();
+		
+		CheckWordsLog.initializeLogFile(fileWordsToCheck);
 		
 		view.displayStatistics("1 из " + model.getNumberWords());
 	}
@@ -318,7 +324,6 @@ public class Controller {
 
 	private void getAndDisplayFirstWordToCheck() {
 		word = model.getFirstWord();
-		//logger.info("\tget first word: " + word.getWord());
 		
 		showWordAndExamples();
 	}
@@ -370,13 +375,11 @@ public class Controller {
 	private void enableButtonPreviousWord() {
 		if (!model.isFirstWord()) {
 			view.getButtonPreviousWord().setEnabled(true);
-			//logger.info("\tdisable previous word button");
 		}
 	}
 
 	private void showWordAndTranscription() {
 		view.displayWord(word.getWord());
 		view.displayTranscription(word.getTranscription());
-		//logger.info("\tshowed word and transcription for: " + word.getWord());
 	}
 }

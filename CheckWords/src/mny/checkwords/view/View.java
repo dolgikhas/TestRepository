@@ -358,4 +358,12 @@ public class View extends JFrame {
 	public void disableButtonPutWordToDoubtFile() {
 		btnPutWordToDoubtFile.setEnabled(false);
 	}
+
+	public void setEmptyTextFields() {
+		txtWord.setText("");
+		txtTranscription.setText("");
+		txtTranslation.setText("");
+		lblStatistics.setText("");;
+		txtExamples.setText("");
+	}
 }

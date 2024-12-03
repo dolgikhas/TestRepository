@@ -20,7 +20,12 @@ public class SoundExamples {
 	
 	private void playExample(String sourceExample) throws FileNotFoundException, JavaLayerException {
 		String processedExample = processExample(sourceExample);
-		FileInputStream fileInputStream = new FileInputStream(Constants.PATH_SOUNDS + word + "_" + processedExample + ".mp3");
+		String soundPath = Constants.PATH_SOUNDS + word + "_" + processedExample + ".mp3";
+		if (processedExample.equals(word + " example")) {
+			soundPath = Constants.PATH_SOUNDS + processedExample + ".mp3";
+		}
+		
+		FileInputStream fileInputStream = new FileInputStream(soundPath);
 		Player playMP3 = new Player(fileInputStream);
 		playMP3.play();
 	}

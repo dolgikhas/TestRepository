@@ -19,10 +19,8 @@ import javax.swing.JPanel;
 
 public class Model {
 	
-	private final static Logger logger = Logger.getLogger("Model");
-	
-	private HashMap<String, Word> mapWordsData;
-	private ArrayList<String> listWords;
+	private final static Logger logger = Logger.getLogger("Model");	
+	private ArrayList<Word> listWords;
 	private FileManager fileManager;
 	private int currentWordIndex = 0;
 	
@@ -46,28 +44,23 @@ public class Model {
 	}
 
 	public Word getFirstWord() {
-		//logger.info("\tbefore getFirstWord(): " + listWords.get(0));
-		return mapWordsData.get(listWords.get(0));
+		return listWords.get(0);
 	}
 
 	public boolean isNextWord() {
-		//logger.info("\tbefore isNextWord(): " + (currentWordIndex < listWords.size()));
 		return (currentWordIndex + 1) < listWords.size();
 	}
 
 	public Word getNextWord() {
-		//logger.info("\tbefore getNextWord(): " + listWords.get(currentWordIndex + 1));
-		return mapWordsData.get(listWords.get(++currentWordIndex));
+		return listWords.get(++currentWordIndex);
 	}
 
 	public boolean isPreviousWord() {
-		//logger.info("\tbefore isPreviousWord(): " + (0 != currentWordIndex));
 		return 0 != currentWordIndex;
 	}
 
 	public Word getPreviousWord() {
-		//logger.info("\tbefore getPreviousWord(): " + listWords.get(currentWordIndex - 1));
-		return mapWordsData.get(listWords.get(--currentWordIndex));
+		return listWords.get(--currentWordIndex);
 	}
 
 	public boolean isFirstWord() {
@@ -88,11 +81,9 @@ public class Model {
 	}
 
 	public void processingListWords(String fileWords) throws Exception {
-		//logger.info("\tinitialize doubt words writer");
 		ArrayList<String> listWordsRepeat = new ArrayList<>();
 		
-		for (String strWord : listWords) {
-			Word word = mapWordsData.get(strWord);
+		for (Word word : listWords) {
 			ResultCheck result = word.getResultCheck();
 			
 			if (ResultCheck.Plus == result) {
@@ -102,7 +93,8 @@ public class Model {
 				fileManager.writeWordAndRepeatNumberToFile(word, ResultCheck.Equal);
 				continue;				
 			} else if (ResultCheck.Doubt == result) {
-				fileManager.writeWordAndRepeatNumberToFile(word, ResultCheck.Equal);
+//				fileManager.writeWordAndRepeatNumberToFile(word, ResultCheck.Equal);
+				writeWordToFileOrRepeatFile(word, fileWords);
 				fileManager.writeWordAndRepeatNumberToFileDoubtWords(word, ResultCheck.Minus);
 				continue;				
 			}
@@ -110,7 +102,7 @@ public class Model {
 			fileManager.writeWordToFileDoubtWords(fileWords, word);
 
 			if (ResultCheck.Asterisk == result) {
-				listWordsRepeat.add(strWord);
+				listWordsRepeat.add(word.getWord());
 			}
 			
 			if (fileWords.equals(Constants.FILE_CHECKED_WORDS)) {
@@ -139,8 +131,6 @@ public class Model {
 	}
 
 	public static String getRepeatNumberByOption(Word word, ResultCheck option) {
-		//logger.info("\t\t" + word.getWord() + "\t" + word.getRepeatNumber());
-		
 		if (ResultCheck.Minus == option) {
 			return "0";
 		} else if (ResultCheck.Plus == option) {
@@ -180,7 +170,7 @@ public class Model {
 		} else if (Constants.FILE_DOUBT_WORDS_REPEAT.equals(fileWords)) {
 			return Constants.FILE_DOUBT_WORDS_REPEAT_2;
 		} else if (Constants.FILE_CHECKED_WORDS.equals(fileWords)) {
-			return Constants.FILE_CHECKED_WORDS + "_2";
+			return Constants.FILE_CHECKED_WORDS.replaceAll(".txt", "_2.txt");
 		}
 		
 		throw new Exception("Get not correct file name for get repeatFile");
@@ -190,37 +180,29 @@ public class Model {
 		final int maxNumber = getMaxNumberRepeat(fileWords);
 		
 		if (maxNumber <= word.getRepeatNumber()) {
-			//logger.info("\tword " + word.getWord() + " completed repeat");
 			return true;
 		}
 		
-		//logger.info("\tword " + word.getWord() + " continue repeat");
 		return false;
 	}
 
 	public int getMaxNumberRepeat(String fileWords) {
-		//logger.info("\tbefore get max number for word: " + fileWords);
 		
 		if (Constants.FILE_NEW_WORDS.equals(fileWords)) {
-			//logger.info("\treturn " + Constants.REPEAT_NUMBER_NEW_WORDS);
 			return Constants.REPEAT_NUMBER_NEW_WORDS;
 		} else if (Constants.FILE_DOUBT_WORDS.equals(fileWords)) {
-			//logger.info("\treturn " + Constants.REPEAT_NUMBER_DOUBT_WORDS);
 			return Constants.REPEAT_NUMBER_DOUBT_WORDS;
 		}
-		//logger.info("\treturn " + Constants.REPEAT_NUMBER_REPEAT_WORDS);
 		return Constants.REPEAT_NUMBER_REPEAT_WORDS;
 	}
 
 	public void writeWordToRepeatFileIfNeed(Word word, String fileWords) throws Exception {
 		if (!isNeedToWriteFileToRepeatFile(fileWords)) {
-			//logger.info("\tdon't need to write word to repeat file");
 			return;
 		}
 		
 		String repeatFile = getRepeatFileName(fileWords);
 		
-//		fileManager.initializeRepeatFile(repeatFile);
 		fileManager.writeWordAndRepeatNumberToRepeatFile(word, ResultCheck.Minus);
 	}
 
@@ -242,23 +224,17 @@ public class Model {
 	}
 
 	public void saveCheckWordResultsWithWordsWithoutResults(String fileWords) throws Exception {
-//		logger.info("processing words for " + fileWords);
-		
 		if (fileWords.equals(Constants.FILE_PROCESSED_WORDS)) {
 			int indexWordsWithResults = --currentWordIndex; 
-			ArrayList<String> listNotCheckedWords = new ArrayList<>();
-			ArrayList<String> listCheckedWords = new ArrayList<>();
+			ArrayList<Word> listNotCheckedWords = new ArrayList<>();
+			ArrayList<Word> listCheckedWords = new ArrayList<>();
 			getListNotCheckedWords(listNotCheckedWords);		
 			getListCheckedWords(indexWordsWithResults, listCheckedWords);
-//			logger.info("get list not checked words with " + listNotCheckedWords.size() + " components");
+
 			listWords = listNotCheckedWords;
 			saveCheckWordResults(Constants.FILE_PROCESSED_WORDS);
-			logger.info("save not checked words");
-			
-//			logger.info("get list checked words with " + listCheckedWords.size() + " components");
 			listWords = listCheckedWords;
 			saveCheckWordResults(Constants.FILE_CHECKED_WORDS);
-			logger.info("save checked words");
 			
 			return;
 		}
@@ -271,7 +247,7 @@ public class Model {
 
 	private void createListWordsWithoutResultsThenWordsWithResults() {
 		int indexWordsWithResults = --currentWordIndex; 
-		ArrayList<String> resultListWords = new ArrayList<>();
+		ArrayList<Word> resultListWords = new ArrayList<>();
 
 		getListNotCheckedWords(resultListWords);		
 		getListCheckedWords(indexWordsWithResults, resultListWords);
@@ -279,27 +255,24 @@ public class Model {
 		listWords = resultListWords;
 	}
 
-	public void getListCheckedWords(int indexWordsWithResults, ArrayList<String> resultListWords) {
+	public void getListCheckedWords(int indexWordsWithResults, ArrayList<Word> resultListWords) {
 		for (int index = 0; index <= indexWordsWithResults; index++) {
 			checkIfResultAsteriskChangeToMinus4(index);
 			
 			resultListWords.add(listWords.get(index));
-			//logger.info("add to resultListWords " + listWords.get(index));
 		}
 	}
 
-	public void getListNotCheckedWords(ArrayList<String> resultListWords) {
+	public void getListNotCheckedWords(ArrayList<Word> resultListWords) {
 		while (isNextWord()) {
 			Word word = getNextWord();
 			word.setResultCheck(ResultCheck.Equal);
-			resultListWords.add(word.getWord());
-			//logger.info("add to resultListWords " + word.getWord());
+			resultListWords.add(word);
 		}
 	}
 
 	private void checkIfResultAsteriskChangeToMinus4(int index) {
-		String strWord = listWords.get(index);
-		Word word = mapWordsData.get(strWord);
+		Word word = listWords.get(index);
 
 		if (ResultCheck.Asterisk == word.getResultCheck()) {
 			word.setResultCheck(ResultCheck.Minus4);
@@ -307,8 +280,8 @@ public class Model {
 	}
 
 	public void createWordsList() {
-		mapWordsData = new HashMap<>();
 		listWords = new ArrayList<>();
-		fileManager = new FileManager(mapWordsData, listWords);
+		fileManager = new FileManager(listWords);
+		currentWordIndex = 0;
 	}
 }
